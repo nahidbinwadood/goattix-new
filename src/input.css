@@ -285,7 +285,7 @@ body {
   }
    
   .nice-select:after {
-    @apply w-2 h-2 right-4;
+    @apply w-2 h-2 right-5;
   }
   /* Events */
 }
