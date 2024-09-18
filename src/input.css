@@ -226,6 +226,19 @@ body {
     content: "+";
     @apply absolute top-[17px] right-[10px] h-[30px] w-[30px] rounded-full bg-white text-blackv1 text-[25px] flex items-center justify-center;
   } 
+
+  /* Events */
+  .events-filter .nice-select {
+    @apply bg-blackv2 border-blackv2 rounded-[4px] h-[35px] leading-[35px];
+  }
+  .nice-select .current {
+    @apply text-[14px] font-normal;
+  }
+   
+  .nice-select:after {
+    @apply w-2 h-2 right-3;
+  }
+  /* Events */
 }
 @media only screen and (min-width: 641px) and (max-width: 991px) {
   .owl-dots {
@@ -242,6 +255,19 @@ body {
     content: "+";
     @apply absolute top-[18px] right-[10px] h-[30px] w-[30px] rounded-full bg-white text-blackv1 text-[30px] flex items-center justify-center;
   } 
+
+  /* Events */
+  .events-filter .nice-select {
+    @apply bg-blackv2 border-blackv2 rounded-[6px] h-[40px] leading-[40px];
+  }
+  .nice-select .current {
+    @apply text-[15px] font-medium;
+  }
+   
+  .nice-select:after {
+    @apply w-2 h-2 right-4;
+  }
+  /* Events */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

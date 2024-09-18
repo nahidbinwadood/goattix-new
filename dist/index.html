@@ -135,7 +135,7 @@
               >Home</a
             >
           </div>
-          <a class="text-sm md:text-base text-menuColor" href="index.html"
+          <a href="events.html" class="text-sm md:text-base text-menuColor" href="index.html"
             >Events</a
           >
           <a class="text-sm md:text-base text-menuColor" href="index.html"
@@ -383,7 +383,7 @@
                 </div>
               </div>
             </div>
-            <!-- event card  -->
+ 
 
             <!-- event card  -->
             <div class="col-12 md:col-6 xl:col-4 mt-[30px]">
@@ -910,29 +910,7 @@
 
     <!-- all js scripts  -->
     <script>
-      const openMenu = document.getElementById("openMenu");
-      const closeMenu = document.getElementById("closeMenu");
-      const sidebarMenu = document.getElementById("menu-sidebar");
-
-      openMenu?.addEventListener("click", () => {
-        if (sidebarMenu) {
-          sidebarMenu.classList.remove("translate-x-full");
-          sidebarMenu.classList.add("translate-x-0");
-        }
-      });
-      closeMenu?.addEventListener("click", () => {
-        if (openMenu) {
-          sidebarMenu.classList.add("translate-x-full");
-          sidebarMenu.classList.remove("translate-x-0");
-        }
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!sidebarMenu.contains(e.target) && !openMenu.contains(e.target)) {
-          sidebarMenu.classList.add("translate-x-full");
-          sidebarMenu.classList.remove("translate-x-0");
-        }
-      });
+      
     </script>
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/plugins.js"></script>

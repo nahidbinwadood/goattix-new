@@ -582,3 +582,29 @@ timezones.forEach((timezone) => {
   option.textContent = timezone.label;
   timezoneSelect?.appendChild(option);
 });
+
+// ===sidebar::start
+const openMenu = document.getElementById("openMenu");
+      const closeMenu = document.getElementById("closeMenu");
+      const sidebarMenu = document.getElementById("menu-sidebar");
+
+      openMenu?.addEventListener("click", () => {
+        if (sidebarMenu) {
+          sidebarMenu.classList.remove("translate-x-full");
+          sidebarMenu.classList.add("translate-x-0");
+        }
+      });
+      closeMenu?.addEventListener("click", () => {
+        if (openMenu) {
+          sidebarMenu.classList.add("translate-x-full");
+          sidebarMenu.classList.remove("translate-x-0");
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!sidebarMenu.contains(e.target) && !openMenu.contains(e.target)) {
+          sidebarMenu.classList.add("translate-x-full");
+          sidebarMenu.classList.remove("translate-x-0");
+        }
+      });
+// ===sidebar::end
