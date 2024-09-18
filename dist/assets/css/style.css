@@ -3025,6 +3025,31 @@ body{
     --tw-text-opacity: 1;
     color: rgb(17 17 17 / var(--tw-text-opacity));
   }
+
+  /* Events */
+
+  .events-filter .nice-select{
+    height: 45px;
+    border-radius: 8px;
+    --tw-border-opacity: 1;
+    border-color: rgb(28 28 28 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(28 28 28 / var(--tw-bg-opacity));
+    line-height: 45px;
+  }
+
+  .nice-select .current{
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .nice-select:after{
+    right: 1rem;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  /* Events */
 }
 
 /*===Responsive=== */
@@ -3577,20 +3602,16 @@ body{
     padding-bottom: 1.75rem;
   }
 
+  .xl\:pb-24{
+    padding-bottom: 6rem;
+  }
+
   .xl\:pb-56{
     padding-bottom: 14rem;
   }
 
   .xl\:pt-64{
     padding-top: 16rem;
-  }
-
-  .xl\:pb-14{
-    padding-bottom: 3.5rem;
-  }
-
-  .xl\:pb-24{
-    padding-bottom: 6rem;
   }
 
   .xl\:text-start{

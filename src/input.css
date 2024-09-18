@@ -275,5 +275,18 @@ body {
     content: "+";
     @apply absolute top-[28px] right-[10px] h-[34px] w-[34px] rounded-full bg-white text-blackv1 text-[27px] flex items-center justify-center;
   } 
+
+  /* Events */
+  .events-filter .nice-select {
+    @apply bg-blackv2 border-blackv2 rounded-[8px] h-[45px] leading-[45px];
+  }
+  .nice-select .current {
+    @apply text-[16px] font-medium;
+  }
+   
+  .nice-select:after {
+    @apply w-2 h-2 right-4;
+  }
+  /* Events */
 }
 /*===Responsive=== */
