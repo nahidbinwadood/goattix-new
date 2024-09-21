@@ -96,7 +96,7 @@ body {
     width: 6px;
     height: 6px;
   }
-  .custom--scrollbar::-webkit-scrollbar-track{
+  .custom--scrollbar::-webkit-scrollbar-track {
     @apply bg-gray-100 rounded-[10px];
   }
   .custom--scrollbar::-webkit-scrollbar-thumb,
@@ -125,7 +125,7 @@ body {
 .event--table tr:last-child {
   border-bottom: none;
 }
-.event--table tr td:last-child{
+.event--table tr td:last-child {
   border-right: none;
 }
 .fade-out {
@@ -152,15 +152,15 @@ body {
   left: 0;
   width: 24px;
   height: 24px;
-  border:2px solid rgba(255,255,255,0.6);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
 }
-.custom--checkbox input:checked + label:before{
+.custom--checkbox input:checked + label:before {
   background-color: #fff;
 }
-.custom--checkbox input:checked + label:after{
+.custom--checkbox input:checked + label:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 2px;
   left: 9px;
   width: 6px;
@@ -169,31 +169,31 @@ body {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.iti__country-list{
+.iti__country-list {
   @apply bg-blackv2 border-[rgba(255,255,255,0.20)] rounded-[12px];
 }
-.custom-radio input{
+.custom-radio input {
   @apply hidden;
 }
-.custom-radio label{
+.custom-radio label {
   @apply relative block pl-16;
 }
-.custom-radio label:before{
-  content: '';
+.custom-radio label:before {
+  content: "";
   @apply absolute left-0 top-1/2 -translate-y-[50%] w-[44px] h-[44px] border-[4px] border-white rounded-full;
 }
-.custom-radio input:checked + label:after{
-  content: '';
-  @apply absolute left-[11px] top-[3px] h-[22px] w-[22px] bg-white rounded-full 
+.custom-radio input:checked + label:after {
+  content: "";
+  @apply absolute left-[11px] top-[3px] h-[22px] w-[22px] bg-white rounded-full;
 }
-.edit-venue--area .nice-select{
+.edit-venue--area .nice-select {
   @apply h-[72px] leading-[72px] w-full border border-white bg-transparent;
 }
-.nice-select .list{
+.nice-select .list {
   height: 250px;
   overflow-y: auto;
 }
-.pagination--wrapper li.active{
+.pagination--wrapper li.active {
   @apply bg-blackv1 text-white;
 }
 
@@ -209,8 +209,8 @@ body {
 }
 /* ====nahid::end=== */
 
-
 /*===Responsive=== */
+
 @media (max-width: 640px) {
   .owl-dots {
     @apply mt-[-30px];
@@ -220,25 +220,51 @@ body {
   }
 
   .button {
-    @apply px-6 py-2 text-sm  ;
+    @apply px-6 py-2 text-sm;
   }
   .accordion-header:after {
     content: "+";
     @apply absolute top-[17px] right-[10px] h-[30px] w-[30px] rounded-full bg-white text-blackv1 text-[25px] flex items-center justify-center;
-  } 
+  }
 
   /* Events */
   .events-filter .nice-select {
-    @apply bg-blackv2 border-blackv2 rounded-[4px] h-[35px] leading-[35px];
+    @apply bg-blackv2 border-blackv2 rounded-[4px] h-[40px] leading-[40px];
   }
   .nice-select .current {
     @apply text-[14px] font-normal;
   }
-   
+
   .nice-select:after {
     @apply w-2 h-2 right-3;
   }
+
   /* Events */
+
+  /* attendee::start */
+  .custom--checkbox label:before {
+    width: 15px;
+    height: 15px;
+  }
+  .custom--checkbox input:checked + label:after {
+    top: 3px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+  }
+
+  .custom--checkbox label {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .your-event--details .nice-select {
+    @apply min-w-[250px]  w-full rounded-xl h-12 leading-[48px] px-8;
+  }
+  .your-event--details .nice-select:after {
+    right: 1rem;
+  }
+  /* attendee::end */
 }
 @media only screen and (min-width: 641px) and (max-width: 991px) {
   .owl-dots {
@@ -248,13 +274,13 @@ body {
     @apply h-3 w-3;
   }
   .button {
-    @apply px-8 py-3 text-base  ;
-  } 
+    @apply px-8 py-3 text-base;
+  }
 
   .accordion-header:after {
     content: "+";
     @apply absolute top-[18px] right-[10px] h-[30px] w-[30px] rounded-full bg-white text-blackv1 text-[30px] flex items-center justify-center;
-  } 
+  }
 
   /* Events */
   .events-filter .nice-select {
@@ -263,18 +289,27 @@ body {
   .nice-select .current {
     @apply text-[15px] font-medium;
   }
-   
+
   .nice-select:after {
     @apply w-2 h-2 right-4;
   }
   /* Events */
+
+  /* Attendee::start */
+  .your-event--details .nice-select {
+    @apply min-w-[250px] max-w-[250px] w-full rounded-xl h-12 leading-[48px] px-8;
+  }
+  .your-event--details .nice-select:after {
+    right: 1rem;
+  }
+  /* Attendee::end */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .accordion-header:after {
     content: "+";
     @apply absolute top-[28px] right-[10px] h-[34px] w-[34px] rounded-full bg-white text-blackv1 text-[27px] flex items-center justify-center;
-  } 
+  }
 
   /* Events */
   .events-filter .nice-select {
@@ -283,10 +318,40 @@ body {
   .nice-select .current {
     @apply text-[16px] font-medium;
   }
-   
+
   .nice-select:after {
     @apply w-2 h-2 right-5;
   }
   /* Events */
+
+  /* Attendee::start */
+  .your-event--details .nice-select {
+    @apply min-w-[350px] max-w-[350px] w-full rounded-full h-12 leading-[48px] px-8;
+  }
+  .your-event--details .nice-select:after {
+    right: 1rem;
+  }
+  /* Attendee::end */
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1521px) {
+  /* Attendee::start */
+  .your-event--details .nice-select {
+    @apply min-w-[350px] max-w-[450px] w-full rounded-full h-16 leading-[64px] px-8;
+  }
+  .your-event--details .nice-select:after {
+    right: 1.8rem;
+  }
+  /* Attendee::end */
+}
+
+/*============custom============*/
+@media (min-width: 450px) {
+  .attendee-filters {
+    flex-direction: row;
+  }
+}
+
+/*============custom============*/
+
 /*===Responsive=== */
