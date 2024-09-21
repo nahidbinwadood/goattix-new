@@ -1429,6 +1429,10 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse{
+  flex-direction: column-reverse;
+}
+
 .flex-wrap{
   flex-wrap: wrap;
 }
@@ -1815,6 +1819,11 @@ video {
   background-repeat: no-repeat;
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1854,6 +1863,10 @@ video {
 
 .p-\[30px\]{
   padding: 30px;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-10{
@@ -3353,6 +3366,14 @@ body{
     margin-top: 40px;
   }
 
+  .md\:mb-10{
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:size-10{
     width: 2.5rem;
     height: 2.5rem;
@@ -3421,6 +3442,10 @@ body{
     gap: 18px;
   }
 
+  .md\:gap-3{
+    gap: 0.75rem;
+  }
+
   .md\:rounded-lg{
     border-radius: 0.5rem;
   }
@@ -3435,6 +3460,10 @@ body{
 
   .md\:p-\[18px\]{
     padding: 18px;
+  }
+
+  .md\:p-5{
+    padding: 1.25rem;
   }
 
   .md\:px-6{
@@ -3472,6 +3501,11 @@ body{
     padding-bottom: 1.25rem;
   }
 
+  .md\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .md\:pb-14{
     padding-bottom: 3.5rem;
   }
@@ -3490,6 +3524,14 @@ body{
 
   .md\:pt-48{
     padding-top: 12rem;
+  }
+
+  .md\:pb-10{
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:pt-10{
+    padding-top: 2.5rem;
   }
 
   .md\:text-3xl{
@@ -3529,6 +3571,10 @@ body{
   .md\:leading-\[30px\]{
     line-height: 30px;
   }
+
+  .md\:\*\:flex > *{
+    display: flex;
+  }
 }
 
 @media (min-width: 1024px){
@@ -3562,6 +3608,10 @@ body{
 
   .lg\:mt-\[50px\]{
     margin-top: 50px;
+  }
+
+  .lg\:flex{
+    display: flex;
   }
 
   .lg\:size-10{
@@ -4094,6 +4144,10 @@ body{
 
   .\32xl\:pt-\[307px\]{
     padding-top: 307px;
+  }
+
+  .\32xl\:pt-24{
+    padding-top: 6rem;
   }
 
   .\32xl\:\!text-\[24px\]{
