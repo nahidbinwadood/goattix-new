@@ -16,21 +16,23 @@
   </head>
   <body>
     <!-- start header  -->
-    <header class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-[37px]">
-      <div class="container">
-        <div class="row items-center">
-          <div class="col-3">
+    <header
+      class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-2 xl:py-7 2xl:py-[37px]"
+    >
+      <div class="container relative">
+        <div class="2xl:row lg:items-center flex items-center justify-between">
+          <div class="2xl:col-3">
             <!-- logo  -->
             <a href="index.html">
               <img
-                class="w-[123px] h-[54px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt="logo"
               />
             </a>
           </div>
-          <div class="col-6">
-            <ul class="menu flex items-center gap-12">
+          <div class="2xl:col-6 hidden xl:flex">
+            <ul class="menu flex items-center gap-8 2xl:gap-12">
               <li>
                 <a
                   href="index.html"
@@ -75,16 +77,103 @@
               </li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="2xl:col-3 hidden xl:flex 2xl:block">
             <div class="text-right">
               <a href="login.html" class="button">Sign in</a>
             </div>
           </div>
+
+          <!-- hamburger icons::start -->
+          <div class="transition duration-500 xl:hidden">
+            <div id="openMenu" class="transition duration-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="#8F8F8F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- hamburger icons::end -->
         </div>
       </div>
+      <!-- sidebar::start -->
+      <div
+        id="menu-sidebar"
+        class="bg-blackv1 absolute top-0 h-[100vh] right-0 pt-8 px-6 w-[220px] translate-x-full duration-500 transition-all md:w-[270px]"
+      >
+        <div>
+          <div class="transition duration-500">
+            <svg
+              id="closeMenu"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18 6L6 18M6 6l12 12"
+                stroke="#8F8F8F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col pt-8 justify-center pl-6 gap-6">
+          <div class="sidebar--menu--active">
+            <a
+              class="active text-sm md:text-base font-medium hover:text-white duration-300 ease-in-out"
+              href="index.html"
+              >Home</a
+            >
+          </div>
+          <a
+            href="events.html"
+            class="text-sm md:text-base text-menuColor"
+            href="index.html"
+            >Events</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >About Us</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Permotors</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Blogs</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Contact Us</a
+          >
+        </div>
+
+        <div class="pt-6 pl-5">
+          <div>
+            <a
+              href="login.html"
+              class="text-sm md:text-base font-medium bg-white px-10 py-3 rounded-full text-black"
+              >Sign in</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- sidebar::end -->
     </header>
     <!-- end header  -->
-    <main>
+
+    <main class="overflow-x-hidden">
       <!-- start check out area  -->
       <section class="checkout-area pt-[190px] pb-[100px]">
         <div class="container">
@@ -367,23 +456,24 @@
     </main>
 
     <!-- start footer  -->
-    <footer class="py-[58px] bg-blackv2">
+    <footer class="py-6 md:py-10 2xl:py-[58px] bg-blackv2 overflow-hidden">
       <div class="container">
-        <div class="row items-center">
-          <div class="col-12 md:col-6">
+        <div class="flex items-center justify-between">
+          <div class=" ">
             <a href="index.html">
               <img
-                class="h-[94px] w-[200px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt=""
               />
             </a>
           </div>
-          <div class="col-12 md:col-6">
-            <ul class="flex items-center gap-6 justify-end">
+          <div class=" ">
+            <ul class="flex items-center gap-2 md:gap-6 justify-end">
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -398,8 +488,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -416,8 +507,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -436,23 +528,28 @@
             </ul>
           </div>
         </div>
-        <div class="mt-[52px]">
-          <div class="flex items-center gap-[244px]">
+        <div class="2xl:mt-[52px] mt-6 md:mt-10">
+          <div
+            class="flex flex-col xl:flex-row justify-center gap-3 xl:gap-32 xl:justify-normal item-center 2xl:gap-[244px]"
+          >
             <div>
-              <p class="w-[474px]">
+              <p
+                class="2xl:w-[474px] text-sm md:text-base text-center xl:text-start"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Malesuada amet nibh sed diam.
               </p>
             </div>
             <div>
               <a
-                href="mailto:Business@goattix.com"
-                class="flex items-center gap-7"
+                href="mailto:Business@goattix.com "
+                class="flex items-center justify-center gap-3 md:gap-5 xl:gap-7 text-sm md:text-base"
               >
                 <div
-                  class="h-[53px] w-[53px] flex items-center justify-center bg-[#292929] rounded-full"
+                  class="flex items-center justify-center bg-[#292929] rounded-full p-2 xl:p-4"
                 >
                   <svg
+                    class="size-5"
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
                     height="14"
@@ -471,7 +568,7 @@
               </a>
             </div>
             <div>
-              <p class="text-base leading-normal">
+              <p class="text-sm md:text-base leading-normal text-center">
                 © 2021 ibgme.ae. All rights reserved
               </p>
             </div>
