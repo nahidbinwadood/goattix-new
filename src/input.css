@@ -283,6 +283,23 @@ body {
     width: 15px;
   }
   /* checkout:end */
+
+  /* create event:start */
+   
+  .time-zone .nice-select {
+    background-color: transparent !important;
+    height: 50px !important;
+    display: flex;
+    align-items: center;
+}
+  .nice-select .current {
+    @apply text-[14px] font-normal;
+  }
+
+  .nice-select:after {
+    @apply w-2 h-2 right-3;
+  }
+  /* create event:end */
 }
 @media only screen and (min-width: 641px) and (max-width: 991px) {
   .owl-dots {
@@ -322,7 +339,6 @@ body {
   }
   /* Attendee::end */
 
- 
   /* checkout:start */
   .custom-radio label {
     @apply relative block pl-10;
