@@ -175,48 +175,60 @@
 
     <main class="overflow-x-hidden">
       <!-- start check out area  -->
-      <section class="checkout-area pt-[190px] pb-[100px]">
-        <div class="container">
+      <section
+        class="checkout-area pt-24 md:pt-28 lg:pt-40 xl:pt-48 2xl:pt-[207px] 2xl:pb-[100px]"
+      >
+        <div class="container px-5 md:px-8">
           <form action="#">
             <div class="row">
-              <h1 class="text-[42px] font-medium">Check Out</h1>
+              <h1
+                class="text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-medium"
+              >
+                Check Out
+              </h1>
               <div class="col-12 md:col-6">
                 <!-- person info  -->
-                <div class="mt-[60px]">
+                <div class="2xl:mt-[60px]">
                   <!-- full name  -->
-                  <div class="mt-[30px]">
-                    <label class="text-[18px] mb-4 inline-block" for="f-name"
+                  <div class="mt-5 md:mt-[30px]">
+                    <label
+                      class="text-sm md:text-base lg:text-[18px] mb-2 md:mb-4 inline-block"
+                      for="f-name"
                       >Full Name</label
                     >
                     <input
-                      class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                      class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] border border-white px-2 md:px-3 lg:px-5 bg-transparent focus:outline-none text-sm md:text-base"
                       type="text"
                       placeholder="Enter your name"
                       required
                     />
                   </div>
                   <!-- email  -->
-                  <div class="mt-[30px]">
-                    <label class="text-[18px] mb-4 inline-block" for="f-name"
+                  <div class="mt-4 md:mt-[30px]">
+                    <label
+                      class="text-sm md:text-base lg:text-[18px] mb-2 md:mb-4 inline-block"
+                      for="f-name"
                       >Email</label
                     >
                     <input
-                      class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                      class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] border border-white px-2 md:px-3 lg:px-5 bg-transparent focus:outline-none text-sm md:text-base"
                       type="email"
                       placeholder="Enter your email"
                       required
                     />
                   </div>
                   <!-- phone  -->
-                  <div class="phone-input mt-[30px]">
-                    <label for="phone" class="text-[18px] mb-4 inline-block"
+                  <div class="phone-input mt-4 md:mt-[30px]">
+                    <label
+                      for="phone"
+                      class="text-sm md:text-base lg:text-[18px] mb-2 md:mb-4 inline-block"
                       >Phone</label
                     >
                     <div
-                      class="flex w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent"
+                      class="flex w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] border border-white px-2 md:px-3 lg:px-5 bg-transparent"
                     >
                       <input
-                        class="w-[40px] h-[72px] bg-transparent border-r border-white focus:outline-none"
+                        class="w-[40px] h-12 md:h-14 lg:h-16 xl:h-[72px] bg-transparent border-r border-white focus:outline-none text-sm md:text-base lg:text-[18px]"
                         id="phone"
                         type="tel"
                         name="phone"
@@ -225,7 +237,7 @@
                         <input
                           id="phone"
                           type="number"
-                          class="h-[72px] w-full bg-transparent pl-4 focus:outline-none"
+                          class="h-12 md:h-14 lg:h-16 xl:h-[72px] w-full bg-transparent pl-4 focus:outline-none text-sm md:text-base lg:text-[18px]"
                           placeholder="Enter your number"
                         />
                       </div>
@@ -233,13 +245,15 @@
                   </div>
                 </div>
                 <!-- payment method  -->
-                <div class="mt-[78px]">
-                  <h2 class="text-[28px] font-medium mb-[42px]">
+                <div class="mt-8 md:mt-12 lg:mt-16 2xl:mt-[78px]">
+                  <h2
+                    class="text-xl md:text-2xl lg:text-[28px] font-medium mb-4 md:mb-8 lg:mb-[42px]"
+                  >
                     Payment Method
                   </h2>
                   <!-- payment-radio   -->
                   <div
-                    class="payment-radio flex items-center gap-[62px] custom-radio"
+                    class="payment-radio flex items-center gap-10 2xl:gap-[62px] custom-radio"
                   >
                     <div>
                       <input
@@ -249,201 +263,258 @@
                         checked
                       />
                       <label
-                        class="text-[18px] cursor-pointer"
+                        class="text-sm md:text-base lg:text-[18px] cursor-pointer"
                         for="credit-debit"
                         >Credit/Debit Card</label
                       >
                     </div>
                     <div>
                       <input id="paypal" type="radio" name="payment-radio" />
-                      <label class="text-[18px] cursor-pointer" for="paypal"
+                      <label
+                        class="text-sm md:text-base lg:text-[18px] cursor-pointer"
+                        for="paypal"
                         >PayPal</label
                       >
                     </div>
                   </div>
                   <!-- Card Number  -->
-                  <div class="mt-[50px]">
+                  <div class="mt-5 md:mt-10 lg:mt-12 xl:mt-[50px]">
                     <label
-                      class="text-[18px] mb-4 inline-block"
+                      class="text-sm md:text-base lg:text-[18px] mb-2 md:mb-4 inline-block"
                       for="card-number"
                       >Card Number</label
                     >
                     <input
                       id="card-number"
-                      class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                      class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] border border-white px-3 md:px-4 lg:px-5 bg-transparent focus:outline-none text-sm md:text-base"
                       type="text"
                       placeholder="Enter your card number"
                       required
                     />
                   </div>
                   <!-- Card name  -->
-                  <div class="mt-[30px]">
-                    <label class="text-[18px] mb-4 inline-block" for="card-name"
+                  <div class="mt-3 md:mt-5 lg:mt-7 xl:mt-[30px]">
+                    <label
+                      class="text-sm md:text-base lg:text-[18px] mb-2 md:mb-4 inline-block"
+                      for="card-name"
                       >Card Name</label
                     >
                     <input
                       id="card-name"
-                      class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                      class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] border border-white px-3 md:px-4 lg:px-5 bg-transparent focus:outline-none"
                       type="text"
                       placeholder="Name on card"
                       required
                     />
                   </div>
                   <!-- expiration date & ccv  -->
-                  <div class="flex items-start mt-[30px] gap-[50px]">
-                    <div class="w-[45%]">
-                      <label class="text-[18px] mb-4 inline-block" for="ex-date"
+                  <div
+                    class="flex flex-col items-start mt-5 md:mt-8 lg:mt-[30px] gap-4 2xl:gap-[50px]"
+                  >
+                    <div class="2xl:w-[45%]">
+                      <label
+                        class="text-sm md:text-base lg:text-[18px] mb-4 inline-block"
+                        for="ex-date"
                         >Expiration Date</label
                       >
-                      <div class="flex items-center gap-[30px]">
+                      <div class="flex items-center gap-5 2xl:gap-[30px]">
                         <input
-                          class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                          class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] text-sm md:text-base px-3 md:px-4 lg:px-5 border border-white bg-transparent focus:outline-none"
                           type="number"
                           placeholder="Month"
                         />
                         <input
-                          class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                          class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] text-sm md:text-base px-3 md:px-4 lg:px-5 border border-white bg-transparent focus:outline-none"
                           type="number"
                           placeholder="Year"
                         />
                       </div>
                     </div>
-                    <div class="w-[55%]">
-                      <label class="text-[18px] mb-4 inline-block" for="ccv"
+                    <div class="2xl:w-[55%] w-full">
+                      <label
+                        class="text-sm md:text-base lg:text-[18px] mb-2 md:mb-4 inline-block"
+                        for="ccv"
                         >CCV</label
                       >
                       <input
                         type="number"
-                        class="w-full h-[72px] rounded-[12px] border border-white px-5 bg-transparent focus:outline-none"
+                        class="w-full h-12 md:h-14 lg:h-16 xl:h-[72px] rounded-md md:rounded-lg lg:rounded-[12px] text-sm md:text-base px-3 md:px-4 lg:px-5 border border-white bg-transparent focus:outline-none"
                         placeholder="Enter 3 Digits"
                       />
                     </div>
                   </div>
                   <!-- check button  -->
-                  <div class="mt-20 text-center">
+                  <div class="mt-6 md:mt-8 lg:mt-12 mb-0 md:mb-16 2xl:mt-20 text-center">
                     <button
                       type="submit"
-                      class="w-[455px] mx-auto p-6 bg-white border border-white duration-300 ease-in-out text-blackv1 font-medium text-center rounded-[100px] hover:bg-transparent hover:text-white"
+                      class="2xl:w-[455px] mx-auto px-8 py-2 md:py-3 lg:py-4 2xl:px-6 2xl:py-6 bg-white border border-white duration-300 ease-in-out text-blackv1 font-medium text-center rounded-[100px] hover:bg-transparent hover:text-white"
                     >
                       Proceed to Checkout
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="col-12 md:col-6 mt-[70px]">
+              <div class="col-12 md:col-6 mt-8 md:mt-10 lg:mt-12 xl:mt-[70px]">
                 <!-- purchase ticket area  -->
-                <div class="pl-[160px]">
+                <div class="2xl:pl-[160px]">
                   <!-- tickets  -->
-                  <ul class="py-8 px-20 bg-blackv2 rounded-[20px]">
+                  <ul
+                    class="px-6 pt-8 pb-12 lg:pb-16 2xl:px-20 bg-blackv2 rounded-xl md:rounded-2xl lg:rounded-[20px]"
+                  >
                     <li
-                      class="py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
+                      class="py-4 xl:py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
                     >
-                      <p class="flex items-center gap-7">
-                        <img src="./assets/images/ticket-white.svg" alt="" />
-                        <span class="inline-block text-[22px] font-medium"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <img
+                          class="size-7"
+                          src="./assets/images/ticket-white.svg"
+                          alt=""
+                        />
+                        <span
+                          class="inline-block text-sm md:text-base lg:text-xl xl:text-[22px] font-medium"
                           >18+ to Get In</span
                         >
                       </p>
-                      <p class="flex items-center gap-7">
-                        <span class="text-[20px] text-[rgba(255,255,255,0.68)]"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.68)]"
                           >x1</span
                         >
-                        <span class="text-[20px] font-medium">$230.00</span>
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] font-medium"
+                          >$230.00</span
+                        >
                       </p>
                     </li>
                     <li
-                      class="py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
+                      class="py-4 xl:py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
                     >
-                      <p class="flex items-center gap-7">
-                        <img src="./assets/images/ticket-white.svg" alt="" />
-                        <span class="inline-block text-[22px] font-medium"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <img
+                          class="size-7"
+                          src="./assets/images/ticket-white.svg"
+                          alt=""
+                        />
+                        <span
+                          class="inline-block text-sm md:text-base lg:text-xl xl:text-[22px] font-medium"
                           >18+ to Get In</span
                         >
                       </p>
-                      <p class="flex items-center gap-7">
-                        <span class="text-[20px] text-[rgba(255,255,255,0.68)]"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.68)]"
                           >x1</span
                         >
-                        <span class="text-[20px] font-medium">$230.00</span>
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] font-medium"
+                          >$230.00</span
+                        >
                       </p>
                     </li>
                     <li
-                      class="py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
+                      class="py-4 xl:py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
                     >
-                      <p class="flex items-center gap-7">
-                        <img src="./assets/images/ticket-white.svg" alt="" />
-                        <span class="inline-block text-[22px] font-medium"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <img
+                          class="size-7"
+                          src="./assets/images/ticket-white.svg"
+                          alt=""
+                        />
+                        <span
+                          class="inline-block text-sm md:text-base lg:text-xl xl:text-[22px] font-medium"
                           >18+ to Get In</span
                         >
                       </p>
-                      <p class="flex items-center gap-7">
-                        <span class="text-[20px] text-[rgba(255,255,255,0.68)]"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.68)]"
                           >x1</span
                         >
-                        <span class="text-[20px] font-medium">$230.00</span>
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] font-medium"
+                          >$230.00</span
+                        >
                       </p>
                     </li>
                     <li
-                      class="py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
+                      class="py-4 xl:py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
                     >
-                      <p class="flex items-center gap-7">
-                        <img src="./assets/images/ticket-white.svg" alt="" />
-                        <span class="inline-block text-[22px] font-medium"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <img
+                          class="size-7"
+                          src="./assets/images/ticket-white.svg"
+                          alt=""
+                        />
+                        <span
+                          class="inline-block text-sm md:text-base lg:text-xl xl:text-[22px] font-medium"
                           >18+ to Get In</span
                         >
                       </p>
-                      <p class="flex items-center gap-7">
-                        <span class="text-[20px] text-[rgba(255,255,255,0.68)]"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.68)]"
                           >x1</span
                         >
-                        <span class="text-[20px] font-medium">$230.00</span>
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] font-medium"
+                          >$230.00</span
+                        >
                       </p>
                     </li>
                     <li
-                      class="py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between last:border-none"
+                      class="py-4 xl:py-8 border-b border-[rgba(255,255,255,0.18)] flex items-center justify-between"
                     >
-                      <p class="flex items-center gap-7">
-                        <img src="./assets/images/ticket-white.svg" alt="" />
-                        <span class="inline-block text-[22px] font-medium"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <img
+                          class="size-7"
+                          src="./assets/images/ticket-white.svg"
+                          alt=""
+                        />
+                        <span
+                          class="inline-block text-sm md:text-base lg:text-xl xl:text-[22px] font-medium"
                           >18+ to Get In</span
                         >
                       </p>
-                      <p class="flex items-center gap-7">
-                        <span class="text-[20px] text-[rgba(255,255,255,0.68)]"
+                      <p class="flex items-center gap-3 md:gap-5 lg:gap-7">
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.68)]"
                           >x1</span
                         >
-                        <span class="text-[20px] font-medium">$230.00</span>
+                        <span
+                          class="text-sm md:text-base lg:text-lg xl:text-[20px] font-medium"
+                          >$230.00</span
+                        >
                       </p>
                     </li>
                   </ul>
                   <!-- price and cupon  -->
-                  <div class="mt-[62px] pl-20">
+                  <div class="mt-6 2xl:mt-[62px] px-5 lg:px-16">
                     <p class="flex items-center justify-between">
-                      <span class="text-[20px] text-[rgba(255,255,255,0.6)]"
+                      <span class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
                         >Subtotal:</span
                       >
-                      <span class="text-[24px] font-medium">$640.00</span>
+                      <span class="text-sm md:text-base lg:text-xl xl:text-[24px] font-medium">$640.00</span>
                     </p>
-                    <p class="flex items-center justify-between mt-9">
-                      <span class="text-[20px] text-[rgba(255,255,255,0.6)]"
+                    <p class="flex items-center justify-between mt-4 md:mt-6 lg:mt-8 2xl:mt-9">
+                      <span class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
                         >Site Fees:</span
                       >
-                      <span class="text-[24px] font-medium">$40.00</span>
+                      <span class="text-sm md:text-base lg:text-xl xl:text-[24px] font-medium">$40.00</span>
                     </p>
                     <!-- cupon  -->
-                    <div class="flex items-center gap-6 mt-8">
+                    <div class="flex items-center gap-4 xl:gap-6 mt-8 coupon">
                       <input
-                        class="w-full bg-transparent h-14 border border-white rounded-[60px] px-[30px]"
+                        class="w-full focus:outline-none text-sm md:text-base bg-transparent h-10 md:h-14 border border-white rounded-[60px] px-6 md:px-[30px]"
                         type="text"
                         placeholder="Enter coupon code"
                       />
                       <a href="#" class="button">Submit</a>
                     </div>
-                    <p class="flex items-center justify-between mt-12">
-                      <span class="text-[20px] text-[rgba(255,255,255,0.6)]"
+                    <p class="flex items-center justify-between mt-5 mb-12 lg:mt-12">
+                      <span class="text-sm md:text-base lg:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
                         >Total Amount:</span
                       >
-                      <span class="text-[32px] font-medium">$680.00</span>
+                      <span class=" md:text-xl lg:text-2xl xl:text-3xl 2xl:text-[32px] font-medium">$680.00</span>
                     </p>
                   </div>
                 </div>

@@ -184,7 +184,7 @@ body {
 }
 .custom-radio input:checked + label:after {
   content: "";
-  @apply absolute left-[11px] top-[3px] h-[22px] w-[22px] bg-white rounded-full;
+  @apply absolute left-[11px] top-[1.2px] h-[22px] w-[22px] bg-white rounded-full;
 }
 .edit-venue--area .nice-select {
   @apply h-[72px] leading-[72px] w-full border border-white bg-transparent;
@@ -211,7 +211,7 @@ body {
 
 /*===Responsive=== */
 
-@media (max-width: 640px) {
+@media only screen and (min-width: 320px) and (max-width: 640px) {
   .owl-dots {
     @apply mt-[-30px];
   }
@@ -265,6 +265,24 @@ body {
     right: 1rem;
   }
   /* attendee::end */
+
+  /* checkout:start */
+  .custom-radio label {
+    @apply relative block pl-8;
+  }
+
+  .custom-radio label:before {
+    height: 25px;
+    width: 25px;
+    border-width: 2px;
+  }
+  .custom-radio input:checked + label:after {
+    left: 5px;
+    top: 2.3px;
+    height: 15px;
+    width: 15px;
+  }
+  /* checkout:end */
 }
 @media only screen and (min-width: 641px) and (max-width: 991px) {
   .owl-dots {
@@ -303,6 +321,25 @@ body {
     right: 1rem;
   }
   /* Attendee::end */
+
+ 
+  /* checkout:start */
+  .custom-radio label {
+    @apply relative block pl-10;
+  }
+
+  .custom-radio label:before {
+    height: 35px;
+    width: 35px;
+    border-width: 2px;
+  }
+  .custom-radio input:checked + label:after {
+    left: 7.4px;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+  }
+  /* checkout:end */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -349,6 +386,9 @@ body {
 @media (min-width: 450px) {
   .attendee-filters {
     flex-direction: row;
+  }
+  .coupon {
+    flex-diretion: column;
   }
 }
 
