@@ -13,73 +13,73 @@
   <body>
     <main>
       <!-- auth area start  -->
-      <section class="auth--area max-h-screen overflow-hidden">
+      <section class="auth--area 2xl:max-h-screen 2xl:overflow-hidden">
         <form action="#">
-          <div class="flex auth--form">
-            <div class="w-1/2 px-[200px] py-[70px] max-h-screen overflow-y-auto no-scrollbar">
+          <div class="flex flex-col md:flex-row auth--form">
+            <div class="2xl:w-1/2 2xl:px-[200px] 2xl:py-[70px] 2xl:max-h-screen 2xl:overflow-y-auto 2xl:no-scrollbar px-5 py-10">
               <div>
                 <img
-                  class="w-[218px] h-[101px] mb-[52px] mx-auto"
+                  class="h-[60px] w-[100px] 2xl:w-[218px] 2xl:h-[101px] mb-8 2xl:mb-[52px] mx-auto"
                   src="./assets/images/logo.svg"
                   alt=""
                 />
               </div>
               <h1
-                class="text-[42px] font-medium text-white mb-[55px] text-center"
+                class="text-3xl md:text-4xl lg:text-[42px] font-medium text-white mb-7 2xl:mb-[55px] text-center"
               >
                 Sign In
               </h1>
-              <div class="mt-[30px]">
-                <label class="text-[18px] text-white mb-4 block" for="email"
+              <div class="mt-6 lg:mt-[30px]">
+                <label class="text-sm md:text-base lg:text-[18px] text-white mb-3 md:mb-4 block" for="email"
                   >Email Address</label
                 >
                 <input
                   id="email"
-                  class="border border-white rounded-[12px] px-[20px] h-[72px] text-base w-full text-white bg-transparent"
+                  class="border border-white rounded-lg text-sm md:text-base 2xl:rounded-[12px] px-[20px] h-12 md:h-16 2xl:h-[72px] focus:outline-none w-full text-white bg-transparent"
                   type="email"
                   placeholder="Enter Email Address"
                   required
                 />
               </div>
-              <div class="mt-[30px]">
-                <label class="text-[18px] text-white mb-4 block" for="password"
+              <div class="mt-6 md:mt-[30px]">
+                <label class="text-sm md:text-base lg:text-[18px] text-white mb-4 block" for="password"
                   >Password</label
                 >
                 <input
                   id="password"
-                  class="border border-white rounded-[12px] px-[20px] h-[72px] text-base w-full text-white bg-transparent"
+                  class="border border-white rounded-lg text-sm md:text-base 2xl:rounded-[12px] px-[20px] h-12 md:h-16 2xl:h-[72px] focus:outline-none lg:h-[72px] w-full text-white bg-transparent"
                   type="email"
                   placeholder="Enter Password"
                   required
                 />
               </div>
               <button
-                class="w-full p-6 rounded-[100px] text-[18px] bg-white border border-white text-blackv1 font-medium mt-[60px] hover:bg-transparent hover:text-white duration-300 ease-in-out"
+                class="w-full rounded-[100px] text-[18px] bg-white border border-white text-blackv1 font-medium mt-6 md:mt-8 lg:mt-10 px-6 py-2 md:py-3 lg:py-4 xl:py-6 2xl:mt-[60px] hover:bg-transparent hover:text-white duration-300 ease-in-out"
                 type="submit"
               >
                 Sign In
               </button>
-              <div class="text-right">
+              <div class="text-center xl:text-right">
                 <a
                   href="#"
-                  class="text-[18px] mt-5 inline-block hover:opacity-80 duration-300 ease-in-out"
+                  class="text-sm md:text-base lg:text-[18px] mt-5 inline-block hover:opacity-80 duration-300 ease-in-out"
                   >Forgot your Password?</a
                 >
               </div>
-              <div class="relative mt-10">
+              <div class="relative mt-6 xl:mt-10">
                 <span
                   class="block h-[1px] w-full bg-[rgba(255,255,255,0.32)]"
                 ></span>
                 <span
-                  class="inline-block py-1 px-4 bg-blackv1 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]"
+                  class="inline-block py-1 text-sm md:text-base px-4 bg-blackv1 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]"
                   >OR</span
                 >
               </div>
               <!-- ssl login  -->
-              <div class="flex items-center gap-6 mt-[50px]">
+              <div class="flex flex-col lg:flex-row items-center gap-6 mt-8 md:mt-10 lg:mt-12 2xl:mt-[50px]">
                 <a
                   href="#"
-                  class="g-login py-5 px-3 rounded-[100px] bg-white flex items-center gap-3 text-[18px] font-medium text-blackv1 h-16"
+                  class="g-login py-5 px-8 rounded-[100px] bg-white flex items-center gap-3 text-sm md:text-base lg:text-[18px] font-medium text-blackv1 h-10 md:h-14 lg:h-16"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@
                 </a>
                 <a
                   href="#"
-                  class="fb-login py-5 px-3 rounded-[100px] bg-white flex items-center gap-3 text-[18px] font-medium text-blackv1 h-16"
+                  class="fb-login py-5 px-8 rounded-[100px] bg-white flex items-center gap-3 text-sm md:text-base lg:text-[18px] font-medium text-blackv1 h-10 md:h-14 lg:h-16"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -129,13 +129,13 @@
                 </a>
               </div>
               <!-- new user  -->
-              <div class="flex items-center justify-center gap-[18px] mt-[60px]">
-                <p class="text-[18px]">New User?</p>
-                <a href="#" class="text-[18px] font-bold hover:opacity-80 duration-300 ease-in-out">Create Account</a>
+              <div class="flex items-center justify-center gap-[18px] mt-7 md:mt-10 lg:mt-12 2xl:mt-[60px]">
+                <p class="text-sm md:text-base lg:text-[18px]">New User?</p>
+                <a href="#" class="text-sm md:text-base lg:text-[18px] font-bold hover:opacity-80 duration-300 ease-in-out">Create Account</a>
               </div>
             </div>
             <!-- image  -->
-            <div class="w-1/2">
+            <div class="md:w-1/2">
                 <img  class="w-full h-full object-cover" src="./assets/images/auth.png" alt="">
             </div>
           </div>
