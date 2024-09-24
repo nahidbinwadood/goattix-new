@@ -170,6 +170,7 @@
       <!-- sidebar::end -->
     </header>
     <!-- end header  -->
+     
     <main class="overflow-x-hidden">
       <!-- start event-details-hero  -->
       <section
@@ -201,7 +202,7 @@
               </a>
               <!-- tickets and test -->
               <div
-                class="flex items-center gap-[14px] justify-end pt-16 2xl:pt-[212px]"
+                class="flex items-center gap-[14px] justify-end pt-16 md:pt-20 lg:pt-24 xl:pt-30 2xl:pt-[212px]"
               >
                 <a
                   href="#"
@@ -245,7 +246,7 @@
                     </p>
                   </div>
                   <p
-                    class="py-3 md:py-4 lg:py-[18px] px-7 md:text-lg lg:text-xl xl:text-2xl 2xl:text-[30px] font-semibold border border-white rounded-[100px]"
+                    class="py-2 md:py-3 lg:py-4 xl:py-[18px] px-7 md:text-lg lg:text-xl xl:text-2xl 2xl:text-[30px] font-semibold border border-white rounded-[100px]"
                   >
                     $15.00 – $600.00
                   </p>
@@ -1367,404 +1368,20 @@
       class="overlay fixed top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[50] backdrop-blur opacity-0 invisible duration-300 ease-in-out"
     ></div>
     <div
-      class="fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] bg-white rounded-[16px] w-[1166px] z-50 overflow-hidden opacity-0 invisible duration-300 ease-in-out"
+      class="fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] bg-white rounded-[16px] w-[90%] max-w-[1166px] z-50 opacity-0 invisible duration-300 ease-in-out"
       id="getTicketPopup"
     >
       <form
         action="#"
-        class="max-h-[calc(100vh-90px)] overflow-y-auto custom--scrollbar pt-20 pb-10 px-[52px] relative"
+        class="max-h-[calc(100vh-90px)] overflow-y-auto custom--scrollbar pt-10 sm:pt-20 pb-8 sm:pb-10 px-6 sm:px-[52px] relative"
       >
-        <!-- table  -->
-        <div>
-          <div>
-            <!-- table head  -->
-            <div
-              class="table--head flex items-center justify-between bg-blackv1 py-6 px-12 rounded-tl-[11px] rounded-tr-[11px]"
-            >
-              <p class="text-[18px] font-medium">Tickets</p>
-              <p class="text-[18px] font-medium">Price</p>
-              <p class="text-[18px] font-medium">Quantity</p>
-              <p class="text-[18px] font-medium">Total Price</p>
-              <p class="text-[18px] font-medium">Remove</p>
-            </div>
-            <div class="table--row--wrapp">
-              <!-- table row  -->
-              <div
-                class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]"
-              >
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
-                >
-                  <img
-                    class="w-[26px] h-[26px]"
-                    src="./assets/images/ticket.svg"
-                    alt=""
-                  />
-                  18+ to Get In
-                </p>
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]"
-                >
-                  $50.00
-                </p>
-                <!-- quantity  -->
-                <div class="quantity flex items-center w-[24.5%]">
-                  <button
-                    class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                    disabled
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <rect
-                        width="32"
-                        height="32"
-                        rx="16"
-                        fill="black"
-                        fill-opacity="0.08"
-                      />
-                      <path
-                        d="M11.4766 16H21.8813"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <input
-                    class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
-                    value="0"
-                    type="tel"
-                    readonly
-                  />
-                  <button
-                    class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <rect
-                        width="32"
-                        height="32"
-                        rx="16"
-                        fill="black"
-                        fill-opacity="0.08"
-                      />
-                      <path
-                        d="M11.4287 15.999H20.1906"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 11.4277L16 20.1896"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]"
-                >
-                  $150.00
-                </p>
-                <p class="cursor-pointer">
-                  <img
-                    class="h-[27px] w-[27px]"
-                    src="./assets/images/delete.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-              <!-- table row  -->
-              <div
-                class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]"
-              >
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
-                >
-                  <img
-                    class="w-[26px] h-[26px]"
-                    src="./assets/images/ticket.svg"
-                    alt=""
-                  />
-                  18+ to Get In
-                </p>
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]"
-                >
-                  $50.00
-                </p>
-                <!-- quantity  -->
-                <div class="quantity flex items-center w-[24.5%]">
-                  <button
-                    class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                    disabled
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <rect
-                        width="32"
-                        height="32"
-                        rx="16"
-                        fill="black"
-                        fill-opacity="0.08"
-                      />
-                      <path
-                        d="M11.4766 16H21.8813"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <input
-                    class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
-                    value="0"
-                    type="tel"
-                    readonly
-                  />
-                  <button
-                    class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <rect
-                        width="32"
-                        height="32"
-                        rx="16"
-                        fill="black"
-                        fill-opacity="0.08"
-                      />
-                      <path
-                        d="M11.4287 15.999H20.1906"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 11.4277L16 20.1896"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]"
-                >
-                  $150.00
-                </p>
-                <p class="cursor-pointer">
-                  <img
-                    class="h-[27px] w-[27px]"
-                    src="./assets/images/delete.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-              <!-- table row  -->
-              <div
-                class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]"
-              >
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
-                >
-                  <img
-                    class="w-[26px] h-[26px]"
-                    src="./assets/images/ticket.svg"
-                    alt=""
-                  />
-                  18+ to Get In
-                </p>
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]"
-                >
-                  $50.00
-                </p>
-                <!-- quantity  -->
-                <div class="quantity flex items-center w-[24.5%]">
-                  <button
-                    class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                    disabled
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <rect
-                        width="32"
-                        height="32"
-                        rx="16"
-                        fill="black"
-                        fill-opacity="0.08"
-                      />
-                      <path
-                        d="M11.4766 16H21.8813"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <input
-                    class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
-                    value="0"
-                    type="tel"
-                    readonly
-                  />
-                  <button
-                    class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <rect
-                        width="32"
-                        height="32"
-                        rx="16"
-                        fill="black"
-                        fill-opacity="0.08"
-                      />
-                      <path
-                        d="M11.4287 15.999H20.1906"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 11.4277L16 20.1896"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <p
-                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]"
-                >
-                  $150.00
-                </p>
-                <p class="cursor-pointer">
-                  <img
-                    class="h-[27px] w-[27px]"
-                    src="./assets/images/delete.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-            <!-- total amount & quantity  -->
-            <div class="flex items-center justify-end gap-7 mt-7">
-              <p class="flex items-center gap-3 text-[rgba(0,0,0,0.68)]">
-                Qty: <span class="text-[20px] font-medium text-blackv1">6</span>
-              </p>
-              <p class="h-[15px] w-[1px] bg-[rgba(0,0,0,0.29)]"></p>
-              <p class="flex items-center gap-3 text-[rgba(0,0,0,0.6)]">
-                Total Amount:
-                <span class="text-[20px] font-medium text-blackv1"
-                  >$450.00</span
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- attendee box  -->
-        <div class="py-[30px] px-[50px] relative mt-[50px] rounded-[16px]
-        bg-[#F2F2F2] text-blackv1>
-        <h3 class="text-[24px] font-medium leading-normal mb-[6px]">
-          Attendee1
-        </h3>
-        <div class="row">
-          <div class="col-12 md:col-6 mt-5">
-            <label for="name" class="text-[18px] mb-5 inline-block">Name</label>
-            <input
-              type="text"
-              id="name"
-              class="w-full h-[72px] rounded-[12px] border border-blackv1 focus:outline-none px-5"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div class="col-12 md:col-6 mt-5">
-            <label for="name" class="text-[18px] mb-5 inline-block"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="name"
-              class="w-full h-[72px] rounded-[12px] border border-blackv1 focus:outline-none px-5"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-        </div>
-
-        <!-- close--attendee  -->
         <p
-          class="close--attendee absolute top-[23px] right-[23px] cursor-pointer"
+          class="close--getTicket absolute top-[20px] right-[20px] sm:top-[23px] sm:right-[51px] cursor-pointer z-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M12 0C5.364 0 0 5.364 0 12C0 18.636 5.364 24 12 24C18.636 24 24 18.636 24 12C24 5.364 18.636 0 12 0ZM17.16 17.16C16.692 17.628 15.936 17.628 15.468 17.16L12 13.692L8.532 17.16C8.064 17.628 7.308 17.628 6.84 17.16C6.372 16.692 6.372 15.936 6.84 15.468L10.308 12L6.84 8.532C6.372 8.064 6.372 7.308 6.84 6.84C7.308 6.372 8.064 6.372 8.532 6.84L12 10.308L15.468 6.84C15.936 6.372 16.692 6.372 17.16 6.84C17.628 7.308 17.628 8.064 17.16 8.532L13.692 12L17.16 15.468C17.616 15.924 17.616 16.692 17.16 17.16Z"
-              fill="black"
-              fill-opacity="0.24"
-            />
-          </svg>
-        </p>
-
-        <!-- close--attendee  -->
-        <p
-          class="close--getTicket absolute top-[23px] right-[51px] cursor-pointer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="34"
-            height="34"
+            width="30"
+            height="30"
             viewBox="0 0 34 34"
             fill="none"
           >
@@ -1782,13 +1399,191 @@
             </defs>
           </svg>
         </p>
-        <div class="flex justify-end">
-          <button
-            class="mt-9 inline-block py-4 px-[60px] border border-blackv1 bg-blackv1 text-[20px] font-medium rounded-[100px] duration-300 ease-in-out hover:bg-transparent hover:text-blackv1"
-            type="submit"
+        <!-- table -->
+        <div class="overflow-x-auto w-full">
+          <div>
+            <!-- table head -->
+            <div
+              class="table--head grid grid-cols-5 gap-2 bg-blackv1 py-4 sm:py-6 px-4 sm:px-12 rounded-tl-[11px] rounded-tr-[11px]"
+            >
+              <p class="text-[14px] sm:text-[18px] font-medium">Tickets</p>
+              <p class="text-[14px] sm:text-[18px] font-medium">Price</p>
+              <p class="text-[14px] sm:text-[18px] font-medium">Quantity</p>
+              <p class="text-[14px] sm:text-[18px] font-medium">Total Price</p>
+              <p class="text-[14px] sm:text-[18px] font-medium">Remove</p>
+            </div>
+            <div class="table--row--wrapp">
+              <!-- table row -->
+              <div
+                class="table--row grid grid-cols-5 items-center px-4 sm:px-12 py-4 sm:py-8 border-b-[1px] border-[rgba(0,0,0,0.10)] gap-2"
+              >
+                <p
+                  class="text-[14px] sm:text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px]"
+                >
+                  <img
+                    class="w-[24px] sm:w-[26px] h-[24px] sm:h-[26px]"
+                    src="./assets/images/ticket.svg"
+                    alt="ticket icon"
+                  />
+                  18+ to Get In
+                </p>
+                <p
+                  class="text-[14px] sm:text-[18px] leading-normal text-[rgba(0,0,0,0.6)]"
+                >
+                  $50.00
+                </p>
+                <!-- quantity -->
+                <div class="quantity flex items-center justify-center">
+                  <button
+                    class="minus h-[32px] sm:h-[42px] w-[32px] sm:w-[42px] rounded-full disabled:opacity-50"
+                    disabled
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4766 16H21.8813"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <input
+                    class="w-[40px] sm:w-[56px] bg-transparent text-[14px] sm:text-[18px] font-medium text-blackv1 text-center focus:outline-none"
+                    value="0"
+                    type="tel"
+                    readonly
+                  />
+                  <button
+                    class="plus h-[32px] sm:h-[42px] w-[32px] sm:w-[42px] rounded-full disabled:opacity-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4287 15.999H20.1906"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 11.4277L16 20.1896"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <p
+                  class="text-[14px] sm:text-[18px] leading-normal text-[rgba(0,0,0,0.6)]"
+                >
+                  $150.00
+                </p>
+                <p class="cursor-pointer text-center">
+                  <img
+                    class="h-[24px] sm:h-[27px] w-[24px] sm:w-[27px]"
+                    src="./assets/images/delete.svg"
+                    alt="delete icon"
+                  />
+                </p>
+              </div>
+              <!-- Repeat for other rows -->
+            </div>
+            <!-- total amount & quantity -->
+            <div class="flex items-center justify-end gap-7 mt-5 sm:mt-7">
+              <p class="flex items-center gap-3 text-[rgba(0,0,0,0.68)]">
+                Qty:
+                <span
+                  class="text-[16px] sm:text-[20px] font-medium text-blackv1"
+                  >6</span
+                >
+              </p>
+              <p class="h-[15px] w-[1px] bg-[rgba(0,0,0,0.29)]"></p>
+              <p class="flex items-center gap-3 text-[rgba(0,0,0,0.6)]">
+                Total Amount:
+                <span
+                  class="text-[16px] sm:text-[20px] font-medium text-blackv1"
+                  >$450.00</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- attendee box -->
+        <div
+          class="py-6 sm:py-[30px] px-4 sm:px-[50px] relative mt-6 sm:mt-[50px] rounded-[16px] bg-[#F2F2F2] text-blackv1"
+        >
+          <h3
+            class="text-[20px] sm:text-[24px] font-medium leading-normal mb-4 sm:mb-[6px]"
           >
-            Checkout
-          </button>
+            Attendee 1
+          </h3>
+          <div class="flex flex-col md:flex-row gap-2 sm:gap-6">
+            <div class="w-full md:w-1/2 mt-3 sm:mt-5">
+              <label
+                for="name"
+                class="text-[16px] sm:text-[18px] mb-2 sm:mb-5 inline-block"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="w-full h-[48px] sm:h-[72px] rounded-lg md:rounded-xl lg:rounded-[12px] border border-blackv1 focus:outline-none px-4 sm:px-5 text-sm md:text-base"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="w-full md:w-1/2 mt-3 sm:mt-5">
+              <label
+                for="email"
+                class="text-[16px] sm:text-[18px] mb-2 sm:mb-5 inline-block"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="w-full h-[48px] sm:h-[72px] rounded-lg md:rounded-xl lg:rounded-[12px] border border-blackv1 focus:outline-none px-4 sm:px-5 text-sm md:text-base"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+          </div>
+          <div class="flex justify-end text-white">
+            <button
+              class="mt-4 sm:mt-8 inline-block py-3 sm:py-4 px-[40px] sm:px-[60px] border border-blackv1 bg-blackv1 text-sm text-[18px] sm:text-[20px] font-medium rounded-[100px] duration-300 ease-in-out hover:bg-transparent hover:text-blackv1"
+              type="submit"
+            >
+              Checkout
+            </button>
+          </div>
         </div>
       </form>
     </div>

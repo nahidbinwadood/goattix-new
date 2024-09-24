@@ -12,21 +12,23 @@
   </head>
   <body>
     <!-- start header  -->
-    <header class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-[37px]">
-      <div class="container">
-        <div class="row items-center">
-          <div class="col-3">
+    <header
+      class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-2 xl:py-7 2xl:py-[37px]"
+    >
+      <div class="container relative">
+        <div class="2xl:row lg:items-center flex items-center justify-between">
+          <div class="2xl:col-3">
             <!-- logo  -->
             <a href="index.html">
               <img
-                class="w-[123px] h-[54px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt="logo"
               />
             </a>
           </div>
-          <div class="col-6">
-            <ul class="menu flex items-center gap-12">
+          <div class="2xl:col-6 hidden xl:flex">
+            <ul class="menu flex items-center gap-8 2xl:gap-12">
               <li>
                 <a
                   href="index.html"
@@ -71,564 +73,1556 @@
               </li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="2xl:col-3 hidden xl:flex 2xl:block">
             <div class="text-right">
               <a href="login.html" class="button">Sign in</a>
             </div>
           </div>
+
+          <!-- hamburger icons::start -->
+          <div class="transition duration-500 xl:hidden">
+            <div id="openMenu" class="transition duration-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="#8F8F8F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- hamburger icons::end -->
         </div>
       </div>
+      <!-- sidebar::start -->
+      <div
+        id="menu-sidebar"
+        class="bg-blackv1 absolute top-0 h-[100vh] right-0 pt-8 px-6 w-[220px] translate-x-full duration-500 transition-all md:w-[270px]"
+      >
+        <div>
+          <div class="transition duration-500">
+            <svg
+              id="closeMenu"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18 6L6 18M6 6l12 12"
+                stroke="#8F8F8F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col pt-8 justify-center pl-6 gap-6">
+          <div class="sidebar--menu--active">
+            <a
+              class="active text-sm md:text-base font-medium hover:text-white duration-300 ease-in-out"
+              href="index.html"
+              >Home</a
+            >
+          </div>
+          <a
+            href="events.html"
+            class="text-sm md:text-base text-menuColor"
+            href="index.html"
+            >Events</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >About Us</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Permotors</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Blogs</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Contact Us</a
+          >
+        </div>
+
+        <div class="pt-6 pl-5">
+          <div>
+            <a
+              href="login.html"
+              class="text-sm md:text-base font-medium bg-white px-10 py-3 rounded-full text-black"
+              >Sign in</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- sidebar::end -->
     </header>
     <!-- end header  -->
-    <main>
+
+    <main class="overflow-hidden">
       <!-- start my events area  -->
-       <section class="my-events--area 2xl:pt-[187px] 2xl:pb-[100px]">
+      <section
+        class="my-events--area pt-20 md:pt-28 lg:pt-40 pb-20 md:pb-28 lg:pb-40 2xl:pt-[187px] 2xl:pb-[100px]"
+      >
         <div class="container">
-            <div class="row">
-                <!-- top bar  -->
-                <div class="col-12 flex items-center justify-between">
-                    <div class="flex items-center gap-[73px]">
-                        <h1 class="text-[42px] font-medium leading-normal">My Events</h1>
-                        <a href="#" class="py-4 px-8 bg-white border border-white flex items-center gap-4 text-blackv1 font-medium duration-300 ease-in-out hover:bg-transparent hover:text-white button--arrow rounded-[100px]">
-                            Add New Event
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
-                                <path d="M1.17969 7.76562H12.6797" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M7.17969 1.76562L7.17969 13.2656" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                        </a>
-                    </div>
-                    <!-- form search  -->
-                    <form action="#" class="w-[485px] relative">
-                        <input class="w-full h-[72px] rounded-[100px] border border-white pl-[90px] pr-8 text-white bg-transparent" type="text" placeholder="Search Events">
-                        <button class="absolute top-1/2 -translate-y-[50%] left-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                            <path d="M20.0763 17.5695L19.9858 17.7058L20.1015 17.8215L24.7025 22.4225C25.3322 23.0522 25.3322 24.0728 24.7025 24.7025L24.7024 24.7026C24.0737 25.3322 23.0513 25.3322 22.4226 24.7026L22.4225 24.7025L17.8215 20.1015L17.7058 19.9858L17.5695 20.0763C16.1682 21.006 14.4909 21.55 12.6875 21.55C7.80089 21.55 3.825 17.5741 3.825 12.6875C3.825 7.80089 7.80089 3.825 12.6875 3.825C17.5741 3.825 21.55 7.80089 21.55 12.6875C21.55 14.4909 21.006 16.1682 20.0763 17.5695ZM12.6875 6.14375C9.07892 6.14375 6.14375 9.07892 6.14375 12.6875C6.14375 16.2961 9.07892 19.2312 12.6875 19.2312C16.2961 19.2312 19.2312 16.2961 19.2312 12.6875C19.2312 9.07892 16.2961 6.14375 12.6875 6.14375Z" fill="white" stroke="black" stroke-width="0.4"/>
-                          </svg>
-                        </button>
-                    </form>
+          <div class="row">
+            <!-- top bar  -->
+            <div
+              class="col-12 gap-5 flex flex-col  sm:flex-row md:items-center justify-between"
+            >
+              <div
+                class="flex gap-3 flex-col md:flex-row md:items-center 2xl:gap-[73px]"
+              >
+                <h1
+                  class="text-2xl md:text-3xl lg:text-4xl 2xl:text-[42px] font-medium leading-normal"
+                >
+                  My Events
+                </h1>
+                <div>
+                  <a
+                    href="#"
+                    class="w-fit text-nowrap py-2 justify-center text-sm md:text-base xl:py-4 px-8 bg-white border border-white flex items-center gap-4 text-blackv1 font-medium duration-300 ease-in-out hover:bg-transparent hover:text-white button--arrow rounded-[100px]"
+                  >
+                    Add New Event
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="15"
+                      viewBox="0 0 14 15"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.17969 7.76562H12.6797"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.17969 1.76562L7.17969 13.2656"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
                 </div>
-                <!-- custom--tab  -->
-                <div class="custom--tab mt-[55px]">
-                    <!-- tabs  -->
-                     <div class="flex gap-[90px]">
-                        <button class="tab-link text-[22px] py-4 text-[rgba(255,255,255,0.6)] relative active hover:text-white duration-300 ease-in-out" data-tab="tab1">Upcoming Events</button>
-                        <button class="tab-link text-[22px] py-4 text-[rgba(255,255,255,0.6)] relative hover:text-white duration-300 ease-in-out" data-tab="tab2">Past Events</button>
-                     </div>
-                     <!-- tab content  -->
-                      <div class="tab--content mt-[60px]">
-                        <div id="tab1" class="tab-pane active">
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event2.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event1.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event3.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event4.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event5.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                          </div>
-                          <div id="tab2" class="tab-pane hidden">
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event4.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                            <!-- my-event-single  -->
-                            <div class="my-event-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8">
-                                <!-- event  -->
-                                <div class="flex items-center gap-8">
-                                    <div class="overflow-hidden rounded-[16px]">
-                                        <img class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out" src="./assets/images/event5.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h4 class="text-[21px] leading-normal font-medium w-[331px] mb-10">Tiny Waves - Holiday Matsuri Pre Party Kpop Rave</h4>
-                                        <div>
-                                            <p class="text-[18px] font-medium leading-normal">Net Sales: <span class="text-[rgba(255,255,255,0.6)] ml-4">$3502.00</span></p>
-                                            <p class="text-[18px] font-medium leading-normal mt-4">Current Attendees: <span class="text-[rgba(255,255,255,0.6)] ml-4">136</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- event details  -->
-                                 <div class="flex items-center gap-[100px]">
-                                    <div>
-                                        <div>
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                Start Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="flex items-center gap-3 text-base font-medium">
-                                                <img src="./assets/images/calender.svg" alt="">
-                                                End Date
-                                            </p>
-                                            <p class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]">Dec 3, 2022 | 8:00 PM EST</p>
-                                        </div>
-                                    </div>
-                                    <!-- view details  -->
-                                    <div class="pr-6">
-                                        <div class="flex items-center gap-3">
-                                            <a href="event-details.html" class="inline-block py-[15px] px-[55px] bg-white border border-white text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]">View Details</a>
-                                            <a href="#" class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                                    <path d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z" fill="white"/>
-                                                  </svg>
-                                            </a>
-                                            <p class="h-[55px] w-[55px] bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                                                    <g clip-path="url(#clip0_497_913)">
-                                                      <path d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z" fill="white"/>
-                                                    </g>
-                                                    <defs>
-                                                      <clipPath id="clip0_497_913">
-                                                        <rect width="18" height="20" fill="white"/>
-                                                      </clipPath>
-                                                    </defs>
-                                                  </svg>
-                                            </p>
-                                        </div>
-                                        <div class="flex items-center  gap-10 mt-[62px]">
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Sales
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                            <p class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"></p>
-                                            <a href="#" class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out">
-                                                Attendees
-                                                <img class="w-[5px] h-[10px]" src="./assets/images/angle-right.svg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                          </div>
-                      </div>
-                </div>
+              </div>
+              <!-- form search  -->
+              <form
+                action="#"
+                class="2xl:w-[485px] h-12 max-w-[380px] 2xl:h-[72px] sm:max-w-none relative"
+              >
+                <input
+                  class="w-full h-full text-sm md:text-base  rounded-[100px] border border-white pl-16 md:pl-[90px] pr-8 text-white bg-transparent"
+                  type="text"
+                  placeholder="Search Events"
+                />
+                <button class="absolute top-1/2 -translate-y-[50%] left-8">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="29"
+                    height="29"
+                    viewBox="0 0 29 29"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.0763 17.5695L19.9858 17.7058L20.1015 17.8215L24.7025 22.4225C25.3322 23.0522 25.3322 24.0728 24.7025 24.7025L24.7024 24.7026C24.0737 25.3322 23.0513 25.3322 22.4226 24.7026L22.4225 24.7025L17.8215 20.1015L17.7058 19.9858L17.5695 20.0763C16.1682 21.006 14.4909 21.55 12.6875 21.55C7.80089 21.55 3.825 17.5741 3.825 12.6875C3.825 7.80089 7.80089 3.825 12.6875 3.825C17.5741 3.825 21.55 7.80089 21.55 12.6875C21.55 14.4909 21.006 16.1682 20.0763 17.5695ZM12.6875 6.14375C9.07892 6.14375 6.14375 9.07892 6.14375 12.6875C6.14375 16.2961 9.07892 19.2312 12.6875 19.2312C16.2961 19.2312 19.2312 16.2961 19.2312 12.6875C19.2312 9.07892 16.2961 6.14375 12.6875 6.14375Z"
+                      fill="white"
+                      stroke="black"
+                      stroke-width="0.4"
+                    />
+                  </svg>
+                </button>
+              </form>
             </div>
+            <!-- custom--tab  -->
+            <div class="custom--tab mt-5 md:mt-8 lg:mt-12 2xl:mt-[55px]">
+              <!-- tabs  -->
+              <div class="flex items-center gap-8 2xl:gap-[90px]">
+                <button
+                  class="tab-link text-base md:text-lg lg:text-xl xl:text-[22px] py-4 text-[rgba(255,255,255,0.6)] relative active hover:text-white duration-300 ease-in-out"
+                  data-tab="tab1"
+                >
+                  Upcoming Events
+                </button>
+                <button
+                  class="tab-link text-base md:text-lg lg:text-xl xl:text-[22px] py-4 text-[rgba(255,255,255,0.6)] relative hover:text-white duration-300 ease-in-out"
+                  data-tab="tab2"
+                >
+                  Past Events
+                </button>
+              </div>
+              <!-- tab content  -->
+              <div class="tab--content mt-5 md:mt-8 lg:mt-12 2xl:mt-[60px]">
+                <div id="tab1" class="tab-pane active">
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event2.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event3.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event4.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event2.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event3.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2" class="tab-pane hidden">
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event3.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- my-event-single  -->
+                  <div
+                    class="my-event-single flex flex-col sm:flex-row items-center justify-between bg-blackv2 p-4 md:p-6 2xl:p-[10px] rounded-[20px] mt-8 gap-5 sm:gap-8 lg:g-0"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col xl:flex-row lg:items-center gap-4 md:gap-8 w-full"
+                    >
+                      <div class="rounded-[16px] w-full">
+                        <div
+                          class="w-full h-[214px] lg:w-full 2xl:w-[345px] overflow-hidden rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover w-full h-full event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt="event"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4
+                          class="text-lg md:text-xl lg:text-[21px] leading-normal font-medium w-full lg:w-4/5 xl:w-full 2xl:w-[331px] mb-10"
+                        >
+                          Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                        </h4>
+                        <div>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2"
+                          >
+                            Net Sales:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >$3502.00</span
+                            >
+                          </p>
+                          <p
+                            class="text-sm md:text-base lg:text-[18px] font-medium leading-normal mt-2 xl:mt-4"
+                          >
+                            Current Attendees:
+                            <span class="text-[rgba(255,255,255,0.6)] ml-2"
+                              >136</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- event details  -->
+                    <div
+                      class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 2xl:gap-[100px] w-full h-full"
+                    >
+                      <div>
+                        <div>
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            Start Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                        <div class="mt-4 md:mt-6 lg:mt-10">
+                          <p
+                            class="flex items-center gap-3 text-sm md:text-base font-medium"
+                          >
+                            <img src="./assets/images/calender.svg" alt="" />
+                            End Date
+                          </p>
+                          <p
+                            class="text-xs md:text-[15px] mt-3 md:mt-4 lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Dec 3, 2022 | 8:00 PM EST
+                          </p>
+                        </div>
+                      </div>
+                      <!-- view details  -->
+                      <div class="2xl:pr-6">
+                        <div
+                          class="flex flex-wrap lg:flex-nowrap items-center gap-3 justify-between"
+                        >
+                          <a
+                            href="event-details.html"
+                            class="inline-block text-nowrap py-2 px-8 text-sm md:text-base 2xl:py-[15px] 2xl:px-[55px] bg-white border border-white xl:text-[20px] text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white font-medium rounded-[100px]"
+                            >View Details</a
+                          >
+                          <div class="flex items-center gap-4">
+                            <a
+                              href="#"
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                              >
+                                <path
+                                  d="M3.37288 12.7834C2.41175 13.7445 1.375 18.8416 1.375 19.25C1.375 19.9664 1.93325 20.625 2.75 20.625C3.15838 20.625 8.2555 19.5882 9.21663 18.6271L17.0844 10.7594L11.2406 4.91563L3.37288 12.7834ZM16.5 1.375C15.6722 1.375 14.5076 1.64863 13.5561 2.60013L13.1656 2.99062L19.0094 8.83438L19.3999 8.44387C20.2758 7.568 20.625 6.45563 20.625 5.5C20.625 3.22163 18.777 1.375 16.5 1.375Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </a>
+                            <p
+                              class="p-2 lg:p-3 xl:p-4 bg-[rgba(255,255,255,0.08)] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                class="size-4 lg:size-5 sxl:size-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="20"
+                                viewBox="0 0 18 20"
+                                fill="none"
+                              >
+                                <g clip-path="url(#clip0_497_913)">
+                                  <path
+                                    d="M1.90081 6.66371C0.425533 6.15038 -0.0614508 5.53085 0.0060722 4.33113C0.0592722 3.39101 0.881825 2.58858 1.86602 2.53941C2.39598 2.51384 2.93002 2.52761 3.45998 2.52564C3.98993 2.52367 4.51988 2.52564 5.15419 2.52564C5.15419 2.18342 5.1501 1.87858 5.15419 1.57373C5.16851 0.680817 5.73121 0.0455533 6.64174 0.0258857C8.21523 -0.00951602 9.79077 -0.00754926 11.3643 0.0298192C12.24 0.0514536 12.8068 0.686718 12.8252 1.54029C12.8314 1.83334 12.8252 2.12835 12.8252 2.4804C13.0278 2.49811 13.2017 2.52367 13.3756 2.52564C14.2146 2.53154 15.0535 2.51777 15.8924 2.53154C16.9441 2.54924 17.7994 3.21794 17.957 4.12265C18.1391 5.1729 17.6521 6.12875 16.6413 6.44343C16.1216 6.6047 16.0684 6.86825 16.0704 7.29504C16.0786 10.4596 16.0806 13.626 16.0663 16.7906C16.0602 18.3659 15.299 19.4418 13.8954 19.8489C13.5311 19.9551 13.1301 19.9747 12.7475 19.9747C10.2512 19.9865 7.75485 19.9413 5.26264 19.9964C3.23899 20.0416 1.87216 18.6551 1.89262 16.763C1.92946 13.6595 1.90286 10.554 1.90081 7.44844C1.90081 7.19473 1.90081 6.94102 1.90081 6.66371ZM7.25764 12.1824C7.25764 11.1007 7.26377 10.021 7.25559 8.93925C7.2515 8.38856 6.92207 8.03257 6.44327 8.01881C5.94196 8.00307 5.5757 8.37282 5.57365 8.94908C5.56547 11.0909 5.56342 13.2327 5.57161 15.3745C5.57365 15.9468 5.93582 16.3362 6.4228 16.3343C6.90979 16.3323 7.25354 15.9468 7.25764 15.3647C7.26377 14.3046 7.25968 13.2425 7.25764 12.1824ZM12.4201 12.2021C12.4201 11.1401 12.4262 10.078 12.418 9.01792C12.4139 8.38659 12.0784 8.00897 11.5566 8.01684C11.0594 8.0247 10.732 8.39249 10.73 8.98448C10.7238 11.1066 10.7238 13.2307 10.7279 15.3529C10.73 15.939 11.0655 16.3225 11.5525 16.3343C12.0559 16.3461 12.4139 15.9429 12.418 15.3273C12.4262 14.2849 12.4201 13.2445 12.4201 12.2021Z"
+                                    fill="white"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_497_913">
+                                    <rect width="18" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-center gap-4 lg:mt-10 text-sm md:text-base 2xl:gap-10 2xl:mt-[62px] sm:justify-start"
+                        >
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Sales
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                          <p
+                            class="h-[14px] w-[2px] bg-[rgba(255,255,255,0.28)]"
+                          ></p>
+                          <a
+                            href="#"
+                            class="flex items-center gap-4 hover:text-[rgba(255,255,255,0.28)] duration-300 ease-in-out"
+                          >
+                            Attendees
+                            <img
+                              class="w-[5px] h-[10px]"
+                              src="./assets/images/angle-right.svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       </section>
+      </section>
       <!-- end my events area  -->
     </main>
 
     <!-- start footer  -->
-    <footer class="py-[58px] bg-blackv2">
+    <footer class="py-6 md:py-10 2xl:py-[58px] bg-blackv2 overflow-hidden">
       <div class="container">
-        <div class="row items-center">
-          <div class="col-12 md:col-6">
+        <div class="flex items-center justify-between">
+          <div class=" ">
             <a href="index.html">
               <img
-                class="h-[94px] w-[200px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt=""
               />
             </a>
           </div>
-          <div class="col-12 md:col-6">
-            <ul class="flex items-center gap-6 justify-end">
+          <div class=" ">
+            <ul class="flex items-center gap-2 md:gap-6 justify-end">
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -643,8 +1637,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -661,8 +1656,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -681,23 +1677,28 @@
             </ul>
           </div>
         </div>
-        <div class="mt-[52px]">
-          <div class="flex items-center gap-[244px]">
+        <div class="2xl:mt-[52px] mt-6 md:mt-10">
+          <div
+            class="flex flex-col xl:flex-row justify-center gap-3 xl:gap-32 xl:justify-normal item-center 2xl:gap-[244px]"
+          >
             <div>
-              <p class="w-[474px]">
+              <p
+                class="2xl:w-[474px] text-sm md:text-base text-center xl:text-start"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Malesuada amet nibh sed diam.
               </p>
             </div>
             <div>
               <a
-                href="mailto:Business@goattix.com"
-                class="flex items-center gap-7"
+                href="mailto:Business@goattix.com "
+                class="flex items-center justify-center gap-3 md:gap-5 xl:gap-7 text-sm md:text-base"
               >
                 <div
-                  class="h-[53px] w-[53px] flex items-center justify-center bg-[#292929] rounded-full"
+                  class="flex items-center justify-center bg-[#292929] rounded-full p-2 xl:p-4"
                 >
                   <svg
+                    class="size-5"
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
                     height="14"
@@ -716,7 +1717,7 @@
               </a>
             </div>
             <div>
-              <p class="text-base leading-normal">
+              <p class="text-sm md:text-base leading-normal text-center">
                 © 2021 ibgme.ae. All rights reserved
               </p>
             </div>
@@ -727,358 +1728,433 @@
     <!-- end footer  -->
 
     <!-- get tickets popup  -->
-    <div class="overlay fixed top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[50] backdrop-blur opacity-0 invisible duration-300 ease-in-out"></div>
     <div
-      class="fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] bg-white rounded-[16px] w-[1166px] z-50 overflow-hidden opacity-0 invisible duration-300 ease-in-out" id="getTicketPopup"
+      class="overlay fixed top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[50] backdrop-blur opacity-0 invisible duration-300 ease-in-out"
+    ></div>
+    <div
+      class="fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] bg-white rounded-[16px] w-[1166px] z-50 overflow-hidden opacity-0 invisible duration-300 ease-in-out"
+      id="getTicketPopup"
     >
-      <form action="#" class="max-h-[calc(100vh-90px)] overflow-y-auto custom--scrollbar pt-20 pb-10 px-[52px] relative">
+      <form
+        action="#"
+        class="max-h-[calc(100vh-90px)] overflow-y-auto custom--scrollbar pt-20 pb-10 px-[52px] relative"
+      >
         <!-- table  -->
-      <div>
         <div>
-          <!-- table head  -->
-          <div
-            class="table--head flex items-center justify-between bg-blackv1 py-6 px-12 rounded-tl-[11px] rounded-tr-[11px]"
-          >
-            <p class="text-[18px] font-medium">Tickets</p>
-            <p class="text-[18px] font-medium">Price</p>
-            <p class="text-[18px] font-medium">Quantity</p>
-            <p class="text-[18px] font-medium">Total Price</p>
-            <p class="text-[18px] font-medium">Remove</p>
-          </div>
-          <div class="table--row--wrapp">
-            <!-- table row  -->
-            <div class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]">
-              <p
-                class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
+          <div>
+            <!-- table head  -->
+            <div
+              class="table--head flex items-center justify-between bg-blackv1 py-6 px-12 rounded-tl-[11px] rounded-tr-[11px]"
+            >
+              <p class="text-[18px] font-medium">Tickets</p>
+              <p class="text-[18px] font-medium">Price</p>
+              <p class="text-[18px] font-medium">Quantity</p>
+              <p class="text-[18px] font-medium">Total Price</p>
+              <p class="text-[18px] font-medium">Remove</p>
+            </div>
+            <div class="table--row--wrapp">
+              <!-- table row  -->
+              <div
+                class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]"
               >
-                <img
-                  class="w-[26px] h-[26px]"
-                  src="./assets/images/ticket.svg"
-                  alt=""
-                />
-                18+ to Get In
-              </p>
-              <p class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]">
-                $50.00
-              </p>
-              <!-- quantity  -->
-              <div class="quantity flex items-center w-[24.5%]">
-                <button
-                  class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                  disabled
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
+                  <img
+                    class="w-[26px] h-[26px]"
+                    src="./assets/images/ticket.svg"
+                    alt=""
+                  />
+                  18+ to Get In
+                </p>
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]"
+                >
+                  $50.00
+                </p>
+                <!-- quantity  -->
+                <div class="quantity flex items-center w-[24.5%]">
+                  <button
+                    class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
+                    disabled
                   >
-                    <rect
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
                       width="32"
                       height="32"
-                      rx="16"
-                      fill="black"
-                      fill-opacity="0.08"
-                    />
-                    <path
-                      d="M11.4766 16H21.8813"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <input
-                  class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
-                  value="0"
-                  type="tel"
-                  readonly
-                />
-                <button
-                  class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4766 16H21.8813"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <input
+                    class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
+                    value="0"
+                    type="tel"
+                    readonly
+                  />
+                  <button
+                    class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
                   >
-                    <rect
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
                       width="32"
                       height="32"
-                      rx="16"
-                      fill="black"
-                      fill-opacity="0.08"
-                    />
-                    <path
-                      d="M11.4287 15.999H20.1906"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 11.4277L16 20.1896"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4287 15.999H20.1906"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 11.4277L16 20.1896"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]"
+                >
+                  $150.00
+                </p>
+                <p class="cursor-pointer">
+                  <img
+                    class="h-[27px] w-[27px]"
+                    src="./assets/images/delete.svg"
+                    alt=""
+                  />
+                </p>
               </div>
-              <p class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]">
-                $150.00
+              <!-- table row  -->
+              <div
+                class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]"
+              >
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
+                >
+                  <img
+                    class="w-[26px] h-[26px]"
+                    src="./assets/images/ticket.svg"
+                    alt=""
+                  />
+                  18+ to Get In
+                </p>
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]"
+                >
+                  $50.00
+                </p>
+                <!-- quantity  -->
+                <div class="quantity flex items-center w-[24.5%]">
+                  <button
+                    class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
+                    disabled
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4766 16H21.8813"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <input
+                    class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
+                    value="0"
+                    type="tel"
+                    readonly
+                  />
+                  <button
+                    class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4287 15.999H20.1906"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 11.4277L16 20.1896"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]"
+                >
+                  $150.00
+                </p>
+                <p class="cursor-pointer">
+                  <img
+                    class="h-[27px] w-[27px]"
+                    src="./assets/images/delete.svg"
+                    alt=""
+                  />
+                </p>
+              </div>
+              <!-- table row  -->
+              <div
+                class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]"
+              >
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
+                >
+                  <img
+                    class="w-[26px] h-[26px]"
+                    src="./assets/images/ticket.svg"
+                    alt=""
+                  />
+                  18+ to Get In
+                </p>
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]"
+                >
+                  $50.00
+                </p>
+                <!-- quantity  -->
+                <div class="quantity flex items-center w-[24.5%]">
+                  <button
+                    class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
+                    disabled
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4766 16H21.8813"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <input
+                    class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
+                    value="0"
+                    type="tel"
+                    readonly
+                  />
+                  <button
+                    class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <rect
+                        width="32"
+                        height="32"
+                        rx="16"
+                        fill="black"
+                        fill-opacity="0.08"
+                      />
+                      <path
+                        d="M11.4287 15.999H20.1906"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 11.4277L16 20.1896"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <p
+                  class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]"
+                >
+                  $150.00
+                </p>
+                <p class="cursor-pointer">
+                  <img
+                    class="h-[27px] w-[27px]"
+                    src="./assets/images/delete.svg"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+            <!-- total amount & quantity  -->
+            <div class="flex items-center justify-end gap-7 mt-7">
+              <p class="flex items-center gap-3 text-[rgba(0,0,0,0.68)]">
+                Qty: <span class="text-[20px] font-medium text-blackv1">6</span>
               </p>
-              <p class="cursor-pointer">
-                <img
-                  class="h-[27px] w-[27px]"
-                  src="./assets/images/delete.svg"
-                  alt=""
-                />
+              <p class="h-[15px] w-[1px] bg-[rgba(0,0,0,0.29)]"></p>
+              <p class="flex items-center gap-3 text-[rgba(0,0,0,0.6)]">
+                Total Amount:
+                <span class="text-[20px] font-medium text-blackv1"
+                  >$450.00</span
+                >
               </p>
             </div>
-            <!-- table row  -->
-            <div class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]">
-              <p
-                class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
-              >
-                <img
-                  class="w-[26px] h-[26px]"
-                  src="./assets/images/ticket.svg"
-                  alt=""
-                />
-                18+ to Get In
-              </p>
-              <p class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]">
-                $50.00
-              </p>
-              <!-- quantity  -->
-              <div class="quantity flex items-center w-[24.5%]">
-                <button
-                  class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                  disabled
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <rect
-                      width="32"
-                      height="32"
-                      rx="16"
-                      fill="black"
-                      fill-opacity="0.08"
-                    />
-                    <path
-                      d="M11.4766 16H21.8813"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <input
-                  class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
-                  value="0"
-                  type="tel"
-                  readonly
-                />
-                <button
-                  class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <rect
-                      width="32"
-                      height="32"
-                      rx="16"
-                      fill="black"
-                      fill-opacity="0.08"
-                    />
-                    <path
-                      d="M11.4287 15.999H20.1906"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 11.4277L16 20.1896"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <p class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]">
-                $150.00
-              </p>
-              <p class="cursor-pointer">
-                <img
-                  class="h-[27px] w-[27px]"
-                  src="./assets/images/delete.svg"
-                  alt=""
-                />
-              </p>
-            </div>
-            <!-- table row  -->
-            <div class="table--row flex items-center px-12 py-8 border-b-[1px] border-[rgba(0,0,0,0.10)]">
-              <p
-                class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] flex items-center gap-[10px] w-[22%]"
-              >
-                <img
-                  class="w-[26px] h-[26px]"
-                  src="./assets/images/ticket.svg"
-                  alt=""
-                />
-                18+ to Get In
-              </p>
-              <p class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[21%]">
-                $50.00
-              </p>
-              <!-- quantity  -->
-              <div class="quantity flex items-center w-[24.5%]">
-                <button
-                  class="minus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                  disabled
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <rect
-                      width="32"
-                      height="32"
-                      rx="16"
-                      fill="black"
-                      fill-opacity="0.08"
-                    />
-                    <path
-                      d="M11.4766 16H21.8813"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <input
-                  class="w-[56px] bg-transparent text-[18px] font-medium text-blackv1 text-center focus:outline-none"
-                  value="0"
-                  type="tel"
-                  readonly
-                />
-                <button
-                  class="plus h-[42px] w-[42px] rounded-full disabled:opacity-50"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <rect
-                      width="32"
-                      height="32"
-                      rx="16"
-                      fill="black"
-                      fill-opacity="0.08"
-                    />
-                    <path
-                      d="M11.4287 15.999H20.1906"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 11.4277L16 20.1896"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <p class="text-[18px] leading-normal text-[rgba(0,0,0,0.6)] w-[28%]">
-                $150.00
-              </p>
-              <p class="cursor-pointer">
-                <img
-                  class="h-[27px] w-[27px]"
-                  src="./assets/images/delete.svg"
-                  alt=""
-                />
-              </p>
-            </div>
-          </div>
-          <!-- total amount & quantity  -->
-          <div class="flex items-center justify-end gap-7 mt-7">
-            <p class="flex items-center gap-3 text-[rgba(0,0,0,0.68)]">Qty: <span class="text-[20px] font-medium text-blackv1">6</span></p>
-            <p class="h-[15px] w-[1px] bg-[rgba(0,0,0,0.29)]"></p>
-            <p class="flex items-center gap-3 text-[rgba(0,0,0,0.6)]">Total Amount: <span class="text-[20px] font-medium text-blackv1">$450.00</span></p>
           </div>
         </div>
-      </div>
-      <!-- attendee box  -->
-       <div class="py-[30px] px-[50px] relative mt-[50px] rounded-[16px] bg-[#F2F2F2] text-blackv1>
-        <h3 class="text-[24px] font-medium leading-normal mb-[6px] ">Attendee1</h3>
+        <!-- attendee box  -->
+        <div class="py-[30px] px-[50px] relative mt-[50px] rounded-[16px]
+        bg-[#F2F2F2] text-blackv1>
+        <h3 class="text-[24px] font-medium leading-normal mb-[6px]">
+          Attendee1
+        </h3>
         <div class="row">
           <div class="col-12 md:col-6 mt-5">
             <label for="name" class="text-[18px] mb-5 inline-block">Name</label>
-            <input type="text" id="name" class="w-full h-[72px] rounded-[12px] border border-blackv1 focus:outline-none px-5" placeholder="Enter your name" required>
+            <input
+              type="text"
+              id="name"
+              class="w-full h-[72px] rounded-[12px] border border-blackv1 focus:outline-none px-5"
+              placeholder="Enter your name"
+              required
+            />
           </div>
           <div class="col-12 md:col-6 mt-5">
-            <label for="name" class="text-[18px] mb-5 inline-block">Email</label>
-            <input type="email" id="name" class="w-full h-[72px] rounded-[12px] border border-blackv1 focus:outline-none px-5" placeholder="Enter your email" required>
+            <label for="name" class="text-[18px] mb-5 inline-block"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="name"
+              class="w-full h-[72px] rounded-[12px] border border-blackv1 focus:outline-none px-5"
+              placeholder="Enter your email"
+              required
+            />
           </div>
         </div>
 
         <!-- close--attendee  -->
-        <p class="close--attendee absolute top-[23px] right-[23px] cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 0C5.364 0 0 5.364 0 12C0 18.636 5.364 24 12 24C18.636 24 24 18.636 24 12C24 5.364 18.636 0 12 0ZM17.16 17.16C16.692 17.628 15.936 17.628 15.468 17.16L12 13.692L8.532 17.16C8.064 17.628 7.308 17.628 6.84 17.16C6.372 16.692 6.372 15.936 6.84 15.468L10.308 12L6.84 8.532C6.372 8.064 6.372 7.308 6.84 6.84C7.308 6.372 8.064 6.372 8.532 6.84L12 10.308L15.468 6.84C15.936 6.372 16.692 6.372 17.16 6.84C17.628 7.308 17.628 8.064 17.16 8.532L13.692 12L17.16 15.468C17.616 15.924 17.616 16.692 17.16 17.16Z" fill="black" fill-opacity="0.24"/>
+        <p
+          class="close--attendee absolute top-[23px] right-[23px] cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M12 0C5.364 0 0 5.364 0 12C0 18.636 5.364 24 12 24C18.636 24 24 18.636 24 12C24 5.364 18.636 0 12 0ZM17.16 17.16C16.692 17.628 15.936 17.628 15.468 17.16L12 13.692L8.532 17.16C8.064 17.628 7.308 17.628 6.84 17.16C6.372 16.692 6.372 15.936 6.84 15.468L10.308 12L6.84 8.532C6.372 8.064 6.372 7.308 6.84 6.84C7.308 6.372 8.064 6.372 8.532 6.84L12 10.308L15.468 6.84C15.936 6.372 16.692 6.372 17.16 6.84C17.628 7.308 17.628 8.064 17.16 8.532L13.692 12L17.16 15.468C17.616 15.924 17.616 16.692 17.16 17.16Z"
+              fill="black"
+              fill-opacity="0.24"
+            />
           </svg>
         </p>
-        
-       </div>
 
-       <!-- close--attendee  -->
-       <p class="close--getTicket absolute top-[23px] right-[51px] cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <g clip-path="url(#clip0_503_392)">
-            <path d="M16.9997 2.83398C9.16551 2.83398 2.83301 9.16648 2.83301 17.0007C2.83301 24.8348 9.16551 31.1673 16.9997 31.1673C24.8338 31.1673 31.1663 24.8348 31.1663 17.0007C31.1663 9.16648 24.8338 2.83398 16.9997 2.83398ZM23.0913 23.0923C22.5388 23.6448 21.6463 23.6448 21.0938 23.0923L16.9997 18.9982L12.9055 23.0923C12.353 23.6448 11.4605 23.6448 10.908 23.0923C10.3555 22.5398 10.3555 21.6473 10.908 21.0948L15.0022 17.0007L10.908 12.9065C10.3555 12.354 10.3555 11.4615 10.908 10.909C11.4605 10.3565 12.353 10.3565 12.9055 10.909L16.9997 15.0032L21.0938 10.909C21.6463 10.3565 22.5388 10.3565 23.0913 10.909C23.6438 11.4615 23.6438 12.354 23.0913 12.9065L18.9972 17.0007L23.0913 21.0948C23.6297 21.6332 23.6297 22.5398 23.0913 23.0923Z" fill="black" fill-opacity="0.22"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_503_392">
-              <rect width="34" height="34" fill="white"/>
-            </clipPath>
-          </defs>
-        </svg>
-      </p>
-      <div class="flex justify-end">
-        <button class="mt-9 inline-block py-4 px-[60px] border border-blackv1 bg-blackv1 text-[20px] font-medium rounded-[100px] duration-300 ease-in-out hover:bg-transparent hover:text-blackv1" type="submit">Checkout</button>
-      </div>
+        <!-- close--attendee  -->
+        <p
+          class="close--getTicket absolute top-[23px] right-[51px] cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_503_392)">
+              <path
+                d="M16.9997 2.83398C9.16551 2.83398 2.83301 9.16648 2.83301 17.0007C2.83301 24.8348 9.16551 31.1673 16.9997 31.1673C24.8338 31.1673 31.1663 24.8348 31.1663 17.0007C31.1663 9.16648 24.8338 2.83398 16.9997 2.83398ZM23.0913 23.0923C22.5388 23.6448 21.6463 23.6448 21.0938 23.0923L16.9997 18.9982L12.9055 23.0923C12.353 23.6448 11.4605 23.6448 10.908 23.0923C10.3555 22.5398 10.3555 21.6473 10.908 21.0948L15.0022 17.0007L10.908 12.9065C10.3555 12.354 10.3555 11.4615 10.908 10.909C11.4605 10.3565 12.353 10.3565 12.9055 10.909L16.9997 15.0032L21.0938 10.909C21.6463 10.3565 22.5388 10.3565 23.0913 10.909C23.6438 11.4615 23.6438 12.354 23.0913 12.9065L18.9972 17.0007L23.0913 21.0948C23.6297 21.6332 23.6297 22.5398 23.0913 23.0923Z"
+                fill="black"
+                fill-opacity="0.22"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_503_392">
+                <rect width="34" height="34" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </p>
+        <div class="flex justify-end">
+          <button
+            class="mt-9 inline-block py-4 px-[60px] border border-blackv1 bg-blackv1 text-[20px] font-medium rounded-[100px] duration-300 ease-in-out hover:bg-transparent hover:text-blackv1"
+            type="submit"
+          >
+            Checkout
+          </button>
+        </div>
       </form>
     </div>
 

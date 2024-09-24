@@ -109,12 +109,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let trigger = document.querySelector(".btn-getTicket");
     let popup = document.getElementById("getTicketPopup");
     let overlay = document.querySelector(".overlay");
+    let closePopupBtn=document.querySelector(".close--getTicket")
 
     if (trigger) {
       trigger.addEventListener("click", function (e) {
         e.preventDefault();
         showPopup(popup, overlay);
       });
+
+      closePopupBtn?.addEventListener("click",()=>{
+        hidePopup(popup, overlay);
+      })
 
       // Add event listener to close the popup when clicking outside
       document.addEventListener("click", function (event) {
