@@ -13,60 +13,65 @@
   <body>
     <main>
       <!-- auth area start  -->
-      <section class="auth--area 2xl:max-h-screen 2xl:overflow-hidden">
+      <section class="auth--area 2xl:h-[100vh] overflow-hidden">
         <form action="#">
-          <div class="flex flex-col md:flex-row auth--form">
-            <div class="2xl:w-1/2 2xl:px-[200px] 2xl:py-[70px] 2xl:max-h-screen 2xl:overflow-y-auto 2xl:no-scrollbar px-5 py-10">
+          <div class="flex flex-col md:flex-row auth--form overflow-y-hidden">
+            <div class="md:w-1/2 2xl:px-[200px] px-5 md:px-8 pt-12 pb-10"
+            >
               <div>
                 <img
-                  class="h-[60px] w-[100px] 2xl:w-[218px] 2xl:h-[101px] mb-8 2xl:mb-[52px] mx-auto"
+                  class="h-[50px] w-[100px] xl:w-[200px] xl:h-[80px] mb-6 xl:mb-10 mx-auto object-cover"
                   src="./assets/images/logo.svg"
                   alt=""
                 />
               </div>
               <h1
-                class="text-3xl md:text-4xl lg:text-[42px] font-medium text-white mb-7 2xl:mb-[55px] text-center"
+                class="text-3xl md:text-4xl lg:text-[42px] font-medium text-white mb-7 text-center"
               >
                 Sign In
               </h1>
-              <div class="mt-6 lg:mt-[30px]">
-                <label class="text-sm md:text-base lg:text-[18px] text-white mb-3 md:mb-4 block" for="email"
+              <div class=" md:mt-6">
+                <label
+                  class="text-sm md:text-base lg:text-[18px] text-white mb-3 md:mb-4 block"
+                  for="email"
                   >Email Address</label
                 >
                 <input
                   id="email"
-                  class="border border-white rounded-lg text-sm md:text-base 2xl:rounded-[12px] px-[20px] h-12 md:h-16 2xl:h-[72px] focus:outline-none w-full text-white bg-transparent"
+                  class="border border-white rounded-lg text-sm md:text-base 2xl:rounded-[12px] px-[20px] h-12 md:h-14 xl:h-[72px] focus:outline-none w-full text-white bg-transparent"
                   type="email"
                   placeholder="Enter Email Address"
                   required
                 />
               </div>
-              <div class="mt-6 md:mt-[30px]">
-                <label class="text-sm md:text-base lg:text-[18px] text-white mb-4 block" for="password"
+              <div class="mt-4 lg:mt-6 2xl:mt-[30px]">
+                <label
+                  class="text-sm md:text-base lg:text-[18px] text-white mb-3 md:mb-4 block"
+                  for="password"
                   >Password</label
                 >
                 <input
                   id="password"
-                  class="border border-white rounded-lg text-sm md:text-base 2xl:rounded-[12px] px-[20px] h-12 md:h-16 2xl:h-[72px] focus:outline-none lg:h-[72px] w-full text-white bg-transparent"
+                  class="border border-white rounded-lg text-sm md:text-base 2xl:rounded-[12px] px-[20px] h-12 md:h-14 xl:h-[72px] focus:outline-none w-full text-white bg-transparent"
                   type="email"
                   placeholder="Enter Password"
                   required
                 />
               </div>
               <button
-                class="w-full rounded-[100px] text-[18px] bg-white border border-white text-blackv1 font-medium mt-6 md:mt-8 lg:mt-10 px-6 py-2 md:py-3 lg:py-4 xl:py-6 2xl:mt-[60px] hover:bg-transparent hover:text-white duration-300 ease-in-out"
+                class="w-full rounded-[100px] xl:text-[18px] bg-white border border-white text-blackv1 font-medium mt-6 lg:mt-8 xl:mt-10 px-6 py-3 xl:py-5 2xl:mt-[60px] hover:bg-transparent text-sm md:text-base hover:text-white duration-300 ease-in-out"
                 type="submit"
               >
                 Sign In
               </button>
-              <div class="text-center xl:text-right">
+              <div class="text-right">
                 <a
                   href="#"
-                  class="text-sm md:text-base lg:text-[18px] mt-5 inline-block hover:opacity-80 duration-300 ease-in-out"
+                  class="text-xs md:text-base xl:text-[18px] mt-4 md:mt-5 lg:mt-6 inline-block hover:opacity-80 duration-300 ease-in-out"
                   >Forgot your Password?</a
                 >
               </div>
-              <div class="relative mt-6 xl:mt-10">
+              <div class="relative mt-4 md:mt-5 lg:mt-6 xl:mt-10">
                 <span
                   class="block h-[1px] w-full bg-[rgba(255,255,255,0.32)]"
                 ></span>
@@ -76,10 +81,12 @@
                 >
               </div>
               <!-- ssl login  -->
-              <div class="flex flex-col lg:flex-row items-center gap-6 mt-8 md:mt-10 lg:mt-12 2xl:mt-[50px]">
+              <div
+                class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2 xl:gap-5 2xl:gap-8 mt-7 md:mt-8 2xl:mt-[50px]  "
+              >
                 <a
                   href="#"
-                  class="g-login py-5 px-8 rounded-[100px] bg-white flex items-center gap-3 text-sm md:text-base lg:text-[18px] font-medium text-blackv1 h-10 md:h-14 lg:h-16"
+                  class="g-login text-nowrap py-5 px-8 rounded-[100px] bg-white flex items-center gap-2 text-sm xl:text-base xl:text-[18px] font-medium text-blackv1 h-10 md:h-12 xl:h-16"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +117,7 @@
                 </a>
                 <a
                   href="#"
-                  class="fb-login py-5 px-8 rounded-[100px] bg-white flex items-center gap-3 text-sm md:text-base lg:text-[18px] font-medium text-blackv1 h-10 md:h-14 lg:h-16"
+                  class="fb-login text-nowrap py-5 px-8 rounded-[100px] bg-white flex items-center gap-2 text-sm xl:text-base xl:text-[18px] font-medium text-blackv1 h-10 md:h-12 xl:h-16"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -129,14 +136,24 @@
                 </a>
               </div>
               <!-- new user  -->
-              <div class="flex items-center justify-center gap-[18px] mt-7 md:mt-10 lg:mt-12 2xl:mt-[60px]">
+              <div
+                class="flex items-center justify-center gap-[18px] mt-6 md:mt-8 2xl:mt-[60px]"
+              >
                 <p class="text-sm md:text-base lg:text-[18px]">New User?</p>
-                <a href="#" class="text-sm md:text-base lg:text-[18px] font-bold hover:opacity-80 duration-300 ease-in-out">Create Account</a>
+                <a
+                  href="#"
+                  class="text-sm md:text-base lg:text-[18px] font-bold hover:opacity-80 duration-300 ease-in-out"
+                  >Create Account</a
+                >
               </div>
             </div>
             <!-- image  -->
             <div class="md:w-1/2">
-                <img  class="w-full h-full object-cover" src="./assets/images/auth.png" alt="">
+              <img
+                class="w-full h-full object-cover"
+                src="./assets/images/auth.png"
+                alt=""
+              />
             </div>
           </div>
         </form>

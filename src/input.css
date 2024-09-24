@@ -406,6 +406,9 @@ body {
   .coupon {
     flex-diretion: column;
   }
+  .ssl-btns{
+    flex-direction:column;
+  }
 }
 
 /*============custom============*/
