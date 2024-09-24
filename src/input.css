@@ -228,7 +228,7 @@ body {
   }
 
   /* Events */
-  .events-filter .nice-select {
+  .events-filter .nice-select, {
     @apply bg-blackv2 border-blackv2 rounded-[4px] h-[40px] leading-[40px];
   }
   .nice-select .current {
@@ -300,6 +300,12 @@ body {
     @apply w-2 h-2 right-3;
   }
   /* create event:end */
+
+  /* edit venue:start */
+  .edit-venue--area .nice-select {
+    @apply min-w-[250px] rounded-md w-full h-12 leading-[48px] px-5;
+  }
+  /* edit venue:end */
 }
 @media only screen and (min-width: 641px) and (max-width: 991px) {
   .owl-dots {
@@ -356,6 +362,12 @@ body {
     width: 20px;
   }
   /* checkout:end */
+
+  /* edit venue:start */
+  .edit-venue--area .nice-select {
+    @apply min-w-[250px] rounded-xl w-full h-14 leading-[48px] px-5;
+  }
+  /* edit venue:end */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -385,6 +397,12 @@ body {
     right: 1rem;
   }
   /* Attendee::end */
+
+  /* edit venue:start */
+  .edit-venue--area .nice-select {
+    @apply min-w-[250px] rounded-xl w-full h-14 leading-[48px] px-5;
+  }
+  /* edit venue:end */
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1521px) {
