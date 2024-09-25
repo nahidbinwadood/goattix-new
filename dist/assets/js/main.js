@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let trigger = document.querySelector(".btn-getTicket");
     let popup = document.getElementById("getTicketPopup");
     let overlay = document.querySelector(".overlay");
-    let closePopupBtn=document.querySelector(".close--getTicket")
+    let closePopupBtn = document.querySelector(".close--attendee");
 
     if (trigger) {
       trigger.addEventListener("click", function (e) {
@@ -117,9 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
         showPopup(popup, overlay);
       });
 
-      closePopupBtn?.addEventListener("click",()=>{
+      closePopupBtn?.addEventListener("click", () => {
         hidePopup(popup, overlay);
-      })
+      });
 
       // Add event listener to close the popup when clicking outside
       document.addEventListener("click", function (event) {
@@ -186,13 +186,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const myEventSingle = $(this).closest(".my-event-single");
         // Add or remove the class with a delay
-        if (myEventSingle.hasClass("rounded-b-none")) {
+        if (myEventSingle.hasClass("rounded-b-xl")) {
           setTimeout(function () {
-            myEventSingle.removeClass("rounded-b-none");
+            myEventSingle.removeClass("rounded-b-xl");
             svgIcon.removeClass("rotate-180");
           }, 320); // Adjust the delay time as needed
         } else {
-          myEventSingle.addClass("rounded-b-none");
+          myEventSingle.addClass("rounded-b-xl");
           svgIcon.addClass("rotate-180");
           svgIcon.addClass("duration-300");
         }
@@ -222,70 +222,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //=== time and date relatex func ====//
 // startDate Func
- function starDateFunc() {
-
-  console.log('clicked');
+function starDateFunc() {
+  console.log("clicked");
 
   document.addEventListener("DOMContentLoaded", function () {
-    flatpickr('.start-date', {
+    flatpickr(".start-date", {
       // Enable time picker
       dateFormat: "Y-m-d", // Date format with 12-hour time and AM/PM
     });
   });
+}
 
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    flatpickr('.start-date', {
-      // Enable time picker
-      dateFormat: "Y-m-d", // Date format with 12-hour time and AM/PM
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr(".start-date", {
+    // Enable time picker
+    dateFormat: "Y-m-d", // Date format with 12-hour time and AM/PM
   });
-
-
-
+});
 
 // endDate Func
 
-  document.addEventListener("DOMContentLoaded", function () {
-      flatpickr(`.end-date`, {
-        // Enable time picker
-        dateFormat: "Y-m-d", // Date format with 12-hour time and AM/PM
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr(`.end-date`, {
+    // Enable time picker
+    dateFormat: "Y-m-d", // Date format with 12-hour time and AM/PM
   });
-
-
+});
 
 // startTime Func
 
-  document.addEventListener("DOMContentLoaded", function () {
-    flatpickr(`.start-time`, {
-      enableTime: true, // Enable time picker
-      dateFormat: "h:i K", // Date format with 12-hour time and AM/PM
-      time_24hr: false, // 12-hour format with AM/PM
-      minuteIncrement: 5, // Increment by 5 minutes
-      defaultHour: "currentHour", // Default hour (9 AM)
-      defaultMinute: "currentMinuite", // Default minute
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr(`.start-time`, {
+    enableTime: true, // Enable time picker
+    dateFormat: "h:i K", // Date format with 12-hour time and AM/PM
+    time_24hr: false, // 12-hour format with AM/PM
+    minuteIncrement: 5, // Increment by 5 minutes
+    defaultHour: "currentHour", // Default hour (9 AM)
+    defaultMinute: "currentMinuite", // Default minute
   });
-
+});
 
 // endTime Func
 
-  document.addEventListener("DOMContentLoaded", function () {
-    flatpickr(`.end-time`, {
-      enableTime: true, // Enable time picker
-      dateFormat: "h:i K", // Date format with 12-hour time and AM/PM
-      time_24hr: false, // 12-hour format with AM/PM
-      minuteIncrement: 5, // Increment by 5 minutes
-      defaultHour: "currentHour", // Default hour (9 AM)
-      defaultMinute: "currentMinuite", // Default minute
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr(`.end-time`, {
+    enableTime: true, // Enable time picker
+    dateFormat: "h:i K", // Date format with 12-hour time and AM/PM
+    time_24hr: false, // 12-hour format with AM/PM
+    minuteIncrement: 5, // Increment by 5 minutes
+    defaultHour: "currentHour", // Default hour (9 AM)
+    defaultMinute: "currentMinuite", // Default minute
   });
-
-
-
-
+});
 
 //=== time and date relatex func ====//
 
@@ -360,9 +348,16 @@ const newVenueParentContainer = document.getElementById(
 // add new recurring event
 
 // append new data func
-function appendNewElementFunc(addBtn, appendChildElem, appendParentElem, target,  extraclass1, extraclass2,) {
+function appendNewElementFunc(
+  addBtn,
+  appendChildElem,
+  appendParentElem,
+  target,
+  extraclass1,
+  extraclass2
+) {
   addBtn.addEventListener("click", (event) => {
-    starDateFunc()
+    starDateFunc();
 
     let newCreatedElement = document.createElement("li");
 
@@ -389,9 +384,9 @@ if (createNewEventBtn && newEventSelector && newEventParentContainer) {
     createNewEventBtn,
     newEventSelector,
     newEventParentContainer,
-    '.start-date',
-    'flex-col',
-    'gap-5'
+    ".start-date",
+    "flex-col",
+    "gap-5"
   );
 }
 
@@ -401,9 +396,9 @@ if (createNewVenueBtn && newVenueSelector && newVenueParentContainer) {
     createNewVenueBtn,
     newVenueSelector,
     newVenueParentContainer,
-    '.start-date',
-    'flex-col',
-    'gap-5'
+    ".start-date",
+    "flex-col",
+    "gap-5"
   );
 }
 
@@ -436,60 +431,63 @@ const recurringNewEventElements = document.getElementById(
 const recurringEventCheckbox = document.getElementById(
   "recurring-event-checkbox"
 );
-const recurringParentDiv = document.getElementById('recurring-parent-div')
-const addRecurringBtn = document.getElementById('add-recurring-event-btn')
-const recurringEventNewElem = document.getElementsByClassName('recurring-event-wrapper')
+const recurringParentDiv = document.getElementById("recurring-parent-div");
+const addRecurringBtn = document.getElementById("add-recurring-event-btn");
+const recurringEventNewElem = document.getElementsByClassName(
+  "recurring-event-wrapper"
+);
 
-function checkboxAddElemFunc (targetElem, parentDiv, addBtn) {
+function checkboxAddElemFunc(targetElem, parentDiv, addBtn) {
   targetElem.addEventListener("change", (event) => {
-    event.stopPropagation()
+    event.stopPropagation();
     if (targetElem.checked) {
       parentDiv.style.height = "100%";
       parentDiv.style.opacity = "100%";
-      addBtn.style.opacity= '100%'
-      setTimeout(
-        addBtn.style.display = 'flex',300
-      )
+      addBtn.style.opacity = "100%";
+      setTimeout((addBtn.style.display = "flex"), 300);
     } else {
       parentDiv.style.height = "0rem";
       parentDiv.style.opacity = "0%";
-      addBtn.style.opacity= '0%'
-      setTimeout(
-        addBtn.style.display = '', 300
-      )
+      addBtn.style.opacity = "0%";
+      setTimeout((addBtn.style.display = ""), 300);
     }
   });
 }
 
-if(addRecurringBtn && recurringParentDiv && recurringEventCheckbox) {
-
-  checkboxAddElemFunc(recurringEventCheckbox, recurringParentDiv, addRecurringBtn )
+if (addRecurringBtn && recurringParentDiv && recurringEventCheckbox) {
+  checkboxAddElemFunc(
+    recurringEventCheckbox,
+    recurringParentDiv,
+    addRecurringBtn
+  );
 }
-
-
-
 
 if (addRecurringBtn && recurringEventNewElem && recurringParentDiv) {
   appendNewElementFunc(
     addRecurringBtn,
     recurringEventNewElem,
     recurringParentDiv,
-    '.start-date',
+    ".start-date",
     `flex-col`
   );
 }
 
+// add exception
+const addExceptionCheckbox = document.getElementById("add-exception-checkbox");
+const addExceptionParentDiv = document.getElementById(
+  "add-exception-parent-div"
+);
+const addExceptionBtn = document.getElementById("add-acception-btn");
+const addExceptionNewElement = document.getElementsByClassName(
+  "add-acception-new-element"
+);
 
-// add exception 
-const addExceptionCheckbox = document.getElementById('add-exception-checkbox')
-const addExceptionParentDiv = document.getElementById('add-exception-parent-div')
-const addExceptionBtn = document.getElementById('add-acception-btn')
-const addExceptionNewElement = document.getElementsByClassName('add-acception-new-element')
-
-
-
-if(addExceptionBtn && addExceptionCheckbox && addExceptionParentDiv) {
-  checkboxAddElemFunc(addExceptionCheckbox, addExceptionParentDiv, addExceptionBtn)
+if (addExceptionBtn && addExceptionCheckbox && addExceptionParentDiv) {
+  checkboxAddElemFunc(
+    addExceptionCheckbox,
+    addExceptionParentDiv,
+    addExceptionBtn
+  );
 }
 
 if (addExceptionBtn && addExceptionNewElement && addExceptionParentDiv) {
@@ -497,20 +495,30 @@ if (addExceptionBtn && addExceptionNewElement && addExceptionParentDiv) {
     addExceptionBtn,
     addExceptionNewElement,
     addExceptionParentDiv,
-    '.start-date',
-    'row'
+    ".start-date",
+    "row"
   );
 }
 
-
-
 // ticket setting banner wrapper
-const settingBackgroundInput = document.getElementById('ticket-setting-background-image-input');
-const settingImageContainerLabel = document.getElementById('ticket-setting-image-preview-label')
-const settingImageNameContainer = document.getElementById('ticket-setting-image-name-wrapper');
-const settingBannerMainWraper = document.getElementById('ticket-setting-banner-main-wrapper')
+const settingBackgroundInput = document.getElementById(
+  "ticket-setting-background-image-input"
+);
+const settingImageContainerLabel = document.getElementById(
+  "ticket-setting-image-preview-label"
+);
+const settingImageNameContainer = document.getElementById(
+  "ticket-setting-image-name-wrapper"
+);
+const settingBannerMainWraper = document.getElementById(
+  "ticket-setting-banner-main-wrapper"
+);
 
-if (settingBackgroundInput && settingImageContainerLabel && settingImageNameContainer) {
+if (
+  settingBackgroundInput &&
+  settingImageContainerLabel &&
+  settingImageNameContainer
+) {
   imageUploadAndPreview(
     settingBackgroundInput,
     settingImageContainerLabel,
@@ -520,7 +528,7 @@ if (settingBackgroundInput && settingImageContainerLabel && settingImageNameCont
 
 if (settingImageNameContainer && settingBannerMainWraper) {
   settingImageNameContainer.addEventListener("click", () => {
-    console.log('image-namne');
+    console.log("image-namne");
     settingBannerMainWraper.children[1].children[1].style.display = "none";
     settingBannerMainWraper.children[1].children[0].children[1].innerHTML = `<h4 class="text-sm text-gray-400 pb-1">
                   Choose a JPG, PNG, or GIF, file under 32 MB in size
@@ -529,25 +537,20 @@ if (settingImageNameContainer && settingBannerMainWraper) {
   });
 }
 
-
-
-// change tab 
-const addNewWrappers = document.querySelectorAll(".sm-add-new-wrapper")
+// change tab
+const addNewWrappers = document.querySelectorAll(".sm-add-new-wrapper");
 
 bottomAddBtns.forEach((item, indexBtn) => {
-  item.addEventListener('click', () => {
+  item.addEventListener("click", () => {
     addNewWrappers.forEach((item, indexWrapper) => {
-      if(indexBtn === indexWrapper) {
-        item.style.display = 'block';
-      }else{
-        item.style.display = 'none'
+      if (indexBtn === indexWrapper) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
       }
-    })
-    
-  })
-})
-
-
+    });
+  });
+});
 
 const timezones = [
   { value: "UTC-12:00", label: "UTC-12:00" },
@@ -576,13 +579,13 @@ const timezones = [
   { value: "UTC+11:00", label: "UTC+11:00" },
   { value: "UTC+12:00", label: "UTC+12:00" },
   { value: "UTC+13:00", label: "UTC+13:00" },
-  { value: "UTC+14:00", label: "UTC+14:00" }
+  { value: "UTC+14:00", label: "UTC+14:00" },
 ];
 
-const timezoneSelect = document.getElementById('timezone');
+const timezoneSelect = document.getElementById("timezone");
 
 timezones.forEach((timezone) => {
-  const option = document.createElement('option');
+  const option = document.createElement("option");
   option.value = timezone.value;
   option.textContent = timezone.label;
   timezoneSelect?.appendChild(option);
@@ -590,26 +593,26 @@ timezones.forEach((timezone) => {
 
 // ===sidebar::start
 const openMenu = document.getElementById("openMenu");
-      const closeMenu = document.getElementById("closeMenu");
-      const sidebarMenu = document.getElementById("menu-sidebar");
+const closeMenu = document.getElementById("closeMenu");
+const sidebarMenu = document.getElementById("menu-sidebar");
 
-      openMenu?.addEventListener("click", () => {
-        if (sidebarMenu) {
-          sidebarMenu.classList.remove("translate-x-full");
-          sidebarMenu.classList.add("translate-x-0");
-        }
-      });
-      closeMenu?.addEventListener("click", () => {
-        if (openMenu) {
-          sidebarMenu.classList.add("translate-x-full");
-          sidebarMenu.classList.remove("translate-x-0");
-        }
-      });
+openMenu?.addEventListener("click", () => {
+  if (sidebarMenu) {
+    sidebarMenu.classList.remove("translate-x-full");
+    sidebarMenu.classList.add("translate-x-0");
+  }
+});
+closeMenu?.addEventListener("click", () => {
+  if (openMenu) {
+    sidebarMenu.classList.add("translate-x-full");
+    sidebarMenu.classList.remove("translate-x-0");
+  }
+});
 
-      document.addEventListener("click", (e) => {
-        if (!sidebarMenu.contains(e.target) && !openMenu.contains(e.target)) {
-          sidebarMenu.classList.add("translate-x-full");
-          sidebarMenu.classList.remove("translate-x-0");
-        }
-      });
+document.addEventListener("click", (e) => {
+  if (!sidebarMenu.contains(e.target) && !openMenu.contains(e.target)) {
+    sidebarMenu.classList.add("translate-x-full");
+    sidebarMenu.classList.remove("translate-x-0");
+  }
+});
 // ===sidebar::end

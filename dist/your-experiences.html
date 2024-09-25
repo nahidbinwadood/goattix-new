@@ -12,21 +12,23 @@
   </head>
   <body>
     <!-- start header  -->
-    <header class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-[37px]">
-      <div class="container">
-        <div class="row items-center">
-          <div class="col-3">
+    <header
+      class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-2 xl:py-7 2xl:py-[37px]"
+    >
+      <div class="container relative">
+        <div class="2xl:row lg:items-center flex items-center justify-between">
+          <div class="2xl:col-3">
             <!-- logo  -->
             <a href="index.html">
               <img
-                class="w-[123px] h-[54px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt="logo"
               />
             </a>
           </div>
-          <div class="col-6">
-            <ul class="menu flex items-center gap-12">
+          <div class="2xl:col-6 hidden xl:flex">
+            <ul class="menu flex items-center gap-8 2xl:gap-12">
               <li>
                 <a
                   href="index.html"
@@ -71,24 +73,115 @@
               </li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="2xl:col-3 hidden xl:flex 2xl:block">
             <div class="text-right">
               <a href="login.html" class="button">Sign in</a>
             </div>
           </div>
+
+          <!-- hamburger icons::start -->
+          <div class="transition duration-500 xl:hidden">
+            <div id="openMenu" class="transition duration-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="#8F8F8F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- hamburger icons::end -->
         </div>
       </div>
+      <!-- sidebar::start -->
+      <div
+        id="menu-sidebar"
+        class="bg-blackv1 absolute top-0 h-[100vh] right-0 pt-8 px-6 w-[220px] translate-x-full duration-500 transition-all md:w-[270px]"
+      >
+        <div>
+          <div class="transition duration-500">
+            <svg
+              id="closeMenu"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18 6L6 18M6 6l12 12"
+                stroke="#8F8F8F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col pt-8 justify-center pl-6 gap-6">
+          <div class="sidebar--menu--active">
+            <a
+              class="active text-sm md:text-base font-medium hover:text-white duration-300 ease-in-out"
+              href="index.html"
+              >Home</a
+            >
+          </div>
+          <a
+            href="events.html"
+            class="text-sm md:text-base text-menuColor"
+            href="index.html"
+            >Events</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >About Us</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Permotors</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Blogs</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Contact Us</a
+          >
+        </div>
+
+        <div class="pt-6 pl-5">
+          <div>
+            <a
+              href="login.html"
+              class="text-sm md:text-base font-medium bg-white px-10 py-3 rounded-full text-black"
+              >Sign in</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- sidebar::end -->
     </header>
     <!-- end header  -->
-    <main>
+
+    <main class="overflow-x-hidden">
       <!-- start your experiences area  -->
-      <section class="your-experiences--area pt-[190px] pb-[100px]">
+      <section
+        class="your-experiences--area pt-24 md:pt-28 lg:pt-40 pb-20 md:pb-28 lg:pb-40 2xl:pt-[190px] 2xl:pb-[100px]"
+      >
         <div class="container">
           <div class="row">
             <div class="col-12">
               <!-- title  -->
               <div>
-                <h1 class="text-[42px] font-medium mb-[38px]">
+                <h1
+                  class="text-2xl md:text-3xl lg:text-4xl 2xl:text-[42px] font-medium mb-6 md:mb-8 lg:mb-[38px]"
+                >
                   Your Experiences
                 </h1>
               </div>
@@ -98,27 +191,35 @@
                 <div class="relative expericence-card">
                   <!-- my-experience-single  -->
                   <div
-                    class="my-event-single experience-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8 relative"
+                    class="my-event-single experience-single flex items-center justify-between bg-blackv2  px-4 py-4 md:px-6 md:py-5 xl:pr-12 rounded-t-xl rounded-b-xl  mt-8 relative"
                   >
                     <!-- event  -->
-                    <div class="flex items-center gap-8 w-full">
-                      <div class="overflow-hidden rounded-[16px]">
-                        <img
-                          class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out"
-                          src="./assets/images/event2.png"
-                          alt=""
-                        />
+                    <div
+                      class="flex flex-col md:flex-row md:gap-8 xl:gap-12  lg:items-center gap-4 lg:gap-6 w-full"
+                    >
+                      <div class="overflow-hidden w-full xl:w-[345px]  xl:wfi rounded-lg md:rounded-xl lg:rounded-[16px]">
+                        <div
+                          class="w-full h-full xl:!w-[345px]  xl:h-[214px] rounded-lg md:rounded-xl lg:rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover h-full w-full xl:w-fit event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt=""
+                          />
+                        </div>
                       </div>
                       <div class="w-full">
                         <!-- details top  -->
-                        <div class="flex items-start justify-between pr-16">
+                        <div
+                          class="flex flex-col items-start justify-between 2xl:pr-16 gap-3 xl:flex-row"
+                        >
                           <h3
-                            class="text-[21px] leading-normal font-medium w-[331px]"
+                            class="md:text-lg lg:text-xl xl:text-[21px] leading-normal font-medium xl:w-[280px] 2xl:w-[331px]"
                           >
                             Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
                           </h3>
                           <!-- date  -->
-                          <div>
+                          <div class="flex items-center justify-between w-full xl:w-auto xl:flex-col xl:items-start">
                             <p
                               class="flex items-center gap-3 text-base font-medium"
                             >
@@ -126,44 +227,55 @@
                               Date
                             </p>
                             <p
-                              class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]"
+                              class="text-sm md:text-[15px] lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
                             >
                               Dec 3, 2022 | 8:00 PM EST
                             </p>
                           </div>
                           <!-- number of tickets  -->
-                          <div>
-                            <p class="text-base font-medium">
+                          <div class="flex items-center gap-4 xl:flex-col">
+                            <p class="sm:text-base font-medium">
                               Number of Tickets
                             </p>
                             <p
-                              class="text-[18px] text-[rgba(255,255,255,0.6)] mt-5"
+                              class="xl:text-[18px] text-[rgba(255,255,255,0.6)]  "
                             >
                               4
                             </p>
                           </div>
                         </div>
                         <!-- details bottom  -->
-                        <div class="flex items-center gap-[100px] mt-[62px]">
-                          <p class="text-[22px] font-medium leading-normal">
+                        <div
+                          class="flex flex-col xl:flex-row gap-3 xl:items-center xl:gap-12 2xl:gap-[100px] xl:mt-[62px] mt-5"
+                        >
+                          <p
+                            class="lg:text-lg  2xl:text-[22px] font-medium leading-normal"
+                          >
                             Order# 2731
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                            Reserved by:
-                            <span class="ml-3 text-white">Offek Kessel</span>
+                          <p
+                            class="lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Reserved by :
+                            <span class="ml-2 md:ml-3 text-white"
+                              >Offek Kessel</span
+                            >
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                          <p
+                            class="text-nowrap lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
                             Email:
-                            <span class="ml-3 text-white"
+                            <span class="ml-2 md:ml-3 text-white"
                               >offekkessel123@gmail.com</span
                             >
                           </p>
                         </div>
                         <!-- trigger button  -->
                         <div
-                          class="trigger--btn flex items-center justify-center h-[46px] w-[46px] bg-white rounded-full absolute right-[66px] bottom-[28px] cursor-pointer"
+                          class="trigger--btn flex items-center justify-center 2xl:h-[46px] 2xl:w-[46px] bg-white rounded-full h-[30px] w-[30px] right-[15px] bottom-[45px] md:h-[35px] md:w-[35px] md:right-[20px] md:bottom-[40px] absolute 2xl:right-[105px] 2xl:bottom-[45px] cursor-pointer xl:bottom-[50px] xl:right-[50px]"
                         >
                           <svg
+                            class="size-3 md:size-auto mt-[2px] mr-[.5px]"
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"
                             height="9"
@@ -187,21 +299,21 @@
                     <form action="#" class="bg-[#171717]">
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -209,7 +321,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -217,7 +329,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -225,40 +337,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -268,21 +380,21 @@
                       </div>
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)] last:border-none"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -290,7 +402,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -298,7 +410,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -306,40 +418,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -350,12 +462,12 @@
                     </form>
                     <!-- collapse--footer  -->
                     <div
-                      class="collapse--footer py-10 px-[106px] bg-blackv2 flex items-center gap-[180px] rounded-[20px] rounded-t-none"
+                      class="collapse--footer py-4 sm:flex-row sm:px-6 sm:py-7 lg:py-10 px-4 2xl:px-[106px] bg-blackv2 flex flex-col xl:px-14 gap-4 2xl:items-center 2xl:gap-[180px] rounded-[20px] rounded-t-none lg:gap-16"
                     >
                       <div>
                         <p class="font-medium">Venue</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Level 13
                         </p>
@@ -363,7 +475,7 @@
                       <div>
                         <p class="font-medium">Address</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           5043 Edgewater Dr Orlando FL
                         </p>
@@ -371,7 +483,7 @@
                       <div>
                         <p class="font-medium">Organizer</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Blaze Event and Entertainment
                         </p>
@@ -379,31 +491,40 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- expericence-card  -->
                 <div class="relative expericence-card">
                   <!-- my-experience-single  -->
                   <div
-                    class="my-event-single experience-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8 relative"
+                    class="my-event-single experience-single flex items-center justify-between bg-blackv2  px-4 py-4 md:px-6 md:py-5 xl:pr-12 rounded-t-xl rounded-b-xl  mt-8 relative"
                   >
                     <!-- event  -->
-                    <div class="flex items-center gap-8 w-full">
-                      <div class="overflow-hidden rounded-[16px]">
-                        <img
-                          class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out"
-                          src="./assets/images/event5.png"
-                          alt=""
-                        />
+                    <div
+                      class="flex flex-col md:flex-row md:gap-8 xl:gap-12  lg:items-center gap-4 lg:gap-6 w-full"
+                    >
+                      <div class="overflow-hidden w-full xl:w-[345px]  xl:wfi rounded-lg md:rounded-xl lg:rounded-[16px]">
+                        <div
+                          class="w-full h-full xl:!w-[345px]  xl:h-[214px] rounded-lg md:rounded-xl lg:rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover h-full w-full xl:w-fit event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt=""
+                          />
+                        </div>
                       </div>
                       <div class="w-full">
                         <!-- details top  -->
-                        <div class="flex items-start justify-between pr-16">
+                        <div
+                          class="flex flex-col items-start justify-between 2xl:pr-16 gap-3 xl:flex-row"
+                        >
                           <h3
-                            class="text-[21px] leading-normal font-medium w-[331px]"
+                            class="md:text-lg lg:text-xl xl:text-[21px] leading-normal font-medium xl:w-[280px] 2xl:w-[331px]"
                           >
                             Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
                           </h3>
                           <!-- date  -->
-                          <div>
+                          <div class="flex items-center justify-between w-full xl:w-auto xl:flex-col xl:items-start">
                             <p
                               class="flex items-center gap-3 text-base font-medium"
                             >
@@ -411,44 +532,55 @@
                               Date
                             </p>
                             <p
-                              class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]"
+                              class="text-sm md:text-[15px] lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
                             >
                               Dec 3, 2022 | 8:00 PM EST
                             </p>
                           </div>
                           <!-- number of tickets  -->
-                          <div>
-                            <p class="text-base font-medium">
+                          <div class="flex items-center gap-4 xl:flex-col">
+                            <p class="sm:text-base font-medium">
                               Number of Tickets
                             </p>
                             <p
-                              class="text-[18px] text-[rgba(255,255,255,0.6)] mt-5"
+                              class="xl:text-[18px] text-[rgba(255,255,255,0.6)]  "
                             >
                               4
                             </p>
                           </div>
                         </div>
                         <!-- details bottom  -->
-                        <div class="flex items-center gap-[100px] mt-[62px]">
-                          <p class="text-[22px] font-medium leading-normal">
+                        <div
+                          class="flex flex-col xl:flex-row gap-3 xl:items-center xl:gap-12 2xl:gap-[100px] xl:mt-[62px] mt-5"
+                        >
+                          <p
+                            class="lg:text-lg  2xl:text-[22px] font-medium leading-normal"
+                          >
                             Order# 2731
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                            Reserved by:
-                            <span class="ml-3 text-white">Offek Kessel</span>
+                          <p
+                            class="lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Reserved by :
+                            <span class="ml-2 md:ml-3 text-white"
+                              >Offek Kessel</span
+                            >
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                          <p
+                            class="text-nowrap lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
                             Email:
-                            <span class="ml-3 text-white"
+                            <span class="ml-2 md:ml-3 text-white"
                               >offekkessel123@gmail.com</span
                             >
                           </p>
                         </div>
                         <!-- trigger button  -->
                         <div
-                          class="trigger--btn flex items-center justify-center h-[46px] w-[46px] bg-white rounded-full absolute right-[66px] bottom-[28px] cursor-pointer"
+                          class="trigger--btn flex items-center justify-center 2xl:h-[46px] 2xl:w-[46px] bg-white rounded-full h-[30px] w-[30px] right-[15px] bottom-[45px] md:h-[35px] md:w-[35px] md:right-[20px] md:bottom-[40px] absolute 2xl:right-[105px] 2xl:bottom-[45px] cursor-pointer xl:bottom-[50px] xl:right-[50px]"
                         >
                           <svg
+                            class="size-3 md:size-auto mt-[2px] mr-[.5px]"
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"
                             height="9"
@@ -472,21 +604,21 @@
                     <form action="#" class="bg-[#171717]">
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -494,7 +626,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -502,7 +634,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -510,40 +642,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -553,21 +685,21 @@
                       </div>
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)] last:border-none"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -575,7 +707,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -583,7 +715,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -591,40 +723,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -635,12 +767,12 @@
                     </form>
                     <!-- collapse--footer  -->
                     <div
-                      class="collapse--footer py-10 px-[106px] bg-blackv2 flex items-center gap-[180px] rounded-[20px] rounded-t-none"
+                      class="collapse--footer py-4 sm:flex-row sm:px-6 sm:py-7 lg:py-10 px-4 2xl:px-[106px] bg-blackv2 flex flex-col xl:px-14 gap-4 2xl:items-center 2xl:gap-[180px] rounded-[20px] rounded-t-none lg:gap-16"
                     >
                       <div>
                         <p class="font-medium">Venue</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Level 13
                         </p>
@@ -648,7 +780,7 @@
                       <div>
                         <p class="font-medium">Address</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           5043 Edgewater Dr Orlando FL
                         </p>
@@ -656,7 +788,7 @@
                       <div>
                         <p class="font-medium">Organizer</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Blaze Event and Entertainment
                         </p>
@@ -664,31 +796,40 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- expericence-card  -->
                 <div class="relative expericence-card">
                   <!-- my-experience-single  -->
                   <div
-                    class="my-event-single experience-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8 relative"
+                    class="my-event-single experience-single flex items-center justify-between bg-blackv2  px-4 py-4 md:px-6 md:py-5 xl:pr-12 rounded-t-xl rounded-b-xl  mt-8 relative"
                   >
                     <!-- event  -->
-                    <div class="flex items-center gap-8 w-full">
-                      <div class="overflow-hidden rounded-[16px]">
-                        <img
-                          class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out"
-                          src="./assets/images/event3.png"
-                          alt=""
-                        />
+                    <div
+                      class="flex flex-col md:flex-row md:gap-8 xl:gap-12  lg:items-center gap-4 lg:gap-6 w-full"
+                    >
+                      <div class="overflow-hidden w-full xl:w-[345px]  xl:wfi rounded-lg md:rounded-xl lg:rounded-[16px]">
+                        <div
+                          class="w-full h-full xl:!w-[345px]  xl:h-[214px] rounded-lg md:rounded-xl lg:rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover h-full w-full xl:w-fit event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt=""
+                          />
+                        </div>
                       </div>
                       <div class="w-full">
                         <!-- details top  -->
-                        <div class="flex items-start justify-between pr-16">
+                        <div
+                          class="flex flex-col items-start justify-between 2xl:pr-16 gap-3 xl:flex-row"
+                        >
                           <h3
-                            class="text-[21px] leading-normal font-medium w-[331px]"
+                            class="md:text-lg lg:text-xl xl:text-[21px] leading-normal font-medium xl:w-[280px] 2xl:w-[331px]"
                           >
                             Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
                           </h3>
                           <!-- date  -->
-                          <div>
+                          <div class="flex items-center justify-between w-full xl:w-auto xl:flex-col xl:items-start">
                             <p
                               class="flex items-center gap-3 text-base font-medium"
                             >
@@ -696,44 +837,55 @@
                               Date
                             </p>
                             <p
-                              class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]"
+                              class="text-sm md:text-[15px] lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
                             >
                               Dec 3, 2022 | 8:00 PM EST
                             </p>
                           </div>
                           <!-- number of tickets  -->
-                          <div>
-                            <p class="text-base font-medium">
+                          <div class="flex items-center gap-4 xl:flex-col">
+                            <p class="sm:text-base font-medium">
                               Number of Tickets
                             </p>
                             <p
-                              class="text-[18px] text-[rgba(255,255,255,0.6)] mt-5"
+                              class="xl:text-[18px] text-[rgba(255,255,255,0.6)]  "
                             >
                               4
                             </p>
                           </div>
                         </div>
                         <!-- details bottom  -->
-                        <div class="flex items-center gap-[100px] mt-[62px]">
-                          <p class="text-[22px] font-medium leading-normal">
+                        <div
+                          class="flex flex-col xl:flex-row gap-3 xl:items-center xl:gap-12 2xl:gap-[100px] xl:mt-[62px] mt-5"
+                        >
+                          <p
+                            class="lg:text-lg  2xl:text-[22px] font-medium leading-normal"
+                          >
                             Order# 2731
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                            Reserved by:
-                            <span class="ml-3 text-white">Offek Kessel</span>
+                          <p
+                            class="lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Reserved by :
+                            <span class="ml-2 md:ml-3 text-white"
+                              >Offek Kessel</span
+                            >
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                          <p
+                            class="text-nowrap lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
                             Email:
-                            <span class="ml-3 text-white"
+                            <span class="ml-2 md:ml-3 text-white"
                               >offekkessel123@gmail.com</span
                             >
                           </p>
                         </div>
                         <!-- trigger button  -->
                         <div
-                          class="trigger--btn flex items-center justify-center h-[46px] w-[46px] bg-white rounded-full absolute right-[66px] bottom-[28px] cursor-pointer"
+                          class="trigger--btn flex items-center justify-center 2xl:h-[46px] 2xl:w-[46px] bg-white rounded-full h-[30px] w-[30px] right-[15px] bottom-[45px] md:h-[35px] md:w-[35px] md:right-[20px] md:bottom-[40px] absolute 2xl:right-[105px] 2xl:bottom-[45px] cursor-pointer xl:bottom-[50px] xl:right-[50px]"
                         >
                           <svg
+                            class="size-3 md:size-auto mt-[2px] mr-[.5px]"
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"
                             height="9"
@@ -757,21 +909,21 @@
                     <form action="#" class="bg-[#171717]">
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -779,7 +931,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -787,7 +939,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -795,40 +947,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -838,21 +990,21 @@
                       </div>
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)] last:border-none"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -860,7 +1012,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -868,7 +1020,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -876,40 +1028,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -920,12 +1072,12 @@
                     </form>
                     <!-- collapse--footer  -->
                     <div
-                      class="collapse--footer py-10 px-[106px] bg-blackv2 flex items-center gap-[180px] rounded-[20px] rounded-t-none"
+                      class="collapse--footer py-4 sm:flex-row sm:px-6 sm:py-7 lg:py-10 px-4 2xl:px-[106px] bg-blackv2 flex flex-col xl:px-14 gap-4 2xl:items-center 2xl:gap-[180px] rounded-[20px] rounded-t-none lg:gap-16"
                     >
                       <div>
                         <p class="font-medium">Venue</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Level 13
                         </p>
@@ -933,7 +1085,7 @@
                       <div>
                         <p class="font-medium">Address</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           5043 Edgewater Dr Orlando FL
                         </p>
@@ -941,7 +1093,7 @@
                       <div>
                         <p class="font-medium">Organizer</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Blaze Event and Entertainment
                         </p>
@@ -949,31 +1101,40 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- expericence-card  -->
                 <div class="relative expericence-card">
                   <!-- my-experience-single  -->
                   <div
-                    class="my-event-single experience-single flex items-center justify-between bg-blackv2 p-[10px] rounded-[20px] mt-8 relative"
+                    class="my-event-single experience-single flex items-center justify-between bg-blackv2  px-4 py-4 md:px-6 md:py-5 xl:pr-12 rounded-t-xl rounded-b-xl  mt-8 relative"
                   >
                     <!-- event  -->
-                    <div class="flex items-center gap-8 w-full">
-                      <div class="overflow-hidden rounded-[16px]">
-                        <img
-                          class="w-[345px] h-[214px] object-cover rounded-[16px] event-img duration-300 ease-in-out"
-                          src="./assets/images/event4.png"
-                          alt=""
-                        />
+                    <div
+                      class="flex flex-col md:flex-row md:gap-8 xl:gap-12  lg:items-center gap-4 lg:gap-6 w-full"
+                    >
+                      <div class="overflow-hidden w-full xl:w-[345px]  xl:wfi rounded-lg md:rounded-xl lg:rounded-[16px]">
+                        <div
+                          class="w-full h-full xl:!w-[345px]  xl:h-[214px] rounded-lg md:rounded-xl lg:rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover h-full w-full xl:w-fit event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt=""
+                          />
+                        </div>
                       </div>
                       <div class="w-full">
                         <!-- details top  -->
-                        <div class="flex items-start justify-between pr-16">
+                        <div
+                          class="flex flex-col items-start justify-between 2xl:pr-16 gap-3 xl:flex-row"
+                        >
                           <h3
-                            class="text-[21px] leading-normal font-medium w-[331px]"
+                            class="md:text-lg lg:text-xl xl:text-[21px] leading-normal font-medium xl:w-[280px] 2xl:w-[331px]"
                           >
                             Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
                           </h3>
                           <!-- date  -->
-                          <div>
+                          <div class="flex items-center justify-between w-full xl:w-auto xl:flex-col xl:items-start">
                             <p
                               class="flex items-center gap-3 text-base font-medium"
                             >
@@ -981,44 +1142,55 @@
                               Date
                             </p>
                             <p
-                              class="text-[15px] mt-[22px] text-[rgba(255,255,255,0.6)]"
+                              class="text-sm md:text-[15px] lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
                             >
                               Dec 3, 2022 | 8:00 PM EST
                             </p>
                           </div>
                           <!-- number of tickets  -->
-                          <div>
-                            <p class="text-base font-medium">
+                          <div class="flex items-center gap-4 xl:flex-col">
+                            <p class="sm:text-base font-medium">
                               Number of Tickets
                             </p>
                             <p
-                              class="text-[18px] text-[rgba(255,255,255,0.6)] mt-5"
+                              class="xl:text-[18px] text-[rgba(255,255,255,0.6)]  "
                             >
                               4
                             </p>
                           </div>
                         </div>
                         <!-- details bottom  -->
-                        <div class="flex items-center gap-[100px] mt-[62px]">
-                          <p class="text-[22px] font-medium leading-normal">
+                        <div
+                          class="flex flex-col xl:flex-row gap-3 xl:items-center xl:gap-12 2xl:gap-[100px] xl:mt-[62px] mt-5"
+                        >
+                          <p
+                            class="lg:text-lg  2xl:text-[22px] font-medium leading-normal"
+                          >
                             Order# 2731
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                            Reserved by:
-                            <span class="ml-3 text-white">Offek Kessel</span>
+                          <p
+                            class="lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Reserved by :
+                            <span class="ml-2 md:ml-3 text-white"
+                              >Offek Kessel</span
+                            >
                           </p>
-                          <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                          <p
+                            class="text-nowrap lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
                             Email:
-                            <span class="ml-3 text-white"
+                            <span class="ml-2 md:ml-3 text-white"
                               >offekkessel123@gmail.com</span
                             >
                           </p>
                         </div>
                         <!-- trigger button  -->
                         <div
-                          class="trigger--btn flex items-center justify-center h-[46px] w-[46px] bg-white rounded-full absolute right-[66px] bottom-[28px] cursor-pointer"
+                          class="trigger--btn flex items-center justify-center 2xl:h-[46px] 2xl:w-[46px] bg-white rounded-full h-[30px] w-[30px] right-[15px] bottom-[45px] md:h-[35px] md:w-[35px] md:right-[20px] md:bottom-[40px] absolute 2xl:right-[105px] 2xl:bottom-[45px] cursor-pointer xl:bottom-[50px] xl:right-[50px]"
                         >
                           <svg
+                            class="size-3 md:size-auto mt-[2px] mr-[.5px]"
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"
                             height="9"
@@ -1042,21 +1214,21 @@
                     <form action="#" class="bg-[#171717]">
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -1064,7 +1236,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -1072,7 +1244,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -1080,40 +1252,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -1123,21 +1295,21 @@
                       </div>
                       <!-- qr box  -->
                       <div
-                        class="flex items-center gap-[90px] py-10 pl-[106px] pr-[66px] border-b border-[rgba(255,255,255,0.20)] last:border-none"
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
                       >
-                        <div>
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
                           <img
-                            class="w-[210px] h-[212px]"
+                            class="h-full mx-auto"
                             src="./assets/images/qr-code.png"
                             alt=""
                           />
                         </div>
-                        <div>
-                          <div class="flex items-center gap-[150px]">
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
                             <div>
                               <p class="font-medium">Ticke#</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2-2-GTK80X
                               </p>
@@ -1145,7 +1317,7 @@
                             <div>
                               <p class="font-medium">Ticket Type</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 TEST/2
                               </p>
@@ -1153,7 +1325,7 @@
                             <div>
                               <p class="font-medium">Reserved on</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 December 3, 2022
                               </p>
@@ -1161,40 +1333,40 @@
                             <div>
                               <p class="font-medium">Security Code</p>
                               <p
-                                class="text-[18px] mt-5 text-[rgba(255,255,255,0.6)]"
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
                               >
                                 F1B57FX9B9-KM4
                               </p>
                             </div>
                           </div>
-                          <div class="flex items-end justify-between mt-10">
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="email"
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
                                 >Email Address</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="email"
                                 type="email"
                                 placeholder="example@gmail.com"
                                 required
                               />
                             </div>
-                            <div>
-                              <label class="text-[18px] mb-5 block" for="name"
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
                                 >Name</label
                               >
                               <input
-                                class="w-[370px] bg-transparent border border-white h-[70px] px-5 rounded-[12px] focus:outline-none text-[18px]"
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
                                 id="name"
                                 type="text"
                                 placeholder="Offek Kessel"
                                 required
                               />
                             </div>
-                            <div>
+                            <div class="w-full pt-2">
                               <button
-                                class="text-[20px] text-blackv1 bg-white py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
                               >
                                 Update Ticket
                               </button>
@@ -1205,12 +1377,12 @@
                     </form>
                     <!-- collapse--footer  -->
                     <div
-                      class="collapse--footer py-10 px-[106px] bg-blackv2 flex items-center gap-[180px] rounded-[20px] rounded-t-none"
+                      class="collapse--footer py-4 sm:flex-row sm:px-6 sm:py-7 lg:py-10 px-4 2xl:px-[106px] bg-blackv2 flex flex-col xl:px-14 gap-4 2xl:items-center 2xl:gap-[180px] rounded-[20px] rounded-t-none lg:gap-16"
                     >
                       <div>
                         <p class="font-medium">Venue</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Level 13
                         </p>
@@ -1218,7 +1390,7 @@
                       <div>
                         <p class="font-medium">Address</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           5043 Edgewater Dr Orlando FL
                         </p>
@@ -1226,7 +1398,7 @@
                       <div>
                         <p class="font-medium">Organizer</p>
                         <p
-                          class="text-[18px] mt-5 text-[rgba(255,255,255,0.68)]"
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
                         >
                           Blaze Event and Entertainment
                         </p>
@@ -1234,6 +1406,312 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- expericence-card  -->
+                <div class="relative expericence-card">
+                  <!-- my-experience-single  -->
+                  <div
+                    class="my-event-single experience-single flex items-center justify-between bg-blackv2  px-4 py-4 md:px-6 md:py-5 xl:pr-12 rounded-t-xl rounded-b-xl  mt-8 relative"
+                  >
+                    <!-- event  -->
+                    <div
+                      class="flex flex-col md:flex-row md:gap-8 xl:gap-12  lg:items-center gap-4 lg:gap-6 w-full"
+                    >
+                      <div class="overflow-hidden w-full xl:w-[345px]  xl:wfi rounded-lg md:rounded-xl lg:rounded-[16px]">
+                        <div
+                          class="w-full h-full xl:!w-[345px]  xl:h-[214px] rounded-lg md:rounded-xl lg:rounded-[16px]"
+                        >
+                          <img
+                            class="object-cover h-full w-full xl:w-fit event-img duration-300 ease-in-out"
+                            src="./assets/images/event1.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="w-full">
+                        <!-- details top  -->
+                        <div
+                          class="flex flex-col items-start justify-between 2xl:pr-16 gap-3 xl:flex-row"
+                        >
+                          <h3
+                            class="md:text-lg lg:text-xl xl:text-[21px] leading-normal font-medium xl:w-[280px] 2xl:w-[331px]"
+                          >
+                            Tiny Waves - Holiday Matsuri Pre Party Kpop Rave
+                          </h3>
+                          <!-- date  -->
+                          <div class="flex items-center justify-between w-full xl:w-auto xl:flex-col xl:items-start">
+                            <p
+                              class="flex items-center gap-3 text-base font-medium"
+                            >
+                              <img src="./assets/images/calender.svg" alt="" />
+                              Date
+                            </p>
+                            <p
+                              class="text-sm md:text-[15px] lg:mt-[22px] text-[rgba(255,255,255,0.6)]"
+                            >
+                              Dec 3, 2022 | 8:00 PM EST
+                            </p>
+                          </div>
+                          <!-- number of tickets  -->
+                          <div class="flex items-center gap-4 xl:flex-col">
+                            <p class="sm:text-base font-medium">
+                              Number of Tickets
+                            </p>
+                            <p
+                              class="xl:text-[18px] text-[rgba(255,255,255,0.6)]  "
+                            >
+                              4
+                            </p>
+                          </div>
+                        </div>
+                        <!-- details bottom  -->
+                        <div
+                          class="flex flex-col xl:flex-row gap-3 xl:items-center xl:gap-12 2xl:gap-[100px] xl:mt-[62px] mt-5"
+                        >
+                          <p
+                            class="lg:text-lg  2xl:text-[22px] font-medium leading-normal"
+                          >
+                            Order# 2731
+                          </p>
+                          <p
+                            class="lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Reserved by :
+                            <span class="ml-2 md:ml-3 text-white"
+                              >Offek Kessel</span
+                            >
+                          </p>
+                          <p
+                            class="text-nowrap lg:text-lg  2xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                          >
+                            Email:
+                            <span class="ml-2 md:ml-3 text-white"
+                              >offekkessel123@gmail.com</span
+                            >
+                          </p>
+                        </div>
+                        <!-- trigger button  -->
+                        <div
+                          class="trigger--btn flex items-center justify-center 2xl:h-[46px] 2xl:w-[46px] bg-white rounded-full h-[30px] w-[30px] right-[15px] bottom-[45px] md:h-[35px] md:w-[35px] md:right-[20px] md:bottom-[40px] absolute 2xl:right-[105px] 2xl:bottom-[45px] cursor-pointer xl:bottom-[50px] xl:right-[50px]"
+                        >
+                          <svg
+                            class="size-3 md:size-auto mt-[2px] mr-[.5px]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="9"
+                            viewBox="0 0 14 9"
+                            fill="none"
+                          >
+                            <path
+                              d="M12 2L7 7L2 2"
+                              stroke="black"
+                              stroke-width="2.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- collapse content  -->
+                  <div class="collapse--content hidden">
+                    <form action="#" class="bg-[#171717]">
+                      <!-- qr box  -->
+                      <div
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
+                      >
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
+                          <img
+                            class="h-full mx-auto"
+                            src="./assets/images/qr-code.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
+                            <div>
+                              <p class="font-medium">Ticke#</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                TEST/2-2-GTK80X
+                              </p>
+                            </div>
+                            <div>
+                              <p class="font-medium">Ticket Type</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                TEST/2
+                              </p>
+                            </div>
+                            <div>
+                              <p class="font-medium">Reserved on</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                December 3, 2022
+                              </p>
+                            </div>
+                            <div>
+                              <p class="font-medium">Security Code</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                F1B57FX9B9-KM4
+                              </p>
+                            </div>
+                          </div>
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
+                                >Email Address</label
+                              >
+                              <input
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
+                                id="email"
+                                type="email"
+                                placeholder="example@gmail.com"
+                                required
+                              />
+                            </div>
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
+                                >Name</label
+                              >
+                              <input
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
+                                id="name"
+                                type="text"
+                                placeholder="Offek Kessel"
+                                required
+                              />
+                            </div>
+                            <div class="w-full pt-2">
+                              <button
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                              >
+                                Update Ticket
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- qr box  -->
+                      <div
+                        class="flex flex-col lg:flex-row px-4 sm:px-6 sm:py-8 py-6 gap-5 2xl:items-center 2xl:gap-[90px] 2xl:py-10 2xl:pl-[106px] md:gap-8 2xl:pr-[66px] border-b border-[rgba(255,255,255,0.20)]"
+                      >
+                        <div class="w-full lg:w-[350px] xl: xl:flex xl:h-full xl:items-center xl:justify-center">
+                          <img
+                            class="h-full mx-auto"
+                            src="./assets/images/qr-code.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="sm:flex w-full lg:flex-col lg:gap-5">
+                          <div class="flex flex-col lg:gap-10 lg:flex-row 2xl:items-center 2xl:gap-[150px] sm:w-1/2 lg:w-full lg:text-nowrap">
+                            <div>
+                              <p class="font-medium">Ticke#</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                TEST/2-2-GTK80X
+                              </p>
+                            </div>
+                            <div>
+                              <p class="font-medium">Ticket Type</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                TEST/2
+                              </p>
+                            </div>
+                            <div>
+                              <p class="font-medium">Reserved on</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                December 3, 2022
+                              </p>
+                            </div>
+                            <div>
+                              <p class="font-medium">Security Code</p>
+                              <p
+                                class="lg:text-[18px] mt-3 md:mt-5 text-[rgba(255,255,255,0.6)]"
+                              >
+                                F1B57FX9B9-KM4
+                              </p>
+                            </div>
+                          </div>
+                          <div class="flex flex-col gap-3 lg:flex-row items-end justify-between mt-4 xl:mt-10 w-full sm:w-1/2 lg:w-full lg:gap-8">
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="email"
+                                >Email Address</label
+                              >
+                              <input
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
+                                id="email"
+                                type="email"
+                                placeholder="example@gmail.com"
+                                required
+                              />
+                            </div>
+                            <div class="w-full">
+                              <label class="lg:text-[18px] mb-3 md:mb-5 block" for="name"
+                                >Name</label
+                              >
+                              <input
+                                class="w-full 2xl:w-[370px] text-sm md:text-base h-12 md:h-14 bg-transparent border border-white 2xl:h-[70px] px-5 rounded-lg md:rounded-xl lg:rounded-[12px] focus:outline-none text-[18px]"
+                                id="name"
+                                type="text"
+                                placeholder="Offek Kessel"
+                                required
+                              />
+                            </div>
+                            <div class="w-full pt-2">
+                              <button
+                                class=" text-sm md:text-base lg:text-lg xl:text-[20px] text-blackv1 bg-white py-2 xl:py-[15px] px-8 border border-white rounded-[100px] duration-300 ease-in-out font-medium hover:bg-transparent hover:text-white"
+                              >
+                                Update Ticket
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- collapse--footer  -->
+                    <div
+                      class="collapse--footer py-4 sm:flex-row sm:px-6 sm:py-7 lg:py-10 px-4 2xl:px-[106px] bg-blackv2 flex flex-col xl:px-14 gap-4 2xl:items-center 2xl:gap-[180px] rounded-[20px] rounded-t-none lg:gap-16"
+                    >
+                      <div>
+                        <p class="font-medium">Venue</p>
+                        <p
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
+                        >
+                          Level 13
+                        </p>
+                      </div>
+                      <div>
+                        <p class="font-medium">Address</p>
+                        <p
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
+                        >
+                          5043 Edgewater Dr Orlando FL
+                        </p>
+                      </div>
+                      <div>
+                        <p class="font-medium">Organizer</p>
+                        <p
+                          class="text-sm md:text-base lg:text-[18px] mt-2 md:mt-5 text-[rgba(255,255,255,0.68)]"
+                        >
+                          Blaze Event and Entertainment
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 
               </div>
             </div>
           </div>
@@ -1243,23 +1721,24 @@
     </main>
 
     <!-- start footer  -->
-    <footer class="py-[58px] bg-blackv2">
+    <footer class="py-6 md:py-10 2xl:py-[58px] bg-blackv2 overflow-hidden">
       <div class="container">
-        <div class="row items-center">
-          <div class="col-12 md:col-6">
+        <div class="flex items-center justify-between">
+          <div class=" ">
             <a href="index.html">
               <img
-                class="h-[94px] w-[200px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt=""
               />
             </a>
           </div>
-          <div class="col-12 md:col-6">
-            <ul class="flex items-center gap-6 justify-end">
+          <div class=" ">
+            <ul class="flex items-center gap-2 md:gap-6 justify-end">
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -1274,8 +1753,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -1292,8 +1772,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -1312,23 +1793,28 @@
             </ul>
           </div>
         </div>
-        <div class="mt-[52px]">
-          <div class="flex items-center gap-[244px]">
+        <div class="2xl:mt-[52px] mt-6 md:mt-10">
+          <div
+            class="flex flex-col xl:flex-row justify-center gap-3 xl:gap-32 xl:justify-normal item-center 2xl:gap-[244px]"
+          >
             <div>
-              <p class="w-[474px]">
+              <p
+                class="2xl:w-[474px] text-sm md:text-base text-center xl:text-start"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Malesuada amet nibh sed diam.
               </p>
             </div>
             <div>
               <a
-                href="mailto:Business@goattix.com"
-                class="flex items-center gap-7"
+                href="mailto:Business@goattix.com "
+                class="flex items-center justify-center gap-3 md:gap-5 xl:gap-7 text-sm md:text-base"
               >
                 <div
-                  class="h-[53px] w-[53px] flex items-center justify-center bg-[#292929] rounded-full"
+                  class="flex items-center justify-center bg-[#292929] rounded-full p-2 xl:p-4"
                 >
                   <svg
+                    class="size-5"
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
                     height="14"
@@ -1347,7 +1833,7 @@
               </a>
             </div>
             <div>
-              <p class="text-base leading-normal">
+              <p class="text-sm md:text-base leading-normal text-center">
                 © 2021 ibgme.ae. All rights reserved
               </p>
             </div>
