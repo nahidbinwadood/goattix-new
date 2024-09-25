@@ -211,7 +211,7 @@ body {
 
 /*===Responsive=== */
 
-@media only screen and (min-width: 320px) and (max-width: 640px) {
+@media (max-width: 640px) {
   .owl-dots {
     @apply mt-[-30px];
   }
@@ -228,8 +228,12 @@ body {
   }
 
   /* Events */
-  .events-filter .nice-select, {
-    @apply bg-blackv2 border-blackv2 rounded-[4px] h-[40px] leading-[40px];
+  .events-filter .nice-select {
+    height:40px;
+    line-height:40px;
+  }
+  .events-filter .nice-select {
+    @apply bg-blackv2 border-blackv2 rounded-[4px] !h-[40px] !leading-[40px];
   }
   .nice-select .current {
     @apply text-[14px] font-normal;
@@ -285,13 +289,13 @@ body {
   /* checkout:end */
 
   /* create event:start */
-   
+
   .time-zone .nice-select {
     background-color: transparent !important;
     height: 50px !important;
     display: flex;
     align-items: center;
-}
+  }
   .nice-select .current {
     @apply text-[14px] font-normal;
   }
@@ -424,8 +428,8 @@ body {
   .coupon {
     flex-diretion: column;
   }
-  .ssl-btns{
-    flex-direction:column;
+  .ssl-btns {
+    flex-direction: column;
   }
 }
 
