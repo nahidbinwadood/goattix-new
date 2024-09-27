@@ -2768,16 +2768,16 @@ body{
   }
 
   .custom-radio label:before {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     border-width: 2px;
   }
 
   .custom-radio input:checked + label:after {
-    left: 7.4px;
-    top: 2px;
-    height: 20px;
-    width: 20px;
+    left: 6.4px;
+    top: 3px;
+    height: 18px;
+    width: 18px;
   }
 
   /* checkout:end */
@@ -2873,6 +2873,25 @@ body{
   }
 
   /* edit venue:end */
+
+  .custom-radio label{
+    position: relative;
+    display: block;
+    padding-left: 2.5rem;
+  }
+
+  .custom-radio label:before {
+    height: 35px;
+    width: 35px;
+    border-width: 2px;
+  }
+
+  .custom-radio input:checked + label:after {
+    left: 7.5px;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1521px) {
@@ -2909,6 +2928,27 @@ body{
 
   .ssl-btns {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 767px) {
+  .custom-radio label{
+    position: relative;
+    display: block;
+    padding-left: 2.5rem;
+  }
+
+  .custom-radio label:before {
+    height: 27px;
+    width: 27px;
+    border-width: 2px;
+  }
+
+  .custom-radio input:checked + label:after {
+    left: 6px;
+    top: 3px;
+    height: 15px;
+    width: 15px;
   }
 }
 

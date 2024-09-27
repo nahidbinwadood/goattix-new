@@ -176,22 +176,26 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <!-- request camera permmission  -->
-              <div
-                class="request-camera--permission p-7 md:p-10 lg:p-12 2xl:p-14 bg-blackv2 rounded-[20px] flex flex-col items-center"
-              >
+              <!-- request camera permission  -->
+              <div class="request-camera--permission p-7 md:p-10 lg:p-12 2xl:p-14 bg-blackv2 rounded-[20px] flex flex-col items-center">
                 <img
                   class="w-[50px] h-[60px] md:w-[60px] md:h-[80px] lg:w-[76px] lg:h-[90px]"
                   src="./assets/images/qr-camera.svg"
                   alt=""
                 />
                 <a
-                  href="#"
+                  href="javascript:void(0);"
+                  id="cameraButton"
                   class="text-sm px-4 py-2 md:px-6 md:py-3 lg:px-10 lg:py-4 md:text-base lg:text-lg 2xl:py-4 2xl:px-11 bg-white border border-white text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white rounded-[100px] 2xl:text-[20px] font-medium mt-9 text-nowrap"
                   >Request Camera Permission</a
                 >
               </div>
-              <!-- toatal tickets and checked in  -->
+              
+              <div id="videoContainer" class="hidden mt-4">
+                <video id="video" class="w-full" autoplay></video>
+              </div>
+              
+              <!-- total tickets and checked in  -->
               <div
                 class="total-tickets--checkedin flex items-center justify-between xl:justify-end 2xl:gap-[96px] mt-[30px] gap-8"
               >
@@ -275,7 +279,7 @@
               <!-- event table  -->
               <div
                 class="event--table mt-4 xl:mt-12 rounded-md md:rounded-lg lg:rounded-xl 2xl:rounded-[16px] overflow-hidden border border-[rgba(255,255,255,0.20)]"
-              >
+              >9o
                 <div class="overflow-x-auto">
                   <table class="w-full">
                     <!-- thead  -->

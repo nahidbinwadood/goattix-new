@@ -616,3 +616,29 @@ document.addEventListener("click", (e) => {
   }
 });
 // ===sidebar::end
+
+
+
+// video permission:start
+document.addEventListener("DOMContentLoaded", function() {
+  const cameraButton = document.getElementById('cameraButton');
+  const videoContainer = document.getElementById('videoContainer');
+  const videoElement = document.getElementById('video');
+
+  cameraButton.addEventListener('click', async () => {
+    try {
+      // Request access to the user's camera
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      videoElement.srcObject = stream;
+      
+      // Show the video container and hide the button
+      videoContainer.classList.remove('hidden');
+      cameraButton.classList.add('hidden');
+    } catch (error) {
+      alert('Camera access denied or unavailable.');
+      console.error('Error accessing camera:', error);
+    }
+  });
+});
+
+// video permission:end
