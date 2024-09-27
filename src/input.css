@@ -60,7 +60,7 @@ body {
 }
 .accordion-header:after {
   content: "+";
-  @apply absolute top-[30px] right-[42px] h-[40px] w-[40px] rounded-full bg-white text-blackv1 text-[30px] flex items-center justify-center;
+  @apply absolute top-[25px] right-[42px] h-[40px] w-[40px] rounded-full bg-white text-blackv1 text-[28px] flex items-center justify-center;
 }
 .accordion-header.active:after {
   content: "-";

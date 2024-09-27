@@ -753,42 +753,47 @@
             <div class="flex items-center gap-3">
               <input
                 type="radio"
+                id="going-live"
                 name="option"
                 class="appearance-none size-4 md:size-6 cursor-pointer ring-white border-[4px] border-[#111111] ring-2   focus:bg-white rounded-full checked:bg-white checked:border-[#111111] checked:border-[4px] focus:outline-none"
               />
-              <label for="">Going Live</label>
+              <label for="going-live" class="cursor-pointer">Going Live</label>
             </div>
             <div class="flex items-center gap-3">
               <input
                 type="radio"
                 name="option"
+                id="pending"
                 class="appearance-none size-4 md:size-6 cursor-pointer ring-white border-[4px] border-[#111111] ring-2 focus:bg-white rounded-full checked:bg-white checked:border-[#111111] checked:border-[4px] focus:outline-none"
               />
-              <label for="">Pending</label>
+              <label for="pending" class="cursor-pointer">Pending</label>
             </div>
             <div class="flex items-center gap-3">
               <input
                 type="radio"
+                id="postponed"
                 name="option"
                 class="appearance-none  size-4 md:size-6 cursor-pointer ring-white border-[4px] border-[#111111] ring-2  focus:bg-white rounded-full checked:bg-white checked:border-[#111111] checked:border-[4px] focus:outline-none"
               />
-              <label for="">Postponed</label>
+              <label for="postponed" class="cursor-pointer">Postponed</label>
+            </div>
+            <div class="flex items-center gap-3">
+              <input
+                type="radio"
+                id="cancel"
+                name="option"
+                class="appearance-none size-4 md:size-6 cursor-pointer ring-white border-[4px] border-[#111111] ring-2 focus:bg-white rounded-full checked:bg-white checked:border-[#111111] checked:border-[4px] focus:outline-none"
+              />
+              <label for="cancel" class="cursor-pointer">Cancel</label>
             </div>
             <div class="flex items-center gap-3">
               <input
                 type="radio"
                 name="option"
+                id="completed"
                 class="appearance-none size-4 md:size-6 cursor-pointer ring-white border-[4px] border-[#111111] ring-2 focus:bg-white rounded-full checked:bg-white checked:border-[#111111] checked:border-[4px] focus:outline-none"
               />
-              <label for="">Cancel</label>
-            </div>
-            <div class="flex items-center gap-3">
-              <input
-                type="radio"
-                name="option"
-                class="appearance-none size-4 md:size-6 cursor-pointer ring-white border-[4px] border-[#111111] ring-2 focus:bg-white rounded-full checked:bg-white checked:border-[#111111] checked:border-[4px] focus:outline-none"
-              />
-              <label for="">Completed</label>
+              <label for="completed" class="cursor-pointer">Completed</label>
             </div>
           </div>
         </div>
@@ -803,7 +808,7 @@
               id="create-new-venue"
               class="flex gap-2 md:gap-4 items-center text-[#111] font-medium bg-white h-fit rounded-full px-6 py-2.5"
             >
-              <span class="text-xs md:text-base text-nowrap">Create New Venue</span>
+              <span class="text-xs md:text-base text-nowrap"></span>
               <svg
               class="size-3 md:size-auto"
                 xmlns="http://www.w3.org/2000/svg"
@@ -931,8 +936,8 @@
                 class="flex transition-all duration-200 gap-2 md:gap-4 bottom-add-btn border-white border items-center text-[#111] font-medium bg-white h-fit rounded-full px-6 py-2.5"
               >
                 <span class="transition-all duration-200 text-xs md:text-base"
-                  >Create New Venue</span
-                >
+                  >Add New Ticket</span
+                > 
                 <svg
                 class="size-3 md:size-auto"
                   class="transition-all duration-200"
@@ -1070,13 +1075,13 @@
               ></textarea>
             </div>
             <!-- ticket checkbox -->
-            <div class="pb-6">
+            <div class="pb-6 h-16">
               <label
-                class="inline-flex h-full items-center gap-2 md:gap-4 cursor-pointer relative"
+                class="inline-flex  items-center gap-2 md:gap-4 cursor-pointer relative"
               >
                 <input
                   type="checkbox"
-                  class="appearance-none font-bold flex justify-center items-center size-4 md:size-6 lg:size-7 text-sm md:text-base border border-white rounded md:rounded-md lg:text-xl bg-transparent checked:bg-white checked:border-white text-black checked:after:content-['✔'] focus:outline-none"
+                  class="appearance-none h-fit font-bold flex justify-center items-center size-4 md:size-6 lg:size-7 focuc:h-fit text-sm md:text-base border border-white rounded md:rounded-md lg:text-xl bg-transparent checked:bg-white checked:border-white text-black checked:after:content-['✔'] focus:outline-none"
                 />
                 <span class="md:ml-2 md:text-base font-normal text-sm"
                   >Event not Occur: Add Exception</span
@@ -1151,7 +1156,7 @@
               >
             </div>
             <!-- set capacity and sell -->
-            <div class="xl:row pb-6 space-y-4">
+            <div class="xl:row pb-6 space-y-4 xl:space-y-0">
               <div class="col">
                 <div class="w-full ticket-price h-full flex flex-col gap-3 md:gap-5">
                   <label for="">Set shard to capacity</label>

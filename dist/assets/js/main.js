@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let trigger = document.querySelector(".btn-getTicket");
     let popup = document.getElementById("getTicketPopup");
     let overlay = document.querySelector(".overlay");
-    let closePopupBtn = document.querySelector(".close--attendee");
+    let closePopupBtn = document.querySelector(".close--getTicket");
 
     if (trigger) {
       trigger.addEventListener("click", function (e) {
