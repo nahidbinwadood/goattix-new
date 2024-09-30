@@ -303,7 +303,7 @@ function imageUploadAndPreview(
 
     let imageUrl = URL.createObjectURL(fileInput.files[0]);
 
-    previewContainer.innerHTML = `<img style="object-fit: cover; width: 100%"; height: 100% class="w-ful h-full object-cover" src="${imageUrl}" alt="image"/>`;
+    previewContainer.innerHTML = `<img style="object-fit: contain; width: 100%"; height: 100% class="w-ful h-full object-cover" src="${imageUrl}" alt="image"/>`;
   });
 }
 
