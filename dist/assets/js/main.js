@@ -624,6 +624,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const cameraButton = document.getElementById('cameraButton');
   const videoContainer = document.getElementById('videoContainer');
   const videoElement = document.getElementById('video');
+  const videoBtnContainer=document.getElementById('requestPermissionContainer');
 
   cameraButton.addEventListener('click', async () => {
     try {
@@ -632,6 +633,7 @@ document.addEventListener("DOMContentLoaded", function() {
       videoElement.srcObject = stream;
       
       // Show the video container and hide the button
+      videoBtnContainer.classList.add("hidden")
       videoContainer.classList.remove('hidden');
       cameraButton.classList.add('hidden');
     } catch (error) {

@@ -177,24 +177,31 @@
           <div class="row">
             <div class="col-12">
               <!-- request camera permission  -->
-              <div class="request-camera--permission p-7 md:p-10 lg:p-12 2xl:p-14 bg-blackv2 rounded-[20px] flex flex-col items-center">
-                <img
-                  class="w-[50px] h-[60px] md:w-[60px] md:h-[80px] lg:w-[76px] lg:h-[90px]"
-                  src="./assets/images/qr-camera.svg"
-                  alt=""
-                />
-                <a
-                  href="javascript:void(0);"
-                  id="cameraButton"
-                  class="text-sm px-4 py-2 md:px-6 md:py-3 lg:px-10 lg:py-4 md:text-base lg:text-lg 2xl:py-4 2xl:px-11 bg-white border border-white text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white rounded-[100px] 2xl:text-[20px] font-medium mt-9 text-nowrap"
-                  >Request Camera Permission</a
+              <div
+                class="request-camera--permission p-7 md:p-10 lg:p-12 2xl:p-14 bg-blackv2 rounded-[20px]"
+              >
+                <div id="requestPermissionContainer" class="flex flex-col items-center">
+                  <img
+                    class="w-[50px] h-[60px] md:w-[60px] md:h-[80px] lg:w-[76px] lg:h-[90px]"
+                    src="./assets/images/qr-camera.svg"
+                    alt=""
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    id="cameraButton"
+                    class="text-sm px-4 py-2 md:px-6 md:py-3 lg:px-10 lg:py-4 md:text-base lg:text-lg 2xl:py-4 2xl:px-11 bg-white border border-white text-blackv1 duration-300 ease-in-out hover:bg-transparent hover:text-white rounded-[100px] 2xl:text-[20px] font-medium mt-9 text-nowrap"
+                    >Request Camera Permission</a
+                  >
+                </div>
+
+                <div
+                  id="videoContainer"
+                  class=" h-[300px] overflow-hidden w-full flex items-center justify-center hidden"
                 >
+                  <video id="video" class="h-full w-[300px] sm:w-[350px] md:w-[450px] lg:w-[600px] rounded-lg" autoplay></video>
+                </div>
               </div>
-              
-              <div id="videoContainer" class="hidden mt-4">
-                <video id="video" class="w-full" autoplay></video>
-              </div>
-              
+
               <!-- total tickets and checked in  -->
               <div
                 class="total-tickets--checkedin flex items-center justify-between xl:justify-end 2xl:gap-[96px] mt-[30px] gap-8"
@@ -220,9 +227,11 @@
               </h1>
               <!-- event filters  -->
               <div
-                class="your-event--details gap-5 flex flex-col lg:flex-row  lg:items-center lg:justify-between  "
+                class="your-event--details gap-5 flex flex-col lg:flex-row lg:items-center lg:justify-between"
               >
-                <div class="flex flex-col md:flex-row lg:items-center gap-5 xl:gap-10 w-full attendee-filters">
+                <div
+                  class="flex flex-col md:flex-row lg:items-center gap-5 xl:gap-10 w-full attendee-filters"
+                >
                   <!-- select  -->
                   <div class="relative">
                     <select>
@@ -241,7 +250,8 @@
                       placeholder="Search Events"
                     />
                     <button class="absolute top-1/2 -translate-y-[50%] right-8">
-                      <svg  class="size-6 md:size-auto"
+                      <svg
+                        class="size-6 md:size-auto"
                         xmlns="http://www.w3.org/2000/svg"
                         width="29"
                         height="29"
@@ -259,7 +269,7 @@
                   </div>
                 </div>
                 <!-- print export  -->
-                <div class="flex items-center  gap-4 lg:gap-10">
+                <div class="flex items-center gap-4 lg:gap-10">
                   <p
                     class="text-sm md:text-base lg:text-xl xl:text-[22px] gap-2 font-medium flex items-center lg:gap-5 cursor-pointer"
                   >
@@ -271,7 +281,9 @@
                     Print
                   </p>
                   <p class="h-5 w-[2px] bg-[rgba(255,255,255,0.34)]"></p>
-                  <p class="text-sm md:text-base lg:text-xl xl:text-[22px] font-medium cursor-pointer">
+                  <p
+                    class="text-sm md:text-base lg:text-xl xl:text-[22px] font-medium cursor-pointer"
+                  >
                     Export Data
                   </p>
                 </div>
@@ -279,7 +291,8 @@
               <!-- event table  -->
               <div
                 class="event--table mt-4 xl:mt-12 rounded-md md:rounded-lg lg:rounded-xl 2xl:rounded-[16px] overflow-hidden border border-[rgba(255,255,255,0.20)]"
-              >9o
+              >
+                9o
                 <div class="overflow-x-auto">
                   <table class="w-full">
                     <!-- thead  -->
@@ -733,10 +746,10 @@
               </div>
               <!-- pagination  -->
               <div
-                class="mt-6 mb-6 md:mb-10 pagination--wrapper bg-white text-blackv1 rounded-[100px] flex items-center justify-center px-4 py-2  md:px-6 md:py-4 md:mt-10 flex-wrap overflow-x-hidden"
+                class="mt-6 mb-6 md:mb-10 pagination--wrapper bg-white text-blackv1 rounded-[100px] flex items-center justify-center px-4 py-2 md:px-6 md:py-4 md:mt-10 flex-wrap overflow-x-hidden"
               >
-                <ul class="flex items-center gap-2 md:gap-3 lg:gap-5 ">
-                  <li class="hidden md:flex items-center gap-2 cursor-pointer  ">
+                <ul class="flex items-center gap-2 md:gap-3 lg:gap-5">
+                  <li class="hidden md:flex items-center gap-2 cursor-pointer">
                     First
                     <p
                       class="h-8 w-8 bg-blackv1 rounded-full flex items-center justify-center"
@@ -744,12 +757,18 @@
                       <img src="./assets/images/arrow-double.svg" alt="" />
                     </p>
                   </li>
-                  <li class="flex items-center gap-2 cursor-pointer text-xs md:text-sm lg:text-base ">
+                  <li
+                    class="flex items-center gap-2 cursor-pointer text-xs md:text-sm lg:text-base"
+                  >
                     Back
                     <p
                       class="size-5 md:size-8 text-xs md:text-base bg-blackv1 rounded-full flex items-center justify-center"
                     >
-                      <img class="h-full w-full object-cover" src="./assets/images/arrow.svg" alt="" />
+                      <img
+                        class="h-full w-full object-cover"
+                        src="./assets/images/arrow.svg"
+                        alt=""
+                      />
                     </p>
                   </li>
                   <!-- pages  -->
@@ -774,12 +793,12 @@
                     4
                   </li>
                   <li
-                    class=" size-6 md:size-8 text-xs md:text-base hidden md:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base hidden md:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     5
                   </li>
                   <li
-                    class=" size-6 md:size-8 text-xs md:text-base hidden md:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base hidden md:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     6
                   </li>
@@ -794,22 +813,28 @@
                     8
                   </li>
                   <li
-                    class="hidden  w-8 h-8 lg:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="hidden w-8 h-8 lg:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     9
                   </li>
-                  <li class="flex items-center gap-2 cursor-pointer text-xs md:text-sm lg:text-base">
+                  <li
+                    class="flex items-center gap-2 cursor-pointer text-xs md:text-sm lg:text-base"
+                  >
                     <p
                       class="size-5 md:size-8 text-xs md:text-base bg-blackv1 rounded-full flex items-center justify-center"
                     >
-                      <img class="" src="./assets/images/angle-right.svg" alt="" />
+                      <img
+                        class=""
+                        src="./assets/images/angle-right.svg"
+                        alt=""
+                      />
                     </p>
                     Next
                   </li>
 
-                  <li class="hidden md:flex items-center gap-2 cursor-pointer  ">
+                  <li class="hidden md:flex items-center gap-2 cursor-pointer">
                     <p
-                      class="size-6 md:size-8 text-xs md:text-base bg-blackv1 rounded-full  flex items-center justify-center"
+                      class="size-6 md:size-8 text-xs md:text-base bg-blackv1 rounded-full flex items-center justify-center"
                     >
                       <img src="./assets/images/pagination-last.png" alt="" />
                     </p>
