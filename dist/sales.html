@@ -12,21 +12,23 @@
   </head>
   <body>
     <!-- start header  -->
-    <header class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-[37px]">
-      <div class="container">
-        <div class="row items-center">
-          <div class="col-3">
+    <header
+      class="fixed top-0 left-0 bg-blackv1 z-50 w-full py-2 xl:py-7 2xl:py-[37px]"
+    >
+      <div class="container relative">
+        <div class="2xl:row lg:items-center flex items-center justify-between">
+          <div class="2xl:col-3">
             <!-- logo  -->
             <a href="index.html">
               <img
-                class="w-[123px] h-[54px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt="logo"
               />
             </a>
           </div>
-          <div class="col-6">
-            <ul class="menu flex items-center gap-12">
+          <div class="2xl:col-6 hidden xl:flex">
+            <ul class="menu flex items-center gap-8 2xl:gap-12">
               <li>
                 <a
                   href="index.html"
@@ -71,186 +73,331 @@
               </li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="2xl:col-3 hidden xl:flex 2xl:block">
             <div class="text-right">
               <a href="login.html" class="button">Sign in</a>
             </div>
           </div>
+
+          <!-- hamburger icons::start -->
+          <div class="transition duration-500 xl:hidden">
+            <div id="openMenu" class="transition duration-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="#8F8F8F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- hamburger icons::end -->
         </div>
       </div>
+      <!-- sidebar::start -->
+      <div
+        id="menu-sidebar"
+        class="bg-blackv1 absolute top-0 h-[100vh] right-0 pt-8 px-6 w-[220px] translate-x-full duration-500 transition-all md:w-[270px]"
+      >
+        <div>
+          <div class="transition duration-500">
+            <svg
+              id="closeMenu"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18 6L6 18M6 6l12 12"
+                stroke="#8F8F8F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col pt-8 justify-center pl-6 gap-6">
+          <div class="sidebar--menu--active">
+            <a
+              class="text-menuColor text-sm md:text-base font-medium hover:text-white duration-300 ease-in-out"
+              href="index.html"
+              >Home</a
+            >
+          </div>
+          <div class="sidebar--menu--active">
+            <a
+              class="active text-sm md:text-base font-medium hover:text-white duration-300 ease-in-out"
+              href="index.html"
+              >Event</a
+            >
+          </div>
+
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >About Us</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Permotors</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Blogs</a
+          >
+          <a class="text-sm md:text-base text-menuColor" href="index.html"
+            >Contact Us</a
+          >
+        </div>
+
+        <div class="pt-6 pl-5">
+          <div>
+            <a
+              href="login.html"
+              class="text-sm md:text-base font-medium bg-white px-10 py-3 rounded-full text-black"
+              >Sign in</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- sidebar::end -->
     </header>
     <!-- end header  -->
-    <main>
+
+    <main class="overflow-x-hidden">
       <!-- start sales area  -->
-      <section class="sales--area pt-[200px] pb-[100px] overflow-hidden">
+      <section
+        class="sales--area pt-24 md:pt-28 lg:pt-40 pb-20 md:pb-28 lg:pb-40 2xl:pt-[200px] 2xl:pb-[100px] overflow-hidden"
+      >
         <div class="container">
-          <h1 class="text-[42px] font-medium mb-9">Event Details</h1>
+          <h1
+            class="text-2xl md:text-3xl lg:text-4xl 2xl:text-[42px] font-medium mb-2 sm:mb-5 md:mb-7 lg:mb-8 xl:mb-10"
+          >
+            Event Details
+          </h1>
           <div class="row">
-            <div class="flex items-center justify-between">
+            <div
+              class="flex flex-col sm:flex-row md:items-center justify-between mt-4 xl:mt-0"
+            >
               <!-- date and venue  -->
-              <div class="flex items-center gap-[114px]">
-                <p class="flex items-center gap-6">
+              <div
+                class="flex lg:items-center gap-3 flex-col lg:flex-row lg:gap-10 2xl:gap-[114px]"
+              >
+                <p
+                  class="flex text-sm lg:text-base items-center gap-3 md:gap-6"
+                >
                   <img src="./assets/images/calender.svg" alt="" />
                   December 3, 2022 | 8:00 PM EST
                 </p>
-                <div class="flex items-center gap-[114px]">
-                  <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                <div class="flex items-center gap-8 2xl:gap-[114px]">
+                  <p
+                    class="text-sm md:text-base lg:text xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                  >
                     Venue: <span class="text-white ml-3">Level 13</span>
                   </p>
-                  <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                  <p
+                    class="text-sm md:text-base lg:text xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                  >
                     Venue: <span class="text-white ml-3">Level 13</span>
                   </p>
                 </div>
               </div>
               <!-- buttons  -->
-              <div class="flex items-center gap-7">
+              <div class="flex items-center gap-7 mt-5 md:mt-0">
                 <a
                   href="#"
-                  class="inline-block py-[15px] px-[30px] rounded-[100px] bg-white text-blackv1 border border-white text-[20px] font-medium duration-300 ease-in-out hover:bg-transparent hover:text-white"
+                  class="inline-block px-6 py-2 text-nowrap 2xl:py-[15px] 2xl:px-[30px] rounded-[100px] bg-white text-blackv1 border border-white text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[20px] font-medium duration-300 ease-in-out hover:bg-transparent hover:text-white"
                   >Edit Event</a
                 >
                 <a
                   href="#"
-                  class="inline-block py-[15px] px-[30px] rounded-[100px] border border-white text-[20px] font-medium duration-300 ease-in-out hover:bg-white hover:text-blackv1"
+                  class="inline-block px-6 py-2 text-nowrap 2xl:py-[15px] 2xl:px-[30px] rounded-[100px] border border-white text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[20px] font-medium duration-300 ease-in-out hover:bg-white hover:text-blackv1"
                   >View Event</a
                 >
               </div>
             </div>
             <!-- sales by ticket type  -->
-            <div class="mt-20">
-              <h2 class="text-[32px] font-medium mb-4">Sales By Ticket Type</h2>
+            <div class="mt-8 md:mt-8 lg:mt-10 2xl:mt-20">
+              <h2
+                class="text-xl md:text-2xl lg:text-3xl 2xl:text-[32px] font-medium mb-4"
+              >
+                Sales By Ticket Type
+              </h2>
               <div class="row">
-                <div class="col-12 md:col-6 pr-[17px]">
+                <div class="col-12 md:col-6 2xl:pr-[17px]">
                   <!-- ticket type card  -->
                   <div
-                    class="flex items-center py-10 px-[30px] rounded-[20px] bg-blackv2 gap-[140px] mt-5"
+                    class="flex flex-col sm:flex-row sm:justify-between sm:py-6 sm:px-8 md:flex-col md:justify-start md:items-start lg:flex-row px-4 py-3 items-center 2xl:py-10 2xl:px-[30px] rounded-xl lg:justify-between lg:py-10 md:rounded-2xl gap-4 2xl:rounded-[20px] bg-blackv2 2xl:gap-[140px] mt-5"
                   >
-                    <div class="flex items-center gap-3">
+                    <div
+                      class="flex items-center gap-3 text-sm sm:text-base md:text-lg xl:text-[20px]"
+                    >
                       <p>Tier1</p>
                       <p>($30.00)</p>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-5 2xl:gap-10">
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
                           Sold: <span class="text-white ml-4">23</span>
                         </p>
                       </div>
                       <p class="h-3 w-[2px] bg-[rgba(255,255,255,0.6)]"></p>
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                          Available:: <span class="text-white ml-4">77</span>
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          Available: <span class="text-white ml-4">77</span>
                         </p>
                       </div>
                     </div>
                   </div>
                   <!-- ticket type card  -->
                   <div
-                    class="flex items-center py-10 px-[30px] rounded-[20px] bg-blackv2 gap-[140px] mt-5"
+                    class="flex flex-col sm:flex-row sm:justify-between sm:py-6 sm:px-8 md:flex-col md:justify-start md:items-start lg:flex-row px-4 py-3 items-center 2xl:py-10 2xl:px-[30px] rounded-xl lg:justify-between lg:py-10 md:rounded-2xl gap-4 2xl:rounded-[20px] bg-blackv2 2xl:gap-[140px] mt-5"
                   >
-                    <div class="flex items-center gap-3">
+                    <div
+                      class="flex items-center gap-3 text-sm sm:text-base md:text-lg xl:text-[20px]"
+                    >
                       <p>Tier1</p>
                       <p>($30.00)</p>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-5 2xl:gap-10">
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
                           Sold: <span class="text-white ml-4">23</span>
                         </p>
                       </div>
                       <p class="h-3 w-[2px] bg-[rgba(255,255,255,0.6)]"></p>
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                          Available:: <span class="text-white ml-4">77</span>
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          Available: <span class="text-white ml-4">77</span>
                         </p>
                       </div>
                     </div>
                   </div>
                   <!-- ticket type card  -->
                   <div
-                    class="flex items-center py-10 px-[30px] rounded-[20px] bg-blackv2 gap-[140px] mt-5"
+                    class="flex flex-col sm:flex-row sm:justify-between sm:py-6 sm:px-8 md:flex-col md:justify-start md:items-start lg:flex-row px-4 py-3 items-center 2xl:py-10 2xl:px-[30px] rounded-xl lg:justify-between lg:py-10 md:rounded-2xl gap-4 2xl:rounded-[20px] bg-blackv2 2xl:gap-[140px] mt-5"
                   >
-                    <div class="flex items-center gap-3">
+                    <div
+                      class="flex items-center gap-3 text-sm sm:text-base md:text-lg xl:text-[20px]"
+                    >
                       <p>Tier1</p>
                       <p>($30.00)</p>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-5 2xl:gap-10">
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
                           Sold: <span class="text-white ml-4">23</span>
                         </p>
                       </div>
                       <p class="h-3 w-[2px] bg-[rgba(255,255,255,0.6)]"></p>
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                          Available:: <span class="text-white ml-4">77</span>
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          Available: <span class="text-white ml-4">77</span>
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 md:col-6 pl-[17px]">
+                <div class="col-12 md:col-6 2xl:pl-[17px]">
                   <!-- ticket type card  -->
                   <div
-                    class="flex items-center py-10 px-[30px] rounded-[20px] bg-blackv2 gap-[140px] mt-5"
+                    class="flex flex-col sm:flex-row sm:justify-between sm:py-6 sm:px-8 md:flex-col md:justify-start md:items-start lg:flex-row px-4 py-3 items-center 2xl:py-10 2xl:px-[30px] rounded-xl lg:justify-between lg:py-10 md:rounded-2xl gap-4 2xl:rounded-[20px] bg-blackv2 2xl:gap-[140px] mt-5"
                   >
-                    <div class="flex items-center gap-3">
+                    <div
+                      class="flex items-center gap-3 text-sm sm:text-base md:text-lg xl:text-[20px]"
+                    >
                       <p>Tier1</p>
                       <p>($30.00)</p>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-5 2xl:gap-10">
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
                           Sold: <span class="text-white ml-4">23</span>
                         </p>
                       </div>
                       <p class="h-3 w-[2px] bg-[rgba(255,255,255,0.6)]"></p>
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                          Available:: <span class="text-white ml-4">77</span>
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          Available: <span class="text-white ml-4">77</span>
                         </p>
                       </div>
                     </div>
                   </div>
                   <!-- ticket type card  -->
                   <div
-                    class="flex items-center py-10 px-[30px] rounded-[20px] bg-blackv2 gap-[140px] mt-5"
+                    class="flex flex-col sm:flex-row sm:justify-between sm:py-6 sm:px-8 md:flex-col md:justify-start md:items-start lg:flex-row px-4 py-3 items-center 2xl:py-10 2xl:px-[30px] rounded-xl lg:justify-between lg:py-10 md:rounded-2xl gap-4 2xl:rounded-[20px] bg-blackv2 2xl:gap-[140px] mt-5"
                   >
-                    <div class="flex items-center gap-3">
+                    <div
+                      class="flex items-center gap-3 text-sm sm:text-base md:text-lg xl:text-[20px]"
+                    >
                       <p>Tier1</p>
                       <p>($30.00)</p>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-5 2xl:gap-10">
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
                           Sold: <span class="text-white ml-4">23</span>
                         </p>
                       </div>
                       <p class="h-3 w-[2px] bg-[rgba(255,255,255,0.6)]"></p>
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                          Available:: <span class="text-white ml-4">77</span>
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          Available: <span class="text-white ml-4">77</span>
                         </p>
                       </div>
                     </div>
                   </div>
                   <!-- ticket type card  -->
                   <div
-                    class="flex items-center py-10 px-[30px] rounded-[20px] bg-blackv2 gap-[140px] mt-5"
+                    class="flex flex-col sm:flex-row sm:justify-between sm:py-6 sm:px-8 md:flex-col md:justify-start md:items-start lg:flex-row px-4 py-3 items-center 2xl:py-10 2xl:px-[30px] rounded-xl lg:justify-between lg:py-10 md:rounded-2xl gap-4 2xl:rounded-[20px] bg-blackv2 2xl:gap-[140px] mt-5"
                   >
-                    <div class="flex items-center gap-3">
+                    <div
+                      class="flex items-center gap-3 text-sm sm:text-base md:text-lg xl:text-[20px]"
+                    >
                       <p>Tier1</p>
                       <p>($30.00)</p>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-5 2xl:gap-10">
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
                           Sold: <span class="text-white ml-4">23</span>
                         </p>
                       </div>
                       <p class="h-3 w-[2px] bg-[rgba(255,255,255,0.6)]"></p>
                       <div>
-                        <p class="text-[20px] text-[rgba(255,255,255,0.6)]">
-                          Available:: <span class="text-white ml-4">77</span>
+                        <p
+                          class="text-sm sm:text-base md:text-lg xl:text-[20px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          Available: <span class="text-white ml-4">77</span>
                         </p>
                       </div>
                     </div>
@@ -259,91 +406,123 @@
               </div>
             </div>
             <!-- total sales info  -->
-            <div class="mt-[100px]">
+            <div class="mt-8 md:mt-14 lg:mt-16 xl:mt-24 2xl:mt-[100px]">
               <!-- ticket sales  -->
-              <div class="flex items-center gap-[120px]">
-                <div>
-                  <p class="text-[20px] font-medium">Total Tickets Sales</p>
-                  <p class="text-[20px] text-[rgba(255,255,255,0.6)] mt-3">
+              <div
+                class="flex flex-wrap gap-5 md:items-center sm:justify-center sm:gap-10 xl:justify-start 2xl:gap-[120px]"
+              >
+                <div class="flex items-center xl:items-start sm:flex-col gap-2">
+                  <p
+                    class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] font-medium"
+                  >
+                    Total Tickets Sales <span class="ml-1 sm:hidden">:</span>
+                  </p>
+                  <p
+                    class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] text-[rgba(255,255,255,0.6)] ml-3 lg:mt-3"
+                  >
                     124
                   </p>
                 </div>
-                <p class="h-8 w-[1px] bg-[rgba(255,255,255,0.6)]"></p>
-                <div>
-                  <p class="text-[20px] font-medium">Total Tickets Ordered</p>
-                  <p class="text-[20px] text-[rgba(255,255,255,0.6)] mt-3">
+                <p
+                  class="h-8 w-[1px] bg-[rgba(255,255,255,0.6)] hidden sm:block"
+                ></p>
+                <div class="flex items-center xl:items-start sm:flex-col gap-2">
+                  <p
+                    class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] font-medium"
+                  >
+                    Total Tickets Ordered <span class="ml-1 sm:hidden">:</span>
+                  </p>
+                  <p
+                    class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] text-[rgba(255,255,255,0.6)] ml-3 lg:mt-3"
+                  >
                     24
                   </p>
                 </div>
-                <p class="h-8 w-[1px] bg-[rgba(255,255,255,0.6)]"></p>
-                <div>
-                  <p class="text-[20px] font-medium">Completed</p>
-                  <p class="text-[20px] text-[rgba(255,255,255,0.6)] mt-3">
+                <p
+                  class="h-8 w-[1px] bg-[rgba(255,255,255,0.6)] hidden sm:block"
+                ></p>
+                <div class="flex items-center xl:items-start sm:flex-col gap-2">
+                  <p
+                    class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] font-medium"
+                  >
+                    Completed <span class="ml-1 sm:hidden">:</span>
+                  </p>
+                  <p
+                    class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px] font-medium text-[rgba(255,255,255,0.6)] ml-3 lg:mt-3"
+                  >
                     27
                   </p>
                 </div>
               </div>
               <!-- total completed sales and net sales  -->
-              <div class="flex items-center gap-[132px] mt-20">
-                <p class="text-[26px] font-medium text-[rgba(255,255,255,0.6)]">
-                  Total Completed Sales:
-                  <span class="text-white ml-4">$500.00</span>
+              <div
+                class="flex flex-wrap items-center gap-4 md:gap-8 lg:gap-12 2xl:gap-[132px] mt-8 md:mt-14 lg:mt-16 2xl:mt-20"
+              >
+                <p
+                  class="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[26px] font-medium text-[rgba(255,255,255,0.6)]"
+                >
+                  Total Completed Sales :
+                  <span class="text-white ml-2 md:ml-3 lg:ml-4">$500.00</span>
                 </p>
-                <p class="text-[26px] font-medium text-[rgba(255,255,255,0.6)]">
-                  Discounts:
-                  <span class="text-white ml-4">$350.00</span>
+                <p
+                  class="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[26px] font-medium text-[rgba(255,255,255,0.6)]"
+                >
+                  Discounts :
+                  <span class="text-white ml-2 md:ml-3 lg:ml-4">$350.00</span>
                 </p>
-                <p class="text-[26px] font-medium text-[rgba(255,255,255,0.6)]">
+                <p
+                  class="text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[26px] font-medium text-[rgba(255,255,255,0.6)]"
+                >
                   Total Net Sales :
-                  <span class="text-white ml-4">$350.00</span>
+                  <span class="text-white ml-2 md:ml-3 lg:ml-4">$350.00</span>
                 </p>
               </div>
               <!-- event table  -->
               <div
-                class="event--table mt-[110px] rounded-[16px] overflow-hidden border border-[rgba(255,255,255,0.20)]"
+                class="event--table mt-8 md:mt-12 lg:mt-16 xl:mt-20 2xl:mt-[110px] rounded-lg md:rounded-xl lg:rounded-[16px] overflow-hidden border border-[rgba(255,255,255,0.20)]"
               >
-                <div>
-                  <table class="w-full">
+                <div class="overflow-x-auto text-nowrap">
+                  <table class="min-w-full w-full">
                     <!-- thead  -->
                     <thead>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Order #
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Purchaser
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Email
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Purchased
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Date
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Status
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Subtotal
                         </th>
                         <th
-                          class="text-left py-6 px-9 text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[16px] md:text-[20px] text-white bg-blackv2 border-r border-[rgba(255,255,255,0.20)]"
                         >
                           Total
                         </th>
@@ -352,422 +531,506 @@
                     <tbody>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>F44T5TG5</p>
+                          F44T5TG5
                         </td>
                         <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Ali Akbar</p>
+                          Ali Akbar
                         </td>
                         <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>aliakbar@gmail.com</p>
+                          aliakbar@gmail.com
                         </td>
                         <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>2 - Tier 1</p>
+                          2 - Tier 1
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Dec 14, 2022</p>
+                          Dec 14, 2022
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#5CF662] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p class="text-[#5CF662]">Completed</p>
+                          Completed
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>$439.00</p>
+                          $439.00
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
                         >
-                          <p>$500.00</p>
-                        </td>
-                      </tr>
-                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
-                        <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>F44T5TG5</p>
-                        </td>
-                        <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Hina Alyas</p>
-                        </td>
-                        <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>hinadlyas@gmail.com</p>
-                        </td>
-                        <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>3 - Tier 1</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Dec 14, 2022</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p class="text-[#FF2929]">Cancelled</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$439.00</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$500.00</p>
+                          $500.00
                         </td>
                       </tr>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>F44T5TG5</p>
+                          F44T5TG6
                         </td>
                         <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Devid Joseph</p>
+                          Hina Alyas
                         </td>
                         <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>david@gmail.com</p>
+                          hinadlyas@gmail.com
                         </td>
                         <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>2 - Tier 1</p>
+                          3 - Tier 1
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Dec 14, 2022</p>
+                          Dec 14, 2022
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#FF2929] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p class="text-[#5CF662]">Completed</p>
+                          Cancelled
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>$439.00</p>
+                          $439.00
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
                         >
-                          <p>$500.00</p>
-                        </td>
-                      </tr>
-                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
-                        <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>F44T5TG5</p>
-                        </td>
-                        <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Devid Joseph</p>
-                        </td>
-                        <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>david@gmail.com</p>
-                        </td>
-                        <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>2 - Tier 1</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Dec 14, 2022</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p class="text-[#5CF662]">Completed</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$439.00</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$500.00</p>
+                          $500.00
                         </td>
                       </tr>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>F44T5TG5</p>
+                          F44T5TG7
                         </td>
                         <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Devid Joseph</p>
+                          David Joseph
                         </td>
                         <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>david@gmail.com</p>
+                          david@gmail.com
                         </td>
                         <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>2 - Tier 1</p>
+                          2 - Tier 1
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Dec 14, 2022</p>
+                          Dec 14, 2022
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#5CF662] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p class="text-[#FF2929]">Cancelled</p>
+                          Completed
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>$439.00</p>
+                          $439.00
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
                         >
-                          <p>$500.00</p>
-                        </td>
-                      </tr>
-                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
-                        <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>F44T5TG5</p>
-                        </td>
-                        <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Ali Akbar</p>
-                        </td>
-                        <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>aliakbar@gmail.com</p>
-                        </td>
-                        <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>2 - Tier 1</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Dec 14, 2022</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p class="text-[#5CF662]">Completed</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$439.00</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$500.00</p>
+                          $500.00
                         </td>
                       </tr>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>F44T5TG5</p>
+                          F44T5TG8
                         </td>
                         <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Hina Alyas</p>
+                          David Joseph
                         </td>
                         <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>hinadlyas@gmail.com</p>
+                          david@gmail.com
                         </td>
                         <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>3 - Tier 1</p>
+                          2 - Tier 1
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Dec 14, 2022</p>
+                          Dec 14, 2022
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#FF2929] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p class="text-[#FF2929]">Cancelled</p>
+                          Cancelled
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>$439.00</p>
+                          $439.00
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
                         >
-                          <p>$500.00</p>
-                        </td>
-                      </tr>
-                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
-                        <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>F44T5TG5</p>
-                        </td>
-                        <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Devid Joseph</p>
-                        </td>
-                        <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>david@gmail.com</p>
-                        </td>
-                        <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>2 - Tier 1</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>Dec 14, 2022</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p class="text-[#5CF662]">Completed</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$439.00</p>
-                        </td>
-                        <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
-                        >
-                          <p>$500.00</p>
+                          $500.00
                         </td>
                       </tr>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>F44T5TG5</p>
+                          F44T5TG5
                         </td>
                         <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Devid Joseph</p>
+                          Ali Akbar
                         </td>
                         <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>david@gmail.com</p>
+                          aliakbar@gmail.com
                         </td>
                         <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>2 - Tier 1</p>
+                          2 - Tier 1
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Dec 14, 2022</p>
+                          Dec 14, 2022
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#5CF662] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p class="text-[#5CF662]">Completed</p>
+                          Completed
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>$439.00</p>
+                          $439.00
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
                         >
-                          <p>$500.00</p>
+                          $500.00
                         </td>
                       </tr>
                       <tr class="border-b border-[rgba(255,255,255,0.20)]">
                         <td
-                          class="ticket-type text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>F44T5TG5</p>
+                          F44T5TG5
                         </td>
                         <td
-                          class="info text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Devid Joseph</p>
+                          Ali Akbar
                         </td>
                         <td
-                          class="security-code text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>david@gmail.com</p>
+                          aliakbar@gmail.com
                         </td>
                         <td
-                          class="status text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>2 - Tier 1</p>
+                          2 - Tier 1
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>Dec 14, 2022</p>
+                          Dec 14, 2022
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#5CF662] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p class="text-[#FF2929]">Cancelled</p>
+                          Completed
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
                         >
-                          <p>$439.00</p>
+                          $439.00
                         </td>
                         <td
-                          class="check-in text-left py-6 px-9 text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
                         >
-                          <p>$500.00</p>
+                          $500.00
+                        </td>
+                      </tr>
+                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          F44T5TG6
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Hina Alyas
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          hinadlyas@gmail.com
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          3 - Tier 1
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Dec 14, 2022
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#FF2929] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Cancelled
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          $439.00
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          $500.00
+                        </td>
+                      </tr>
+                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          F44T5TG6
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Hina Alyas
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          hinadlyas@gmail.com
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          3 - Tier 1
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Dec 14, 2022
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#FF2929] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Cancelled
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          $439.00
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          $500.00
+                        </td>
+                      </tr>
+                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          F44T5TG5
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Ali Akbar
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          aliakbar@gmail.com
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          2 - Tier 1
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Dec 14, 2022
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#5CF662] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Completed
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          $439.00
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          $500.00
+                        </td>
+                      </tr>
+                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          F44T5TG6
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Hina Alyas
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          hinadlyas@gmail.com
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          3 - Tier 1
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Dec 14, 2022
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#FF2929] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Cancelled
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          $439.00
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          $500.00
+                        </td>
+                      </tr>
+                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          F44T5TG7
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          David Joseph
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          david@gmail.com
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          2 - Tier 1
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Dec 14, 2022
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#5CF662] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Completed
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          $439.00
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          $500.00
+                        </td>
+                      </tr>
+                      <tr class="border-b border-[rgba(255,255,255,0.20)]">
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          F44T5TG8
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          David Joseph
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          david@gmail.com
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          2 - Tier 1
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Dec 14, 2022
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[#FF2929] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          Cancelled
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)] border-r border-[rgba(255,255,255,0.20)]"
+                        >
+                          $439.00
+                        </td>
+                        <td
+                          class="text-left py-4 px-4 md:px-9 text-[14px] md:text-[18px] text-[rgba(255,255,255,0.6)]"
+                        >
+                          $500.00
                         </td>
                       </tr>
                     </tbody>
@@ -776,10 +1039,10 @@
               </div>
               <!-- pagination  -->
               <div
-                class="pagination--wrapper bg-white text-blackv1 rounded-[100px] flex items-center justify-center p-5 mt-10"
+                class="mt-6 mb-6 md:mb-10 pagination--wrapper bg-white text-blackv1 rounded-[100px] flex items-center justify-center px-4 py-2 md:px-6 md:py-4 md:mt-10 flex-wrap overflow-x-hidden"
               >
-                <ul class="flex items-center gap-5">
-                  <li class="flex items-center gap-2 cursor-pointer">
+                <ul class="flex items-center gap-2 md:gap-3 lg:gap-5">
+                  <li class="hidden md:flex items-center gap-2 cursor-pointer">
                     First
                     <p
                       class="h-8 w-8 bg-blackv1 rounded-full flex items-center justify-center"
@@ -787,74 +1050,86 @@
                       <img src="./assets/images/arrow-double.svg" alt="" />
                     </p>
                   </li>
-                  <li class="flex items-center gap-2 cursor-pointer">
+                  <li
+                    class="flex items-center gap-2 cursor-pointer text-xs md:text-sm lg:text-base"
+                  >
                     Back
                     <p
-                      class="h-8 w-8 bg-blackv1 rounded-full flex items-center justify-center"
+                      class="size-5 md:size-8 text-xs md:text-base bg-blackv1 rounded-full flex items-center justify-center"
                     >
-                      <img src="./assets/images/arrow.svg" alt="" />
+                      <img
+                        class="h-full w-full object-cover"
+                        src="./assets/images/arrow.svg"
+                        alt=""
+                      />
                     </p>
                   </li>
                   <!-- pages  -->
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] active duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] active duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     1
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     2
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     3
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     4
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base hidden md:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     5
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="size-6 md:size-8 text-xs md:text-base hidden md:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     6
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="hidden w-8 h-8 lg:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     7
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="hidden w-8 h-8 lg:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     8
                   </li>
                   <li
-                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
+                    class="hidden w-8 h-8 lg:flex items-center justify-center rounded-full border border-[D9D9D9] text-[#7B7B7B] duration-300 ease-in-out hover:bg-blackv1 hover:text-white cursor-pointer"
                   >
                     9
                   </li>
-                  <li class="flex items-center gap-2 cursor-pointer">
+                  <li
+                    class="flex items-center gap-2 cursor-pointer text-xs md:text-sm lg:text-base"
+                  >
                     <p
-                      class="h-8 w-8 bg-blackv1 rounded-full flex items-center justify-center"
+                      class="size-5 md:size-8 text-xs md:text-base bg-blackv1 rounded-full flex items-center justify-center"
                     >
-                      <img src="./assets/images/angle-right.svg" alt="" />
+                      <img
+                        class=""
+                        src="./assets/images/angle-right.svg"
+                        alt=""
+                      />
                     </p>
                     Next
                   </li>
 
-                  <li class="flex items-center gap-2 cursor-pointer">
+                  <li class="hidden md:flex items-center gap-2 cursor-pointer">
                     <p
-                      class="h-8 w-8 bg-blackv1 rounded-full flex items-center justify-center"
+                      class="size-6 md:size-8 text-xs md:text-base bg-blackv1 rounded-full flex items-center justify-center"
                     >
-                      <img src="./assets/images/arrow-double.svg" alt="" />
+                      <img src="./assets/images/pagination-last.png" alt="" />
                     </p>
                     Last
                   </li>
@@ -868,23 +1143,24 @@
     </main>
 
     <!-- start footer  -->
-    <footer class="py-[58px] bg-blackv2">
+    <footer class="py-6 md:py-10 2xl:py-[58px] bg-blackv2 overflow-hidden">
       <div class="container">
-        <div class="row items-center">
-          <div class="col-12 md:col-6">
+        <div class="flex items-center justify-between">
+          <div class=" ">
             <a href="index.html">
               <img
-                class="h-[94px] w-[200px]"
+                class="xl:w-[123px] xl:h-[54px] size-16 md:size-20 lg:size-24"
                 src="./assets/images/logo.svg"
                 alt=""
               />
             </a>
           </div>
-          <div class="col-12 md:col-6">
-            <ul class="flex items-center gap-6 justify-end">
+          <div class=" ">
+            <ul class="flex items-center gap-2 md:gap-6 justify-end">
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -899,8 +1175,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -917,8 +1194,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="h-10 w-10 inline-block">
+                <a href="#" class="size-8 md:size-10 inline-block">
                   <svg
+                    class="h-full w-full"
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="42"
@@ -937,23 +1215,28 @@
             </ul>
           </div>
         </div>
-        <div class="mt-[52px]">
-          <div class="flex items-center gap-[244px]">
+        <div class="2xl:mt-[52px] mt-6 md:mt-10">
+          <div
+            class="flex flex-col xl:flex-row justify-center gap-3 xl:gap-32 xl:justify-normal item-center 2xl:gap-[244px]"
+          >
             <div>
-              <p class="w-[474px]">
+              <p
+                class="2xl:w-[474px] text-sm md:text-base text-center xl:text-start"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Malesuada amet nibh sed diam.
               </p>
             </div>
             <div>
               <a
-                href="mailto:Business@goattix.com"
-                class="flex items-center gap-7"
+                href="mailto:Business@goattix.com "
+                class="flex items-center justify-center gap-3 md:gap-5 xl:gap-7 text-sm md:text-base"
               >
                 <div
-                  class="h-[53px] w-[53px] flex items-center justify-center bg-[#292929] rounded-full"
+                  class="flex items-center justify-center bg-[#292929] rounded-full p-2 xl:p-4"
                 >
                   <svg
+                    class="size-5"
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
                     height="14"
@@ -972,7 +1255,7 @@
               </a>
             </div>
             <div>
-              <p class="text-base leading-normal">
+              <p class="text-sm md:text-base leading-normal text-center">
                 © 2021 ibgme.ae. All rights reserved
               </p>
             </div>

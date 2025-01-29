@@ -60,7 +60,7 @@ body {
 }
 .accordion-header:after {
   content: "+";
-  @apply absolute top-[30px] right-[42px] h-[40px] w-[40px] rounded-full bg-white text-blackv1 text-[30px] flex items-center justify-center;
+  @apply absolute top-[25px] right-[42px] h-[40px] w-[40px] rounded-full bg-white text-blackv1 text-[28px] flex items-center justify-center;
 }
 .accordion-header.active:after {
   content: "-";
@@ -184,7 +184,7 @@ body {
 }
 .custom-radio input:checked + label:after {
   content: "";
-  @apply absolute left-[11px] top-[3px] h-[22px] w-[22px] bg-white rounded-full;
+  @apply absolute left-[11px] top-[1.2px] h-[22px] w-[22px] bg-white rounded-full;
 }
 .edit-venue--area .nice-select {
   @apply h-[72px] leading-[72px] w-full border border-white bg-transparent;
@@ -229,7 +229,11 @@ body {
 
   /* Events */
   .events-filter .nice-select {
-    @apply bg-blackv2 border-blackv2 rounded-[4px] h-[40px] leading-[40px];
+    height: 40px;
+    line-height: 40px;
+  }
+  .events-filter .nice-select {
+    @apply bg-blackv2 border-blackv2 rounded-[4px] !h-[40px] !leading-[40px];
   }
   .nice-select .current {
     @apply text-[14px] font-normal;
@@ -265,7 +269,50 @@ body {
     right: 1rem;
   }
   /* attendee::end */
+
+  /* checkout:start */
+  .custom-radio label {
+    @apply relative block pl-8;
+  }
+
+  .custom-radio label:before {
+    height: 25px;
+    width: 25px;
+    border-width: 2px;
+  }
+  .custom-radio input:checked + label:after {
+    left: 5px;
+    top: 2.3px;
+    height: 15px;
+    width: 15px;
+  }
+  /* checkout:end */
+
+  /* create event:start */
+
+  .time-zone .nice-select {
+    background-color: transparent !important;
+    height: 50px !important;
+    display: flex;
+    align-items: center;
+  }
+  .nice-select .current {
+    @apply text-[14px] font-normal;
+  }
+
+  .nice-select:after {
+    @apply w-2 h-2 right-3;
+  }
+  /* create event:end */
+
+  /* edit venue:start */
+  .edit-venue--area .nice-select {
+    @apply min-w-[250px] rounded-md w-full h-12 leading-[48px] px-5;
+  }
+  /* edit venue:end */
 }
+
+
 @media only screen and (min-width: 641px) and (max-width: 991px) {
   .owl-dots {
     @apply mt-[-32px];
@@ -303,6 +350,30 @@ body {
     right: 1rem;
   }
   /* Attendee::end */
+
+  /* checkout:start */
+  .custom-radio label {
+    @apply relative block pl-10;
+  }
+
+  .custom-radio label:before {
+    height: 30px;
+    width: 30px;
+    border-width: 2px;
+  }
+  .custom-radio input:checked + label:after {
+    left: 6.4px;
+    top: 3px;
+    height: 18px;
+    width: 18px;
+  }
+  /* checkout:end */
+
+  /* edit venue:start */
+  .edit-venue--area .nice-select {
+    @apply min-w-[250px] rounded-xl w-full h-14 leading-[48px] px-5;
+  }
+  /* edit venue:end */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -332,6 +403,28 @@ body {
     right: 1rem;
   }
   /* Attendee::end */
+
+  /* edit venue:start */
+  .edit-venue--area .nice-select {
+    @apply min-w-[250px] rounded-xl w-full h-14 leading-[48px] px-5;
+  }
+  /* edit venue:end */
+
+  .custom-radio label {
+    @apply relative block pl-10;
+  }
+
+  .custom-radio label:before {
+    height: 35px;
+    width: 35px;
+    border-width: 2px;
+  }
+  .custom-radio input:checked + label:after {
+    left: 7.5px;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1521px) {
@@ -350,8 +443,30 @@ body {
   .attendee-filters {
     flex-direction: row;
   }
+  .coupon {
+    flex-diretion: column;
+  }
+  .ssl-btns {
+    flex-direction: column;
+  }
 }
+@media only screen and (min-width: 641px) and (max-width: 767px) {
+  .custom-radio label {
+    @apply relative block pl-10;
+  }
 
+  .custom-radio label:before {
+    height: 27px;
+    width: 27px;
+    border-width: 2px;
+  }
+  .custom-radio input:checked + label:after {
+    left: 6px;
+    top: 3px;
+    height: 15px;
+    width: 15px;
+}
+}
 /*============custom============*/
 
 /*===Responsive=== */
